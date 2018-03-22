@@ -3,6 +3,7 @@ authors:
 - J. Gresham Machen
 date: '2012-02-11'
 description: ''
+draft: true
 slug: 2012-02-11-j.-gresham-machen
 title: ''
 ---

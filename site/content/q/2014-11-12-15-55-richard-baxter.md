@@ -4,6 +4,7 @@ authors:
 - Richard Baxter, 1657
 date: '2014-11-12'
 description: ''
+draft: true
 slug: 2014-11-12-things-you-hope-to-never-find-out-your-pastor-said-about-you
 title: ''
 ---

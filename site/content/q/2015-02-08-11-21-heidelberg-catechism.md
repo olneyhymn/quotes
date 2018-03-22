@@ -3,6 +3,7 @@ authors:
 - Heidelberg Catechism 75
 date: '2015-02-08'
 description: ''
+draft: true
 slug: 2015-02-08-heidelberg-catechism-75
 title: ''
 ---

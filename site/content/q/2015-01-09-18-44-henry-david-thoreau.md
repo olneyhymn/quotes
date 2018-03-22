@@ -3,6 +3,7 @@ authors:
 - Henry David Thoreau
 date: '2015-01-09'
 description: ''
+draft: true
 slug: 2015-01-09-henry-david-thoreau
 title: ''
 ---

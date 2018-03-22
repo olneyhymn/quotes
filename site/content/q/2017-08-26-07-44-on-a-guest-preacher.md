@@ -3,6 +3,7 @@ authors:
 - Feedback on a guest preacher (in 1860)
 date: '2017-08-26'
 description: ''
+draft: true
 slug: 2017-08-26-feedback-on-a-guest-preacher-(in-1860)
 title: ''
 ---

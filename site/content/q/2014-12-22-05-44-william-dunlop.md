@@ -3,6 +3,7 @@ authors:
 - William Dunlop (professor of church history), 1720
 date: '2014-12-22'
 description: ''
+draft: true
 slug: 2014-12-22-william-dunlop-(professor-of-church-history),-1720
 title: ''
 ---

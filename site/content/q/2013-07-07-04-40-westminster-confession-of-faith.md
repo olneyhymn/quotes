@@ -3,6 +3,7 @@ authors:
 - Westminster Confession of Faith 19.6
 date: '2013-07-07'
 description: ''
+draft: true
 slug: 2013-07-07-westminster-confession-of-faith-19.6
 title: ''
 ---

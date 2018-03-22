@@ -3,6 +3,7 @@ authors:
 - Form for the Ordination of Elders and Deacons, Canadian Reformed Church
 date: '2015-10-20'
 description: ''
+draft: true
 slug: 2015-10-20-form-for-the-ordination-of-elders-and-deacons,-canadian-reformed-church
 title: ''
 ---

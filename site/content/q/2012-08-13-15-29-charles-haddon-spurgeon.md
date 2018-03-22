@@ -3,6 +3,7 @@ authors:
 - Charles Haddon Spurgeon via Tim Challies
 date: '2012-08-13'
 description: ''
+draft: true
 slug: 2012-08-13-charles-haddon-spurgeon-via-tim-challies
 title: ''
 ---

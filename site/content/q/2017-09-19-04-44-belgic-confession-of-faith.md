@@ -3,6 +3,7 @@ authors:
 - Belgic Confession of Faith, Article 28, 1561
 date: '2017-09-19'
 description: ''
+draft: true
 slug: 2017-09-19-belgic-confession-of-faith,-article-28,-1561
 title: ''
 ---

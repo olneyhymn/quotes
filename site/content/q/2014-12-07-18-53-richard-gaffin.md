@@ -3,6 +3,7 @@ authors:
 - Richard Gaffin
 date: '2014-12-07'
 description: ''
+draft: true
 slug: 2014-12-07-richard-gaffin
 title: ''
 ---

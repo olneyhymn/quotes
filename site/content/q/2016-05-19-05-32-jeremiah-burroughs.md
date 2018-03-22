@@ -3,6 +3,7 @@ authors:
 - Jeremiah Burroughs
 date: '2016-05-19'
 description: ''
+draft: true
 slug: 2016-05-19-jeremiah-burroughs
 title: ''
 ---

@@ -3,6 +3,7 @@ authors:
 - Leonhard Goppelt
 date: '2015-04-16'
 description: ''
+draft: true
 slug: 2015-04-16-leonhard-goppelt
 title: ''
 ---

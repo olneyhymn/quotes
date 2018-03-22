@@ -3,6 +3,7 @@ authors:
 - Thomas Jefferson
 date: '2016-11-08'
 description: ''
+draft: true
 slug: 2016-11-08-thomas-jefferson
 title: ''
 ---

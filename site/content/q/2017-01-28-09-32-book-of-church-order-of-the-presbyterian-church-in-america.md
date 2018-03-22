@@ -3,6 +3,7 @@ authors:
 - Book of Church Order of the Presbyterian Church in America
 date: '2017-01-28'
 description: ''
+draft: true
 slug: 2017-01-28-book-of-church-order-of-the-presbyterian-church-in-america
 title: ''
 ---

@@ -3,6 +3,7 @@ authors:
 - Geerhardus Vos, 1888
 date: '2016-12-26'
 description: ''
+draft: true
 slug: 2016-12-26-geerhardus-vos,-1888
 title: ''
 ---

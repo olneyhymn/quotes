@@ -3,6 +3,7 @@ authors:
 - Herman Bavinck, 1895
 date: '2012-02-05'
 description: ''
+draft: true
 slug: 2012-02-05-herman-bavinck,-1895
 title: ''
 ---

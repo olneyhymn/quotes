@@ -3,6 +3,7 @@ authors:
 - Honest Abe (1848)
 date: '2015-07-07'
 description: ''
+draft: true
 slug: 2015-07-07-honest-abe-(1848)
 title: ''
 ---

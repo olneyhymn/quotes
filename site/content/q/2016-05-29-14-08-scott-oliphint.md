@@ -3,6 +3,7 @@ authors:
 - Scott Oliphint, Covenental Apologetics
 date: '2016-05-29'
 description: ''
+draft: true
 slug: 2016-05-29-scott-oliphint,-covenental-apologetics
 title: ''
 ---

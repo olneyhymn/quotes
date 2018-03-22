@@ -4,6 +4,7 @@ authors:
   perfect, they're just forgiven"
 date: '2015-12-21'
 description: ''
+draft: true
 slug: 2015-12-21-dr.-richard-gaffin-proposes-an-alternative-to-the-bumper-sticker-"christians-aren't-perfect,-they're-just-forgiven"
 title: ''
 ---

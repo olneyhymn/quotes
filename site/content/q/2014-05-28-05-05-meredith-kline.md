@@ -3,6 +3,7 @@ authors:
 - Meredith Kline, By Oath Consigned
 date: '2014-05-28'
 description: ''
+draft: true
 slug: 2014-05-28-meredith-kline,-by-oath-consigned
 title: ''
 ---

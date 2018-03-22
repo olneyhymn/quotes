@@ -3,6 +3,7 @@ authors:
 - Richard Baxter
 date: '2014-07-25'
 description: ''
+draft: true
 slug: 2014-07-25-richard-baxter
 title: ''
 ---

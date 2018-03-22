@@ -3,6 +3,7 @@ authors:
 - John Maynard Keynes
 date: '2015-04-06'
 description: ''
+draft: true
 slug: 2015-04-06-john-maynard-keynes
 title: ''
 ---

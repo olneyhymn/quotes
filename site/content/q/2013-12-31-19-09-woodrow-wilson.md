@@ -5,6 +5,7 @@ authors:
   called on young Woodrow for assistance. Woodrow said
 date: '2013-12-31'
 description: ''
+draft: true
 slug: 2013-12-31-as-stated-clerk-of-the-general-assembly-of-the-southern-presbyterian-church,-woodrow-wilson's-father-was-responsible-for-editing-the-minutes-of-the-assembly.-he-often-called-on-young-woodrow-for-assistance.-woodrow-said
 title: ''
 ---

@@ -3,6 +3,7 @@ authors:
 - Paul David Tripp
 date: '2015-05-25'
 description: ''
+draft: true
 slug: 2015-05-25-paul-david-tripp
 title: ''
 ---

@@ -3,6 +3,7 @@ authors:
 - Joseph Barron Hopper (my grandfather)
 date: '2015-10-31'
 description: ''
+draft: true
 slug: 2015-10-31-joseph-barron-hopper-(my-grandfather)
 title: ''
 ---

@@ -3,6 +3,7 @@ authors:
 - Daniel Kahnem
 date: '2013-12-24'
 description: ''
+draft: true
 slug: 2013-12-24-daniel-kahnem
 title: ''
 ---

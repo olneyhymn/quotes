@@ -3,6 +3,7 @@ authors:
 - Frederick Herzog, Service in Christ
 date: '2015-12-25'
 description: ''
+draft: true
 slug: 2015-12-25-frederick-herzog,-service-in-christ
 title: ''
 ---

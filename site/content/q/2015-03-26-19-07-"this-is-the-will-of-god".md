@@ -4,6 +4,7 @@ authors:
 - 1 Peter 2
 date: '2015-03-26'
 description: ''
+draft: true
 slug: 2015-03-26-"this-is-the-will-of-god"
 title: ''
 ---

@@ -3,6 +3,7 @@ authors:
 - David VanDrunen
 date: '2016-02-15'
 description: ''
+draft: true
 slug: 2016-02-15-david-vandrunen
 title: ''
 ---

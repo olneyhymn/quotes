@@ -3,6 +3,7 @@ authors:
 - Samuel Rutherford
 date: '2015-02-08'
 description: ''
+draft: true
 slug: 2015-02-08-samuel-rutherford
 title: ''
 ---

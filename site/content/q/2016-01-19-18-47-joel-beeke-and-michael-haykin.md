@@ -3,6 +3,7 @@ authors:
 - Joel Beeke and Michael Haykin
 date: '2016-01-19'
 description: ''
+draft: true
 slug: 2016-01-19-joel-beeke-and-michael-haykin
 title: ''
 ---

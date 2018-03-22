@@ -3,6 +3,7 @@ authors:
 - Charles Babbage, inventor of a mechanical computer in the 1800s
 date: '2017-03-16'
 description: ''
+draft: true
 slug: 2017-03-16-charles-babbage,-inventor-of-a-mechanical-computer-in-the-1800s
 title: ''
 ---

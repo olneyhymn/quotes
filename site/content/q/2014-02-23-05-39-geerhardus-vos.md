@@ -3,6 +3,7 @@ authors:
 - Geerhardus Vos
 date: '2014-02-23'
 description: ''
+draft: true
 slug: 2014-02-23-geerhardus-vos
 title: ''
 ---

@@ -5,6 +5,7 @@ source_date: 1842
 source: The Deaconship
 date: '2017-11-19'
 description: ''
+draft: true
 slug: 2017-11-19-john-gordon-lorimer,-1842
 title: ''
 ---

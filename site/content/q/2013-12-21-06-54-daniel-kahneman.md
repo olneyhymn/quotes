@@ -3,6 +3,7 @@ authors:
 - Daniel Kahneman; Thinking, Fast and Slow
 date: '2013-12-21'
 description: ''
+draft: true
 slug: 2013-12-21-daniel-kahneman;-thinking,-fast-and-slow
 title: ''
 ---

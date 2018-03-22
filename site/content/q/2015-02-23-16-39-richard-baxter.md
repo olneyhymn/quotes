@@ -3,6 +3,7 @@ authors:
 - Richard Baxter on taking notes during sermons
 date: '2015-02-23'
 description: ''
+draft: true
 slug: 2015-02-23-richard-baxter-on-taking-notes-during-sermons
 title: ''
 ---

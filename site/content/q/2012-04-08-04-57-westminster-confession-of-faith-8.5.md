@@ -3,6 +3,7 @@ authors:
 - Westminster Confession of Faith 8.5
 date: '2012-04-08'
 description: ''
+draft: true
 slug: 2012-04-08-westminster-confession-of-faith-8.5
 title: ''
 ---

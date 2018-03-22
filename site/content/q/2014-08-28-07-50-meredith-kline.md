@@ -3,6 +3,7 @@ authors:
 - Meredith Kline, Images of the Spirit
 date: '2014-08-28'
 description: ''
+draft: true
 slug: 2014-08-28-meredith-kline,-images-of-the-spirit
 title: ''
 ---

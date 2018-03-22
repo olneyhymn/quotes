@@ -3,6 +3,7 @@ authors:
 - Westminster Confession of Faith 7.1
 date: '2012-03-04'
 description: ''
+draft: true
 slug: 2012-03-04-westminster-confession-of-faith-7.1
 title: ''
 ---

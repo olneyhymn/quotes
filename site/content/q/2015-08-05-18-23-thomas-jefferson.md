@@ -3,6 +3,7 @@ authors:
 - Oh TJ
 date: '2015-08-05'
 description: ''
+draft: true
 slug: 2015-08-05-oh-tj
 title: ''
 ---

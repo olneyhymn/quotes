@@ -3,6 +3,7 @@ authors:
 - Eugene Peterson
 date: '2013-11-19'
 description: ''
+draft: true
 slug: 2013-11-19-eugene-peterson
 title: ''
 ---

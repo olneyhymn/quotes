@@ -4,6 +4,7 @@ authors:
 - Written my Thomas Manton 350 years ago.
 date: '2016-05-01'
 description: ''
+draft: true
 slug: 2016-05-01-kids-these-days
 title: ''
 ---

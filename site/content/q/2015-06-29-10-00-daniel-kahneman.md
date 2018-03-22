@@ -3,6 +3,7 @@ authors:
 - Daniel Kahneman
 date: '2015-06-29'
 description: ''
+draft: true
 slug: 2015-06-29-daniel-kahneman
 title: ''
 ---

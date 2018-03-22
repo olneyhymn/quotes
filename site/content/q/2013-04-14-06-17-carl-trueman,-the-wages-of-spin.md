@@ -3,6 +3,7 @@ authors:
 - Carl Trueman, The Wages of Spin
 date: '2013-04-14'
 description: ''
+draft: true
 slug: 2013-04-14-carl-trueman,-the-wages-of-spin
 title: ''
 ---

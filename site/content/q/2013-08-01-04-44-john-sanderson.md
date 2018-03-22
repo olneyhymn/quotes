@@ -3,6 +3,7 @@ authors:
 - John Sanderson, quoted by Philip Ryken
 date: '2013-08-01'
 description: ''
+draft: true
 slug: 2013-08-01-john-sanderson,-quoted-by-philip-ryken
 title: ''
 ---

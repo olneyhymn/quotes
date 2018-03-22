@@ -3,6 +3,7 @@ authors:
 - Richard Feynman
 date: '2012-03-08'
 description: ''
+draft: true
 slug: 2012-03-08-richard-feynman
 title: ''
 ---

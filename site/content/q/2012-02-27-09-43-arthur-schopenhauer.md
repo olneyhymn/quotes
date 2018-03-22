@@ -3,6 +3,7 @@ authors:
 - Arthur Schopenhauer
 date: '2012-02-27'
 description: ''
+draft: true
 slug: 2012-02-27-arthur-schopenhauer
 title: ''
 ---

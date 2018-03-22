@@ -3,6 +3,7 @@ authors:
 - Herman Bavinck
 date: '2015-11-17'
 description: ''
+draft: true
 slug: 2015-11-17-herman-bavinck
 title: ''
 ---

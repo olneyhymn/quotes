@@ -4,6 +4,7 @@ authors:
   Day, published 1645
 date: '2017-01-15'
 description: ''
+draft: true
 slug: 2017-01-15-the-directory-for-the-publick-worship-of-god,-of-the-sanctification-of-the-lord's-day,-published-1645
 title: ''
 ---

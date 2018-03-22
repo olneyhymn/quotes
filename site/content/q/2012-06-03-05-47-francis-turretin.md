@@ -3,6 +3,7 @@ authors:
 - Francis Turretin on Christians and good works (via Kevin DeYoung)
 date: '2012-06-03'
 description: ''
+draft: true
 slug: 2012-06-03-francis-turretin-on-christians-and-good-works-(via-kevin-deyoung)
 title: ''
 ---

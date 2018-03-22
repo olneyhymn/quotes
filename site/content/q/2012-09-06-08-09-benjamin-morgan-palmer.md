@@ -3,6 +3,7 @@ authors:
 - Benjamin Morgan Palmer
 date: '2012-09-06'
 description: ''
+draft: true
 slug: 2012-09-06-benjamin-morgan-palmer
 title: ''
 ---

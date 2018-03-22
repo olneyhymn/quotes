@@ -3,6 +3,7 @@ authors:
 - David Powlison
 date: '2014-10-04'
 description: ''
+draft: true
 slug: 2014-10-04-david-powlison
 title: ''
 ---

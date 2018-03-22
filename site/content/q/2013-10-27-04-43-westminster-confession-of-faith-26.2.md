@@ -3,6 +3,7 @@ authors:
 - Westminster Confession of Faith 26.2
 date: '2013-10-27'
 description: ''
+draft: true
 slug: 2013-10-27-westminster-confession-of-faith-26.2
 title: ''
 ---
