@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - "and give it 'optimism') in its present calling is its perception not of a presumed\
   \ promise of future dominion before Christ\u2019s return but of the real victory\
   \ it already possesses in the exalted Christ.\" (Richard Gaffin"

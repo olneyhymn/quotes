@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Herman Bavinck
 date: '2012-02-26'
 description: ''

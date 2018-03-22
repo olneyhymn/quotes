@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Scott Oliphint, Covenental Apologetics
 date: '2016-05-29'
 description: ''

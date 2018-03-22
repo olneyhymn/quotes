@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - John the Evangelist
 date: '2012-01-15'
 description: ''

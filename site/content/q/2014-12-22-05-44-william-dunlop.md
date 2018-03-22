@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - William Dunlop (professor of church history), 1720
 date: '2014-12-22'
 description: ''

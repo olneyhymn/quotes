@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - William Gurnall
 date: '2015-08-09'
 description: ''

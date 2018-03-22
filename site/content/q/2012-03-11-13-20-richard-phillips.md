@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Richard Phillips
 date: '2012-03-11'
 description: ''

@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - David VanDrunen
 date: '2016-02-15'
 description: ''

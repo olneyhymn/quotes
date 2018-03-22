@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Meredith Kline, Images of the Spirit
 date: '2014-08-28'
 description: ''

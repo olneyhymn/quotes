@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Westminster Confession of Faith 26.2
 date: '2013-10-27'
 description: ''

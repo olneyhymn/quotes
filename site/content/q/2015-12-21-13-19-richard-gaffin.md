@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Dr. Richard Gaffin proposes an alternative to the bumper sticker "Christians aren't
   perfect, they're just forgiven"
 date: '2015-12-21'

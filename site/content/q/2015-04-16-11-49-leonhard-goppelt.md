@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Leonhard Goppelt
 date: '2015-04-16'
 description: ''

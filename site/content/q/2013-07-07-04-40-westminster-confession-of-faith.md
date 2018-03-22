@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Westminster Confession of Faith 19.6
 date: '2013-07-07'
 description: ''

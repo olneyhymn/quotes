@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Westminster Confession of Faith 14.3
 date: '2012-08-12'
 description: ''

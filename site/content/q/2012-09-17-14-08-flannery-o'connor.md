@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Flannery O'Connor
 date: '2012-09-17'
 description: ''

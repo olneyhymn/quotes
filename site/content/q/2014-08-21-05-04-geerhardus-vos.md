@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Geerhardus Vos
 date: '2014-08-21'
 description: ''

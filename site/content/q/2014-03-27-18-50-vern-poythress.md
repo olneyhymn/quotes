@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Vern Poythress
 date: '2014-03-27'
 description: ''

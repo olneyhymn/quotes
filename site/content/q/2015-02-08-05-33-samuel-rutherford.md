@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Samuel Rutherford
 date: '2015-02-08'
 description: ''

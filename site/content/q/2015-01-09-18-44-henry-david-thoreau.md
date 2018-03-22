@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Henry David Thoreau
 date: '2015-01-09'
 description: ''

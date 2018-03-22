@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - 'Westminster Shorter Catechism #92'
 date: '2012-04-01'
 description: ''

@@ -7,9 +7,15 @@ theme="hugo-strata-theme-master"
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details:
 # https://gohugo.io/getting-started/configuration/#toml-configuration
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+disableKinds = ["RSS"]
+
+[taxonomies]
+  author = "authors"
+  tag = "tags"
 
 [params]
 date_format = "Mon Jan 02, 2006"
 [params.contact]
 email = "tim@waiting-tables.com"
+
+

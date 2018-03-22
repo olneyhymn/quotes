@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Abraham Lincoln
 date: '2011-10-08'
 description: ''

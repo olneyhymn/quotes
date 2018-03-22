@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - George Whitefield, 1739
 date: '2014-07-28'
 description: ''

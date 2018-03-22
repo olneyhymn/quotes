@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - John the Apostle
 date: '2012-03-11'
 description: ''

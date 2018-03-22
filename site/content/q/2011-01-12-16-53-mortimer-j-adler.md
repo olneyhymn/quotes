@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Mortimer J. Adler
 source: How to Read a Book
 date: '2011-01-12'

@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Meredith Kline, By Oath Consigned
 date: '2014-07-08'
 description: ''

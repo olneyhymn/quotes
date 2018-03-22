@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Joel Beeke and Mark Jones, A Puritan Theology
 date: '2013-12-16'
 description: ''

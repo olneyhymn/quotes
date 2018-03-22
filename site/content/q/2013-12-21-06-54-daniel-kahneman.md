@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Daniel Kahneman; Thinking, Fast and Slow
 date: '2013-12-21'
 description: ''

@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - 5:12)." (Edmund Clowney
 date: '2015-02-10'
 description: ''

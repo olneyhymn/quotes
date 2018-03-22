@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - George Whitfield to Benjamin Franklin, 1772
 date: '2015-12-09'
 description: ''

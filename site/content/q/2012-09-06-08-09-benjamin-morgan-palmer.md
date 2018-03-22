@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Benjamin Morgan Palmer
 date: '2012-09-06'
 description: ''

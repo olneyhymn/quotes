@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Francis Turretin on Christians and good works (via Kevin DeYoung)
 date: '2012-06-03'
 description: ''

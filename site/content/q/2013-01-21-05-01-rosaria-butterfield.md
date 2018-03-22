@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Rosaria Butterfield, The Secret Thoughts of an Unlikely Convert
 date: '2013-01-21'
 description: ''

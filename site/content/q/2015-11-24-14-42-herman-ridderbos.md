@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Herman Ridderbos
 date: '2015-11-24'
 description: ''

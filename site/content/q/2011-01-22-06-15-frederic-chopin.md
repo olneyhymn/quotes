@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Frederic Chopin
 date: '2011-01-22'
 description: ''

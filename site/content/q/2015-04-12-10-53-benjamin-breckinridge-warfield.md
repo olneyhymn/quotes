@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Benjamin Breckinridge Warfield
 date: '2015-04-12'
 description: ''

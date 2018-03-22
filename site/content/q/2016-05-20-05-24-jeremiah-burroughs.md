@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Jeremiah Burroughs
 date: '2016-05-20'
 description: ''

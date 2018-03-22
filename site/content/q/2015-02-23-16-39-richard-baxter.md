@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Richard Baxter on taking notes during sermons
 date: '2015-02-23'
 description: ''

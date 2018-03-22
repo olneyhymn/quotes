@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Dave Clark, Vice President North American Fulfillment, Amazon.com
 date: '2011-11-10'
 description: ''

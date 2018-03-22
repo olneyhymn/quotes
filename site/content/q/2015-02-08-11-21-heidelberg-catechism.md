@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Heidelberg Catechism 75
 date: '2015-02-08'
 description: ''

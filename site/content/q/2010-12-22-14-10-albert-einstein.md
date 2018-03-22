@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Albert Einstein
 date: '2010-12-22'
 description: ''

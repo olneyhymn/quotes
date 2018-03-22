@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Westminster Shorter Catechism, Q. 90
 date: '2012-01-22'
 description: ''

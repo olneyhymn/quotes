@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Hughes Oliphant Old
 date: '2012-01-23'
 description: ''

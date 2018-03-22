@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Meredith Kline
 date: '2014-07-19'
 description: ''

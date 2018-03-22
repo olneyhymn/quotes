@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Thomas Schreiner
 date: '2015-02-24'
 description: ''

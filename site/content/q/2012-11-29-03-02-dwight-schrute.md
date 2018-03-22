@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Dwight Schrute
 date: '2012-11-29'
 description: ''

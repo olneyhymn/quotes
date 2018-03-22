@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Joseph Barron Hopper (my grandfather)
 date: '2015-10-31'
 description: ''

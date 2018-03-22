@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Robert Lewis Dabney
 date: '2012-05-03'
 description: ''

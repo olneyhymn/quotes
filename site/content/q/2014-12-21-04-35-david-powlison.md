@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - David Powlison
 date: '2014-12-21'
 description: ''

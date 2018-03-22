@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Edgar Allen Poe, my fellow UVA dropout
 date: '2017-06-14'
 description: ''

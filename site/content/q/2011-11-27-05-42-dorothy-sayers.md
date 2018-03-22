@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Dorothy Sayers, Creed or Chaos?
 date: '2011-11-27'
 description: ''

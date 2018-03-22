@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - John MacArthur
 date: '2011-01-02'
 description: ''

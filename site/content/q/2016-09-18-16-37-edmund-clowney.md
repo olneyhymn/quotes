@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Edmund Clowney
 date: '2016-09-18'
 description: ''

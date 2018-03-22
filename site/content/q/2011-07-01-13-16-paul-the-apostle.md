@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Paul the Apostle
 date: '2011-07-01'
 description: ''

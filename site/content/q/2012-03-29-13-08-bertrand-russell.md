@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Bertrand Russell
 date: '2012-03-29'
 description: ''

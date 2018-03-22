@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - William Greenhill in 1670
 date: '2016-09-05'
 description: ''

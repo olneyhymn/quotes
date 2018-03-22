@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Form for the Ordination of Elders and Deacons, Canadian Reformed Church
 date: '2015-10-20'
 description: ''

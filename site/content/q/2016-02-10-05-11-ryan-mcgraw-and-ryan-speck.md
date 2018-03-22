@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - "Eph. 4:8, 11\u201316).\" (Ryan McGraw and Ryan Speck"
 date: '2016-02-10'
 description: ''

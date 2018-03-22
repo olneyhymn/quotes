@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Timothy Keller, The Songs of Jesus
 date: '2016-08-03'
 description: ''

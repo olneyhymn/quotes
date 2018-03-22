@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Richard Baxter
 date: '2015-07-07'
 description: ''

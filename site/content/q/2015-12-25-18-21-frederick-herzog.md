@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Frederick Herzog, Service in Christ
 date: '2015-12-25'
 description: ''

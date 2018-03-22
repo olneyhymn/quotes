@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Geerhardus Vos, 1888
 date: '2016-12-26'
 description: ''

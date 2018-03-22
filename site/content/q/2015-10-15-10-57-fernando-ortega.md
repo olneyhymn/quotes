@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Fernando Ortega
 date: '2015-10-15'
 description: ''

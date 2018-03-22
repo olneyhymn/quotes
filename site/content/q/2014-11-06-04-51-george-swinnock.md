@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - George Swinnock
 date: '2014-11-06'
 description: ''

@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - The Directory for The Publick Worship of God, Of the Sanctification of the Lord's
   Day, published 1645
 date: '2017-01-15'

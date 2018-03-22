@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - John Gordon Lorimer, 1842
 date: '2017-11-19'
 description: ''

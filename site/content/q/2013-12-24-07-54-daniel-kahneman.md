@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Daniel Kahnem
 date: '2013-12-24'
 description: ''

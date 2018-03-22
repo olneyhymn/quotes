@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - OPC Book of Church Order
 date: '2017-02-07'
 description: ''

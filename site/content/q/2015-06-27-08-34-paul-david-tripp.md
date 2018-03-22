@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Paul David Tripp
 date: '2015-06-27'
 description: ''

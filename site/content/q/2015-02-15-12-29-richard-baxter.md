@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - for the most part) the preciousness of their leisure, and how free they are to attend
   the service of God and learn his word, in comparison of the married." (Richard Baxter
 date: '2015-02-15'

@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Ray Stannard Baker
 date: '2014-01-28'
 description: ''

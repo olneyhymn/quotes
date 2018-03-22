@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Kids these days
 - Written my Thomas Manton 350 years ago.
 date: '2016-05-01'

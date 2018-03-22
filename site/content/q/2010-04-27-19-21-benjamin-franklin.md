@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Benjamin Franklin
 date: '2010-04-27'
 description: ''

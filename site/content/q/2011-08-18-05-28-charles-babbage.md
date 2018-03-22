@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Charles Babbage
 date: '2011-08-18'
 description: ''

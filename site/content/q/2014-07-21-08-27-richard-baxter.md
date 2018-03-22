@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - A direction from Richard Baxter on "loving the children of God"
 date: '2014-07-21'
 description: ''

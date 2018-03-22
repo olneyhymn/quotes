@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Eugene Peterson
 date: '2013-11-19'
 description: ''

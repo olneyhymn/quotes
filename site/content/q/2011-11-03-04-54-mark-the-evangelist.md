@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Mark the Evangelist
 date: '2011-11-03'
 description: ''

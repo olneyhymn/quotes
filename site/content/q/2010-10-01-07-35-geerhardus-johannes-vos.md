@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Geerhardus Johannes Vos
 source_date: 1920
 date: '2010-10-01'

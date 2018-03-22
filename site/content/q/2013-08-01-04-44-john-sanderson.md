@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - John Sanderson, quoted by Philip Ryken
 date: '2013-08-01'
 description: ''

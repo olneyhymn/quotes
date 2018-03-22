@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Belgic Confession of Faith, Article 31, 1561
 date: '2017-09-19'
 description: ''

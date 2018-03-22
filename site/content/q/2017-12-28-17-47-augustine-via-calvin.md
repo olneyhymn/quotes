@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Augustine via Calvin
 date: '2017-12-28'
 description: ''

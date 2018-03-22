@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Chad Van Dixhoorn
 date: '2015-01-04'
 description: ''

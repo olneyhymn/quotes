@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Charlies Hodge
 date: '2015-11-24'
 description: ''

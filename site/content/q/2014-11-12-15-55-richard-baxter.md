@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Things you hope to never find out your pastor said about you
 - Richard Baxter, 1657
 date: '2014-11-12'

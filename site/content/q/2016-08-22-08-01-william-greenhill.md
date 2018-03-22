@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - William Greenhill
 date: '2016-08-22'
 description: ''

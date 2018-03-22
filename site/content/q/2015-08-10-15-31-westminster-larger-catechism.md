@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Westminster Larger Catechism
 date: '2015-08-10'
 description: ''

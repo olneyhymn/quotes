@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Archibald Alexander
 date: '2015-04-16'
 description: ''

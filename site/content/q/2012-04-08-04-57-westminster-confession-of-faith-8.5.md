@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Westminster Confession of Faith 8.5
 date: '2012-04-08'
 description: ''

@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Robert Murray Mccheyne
 date: '2015-02-22'
 description: ''

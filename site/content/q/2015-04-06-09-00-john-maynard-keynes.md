@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - John Maynard Keynes
 date: '2015-04-06'
 description: ''

@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Horatius Bonar
 date: '2017-05-22'
 description: ''

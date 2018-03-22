@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Richard Gaffin
 date: '2014-12-07'
 description: ''

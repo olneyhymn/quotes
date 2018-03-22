@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Rosaria Butterfield
 date: '2017-02-27'
 description: ''

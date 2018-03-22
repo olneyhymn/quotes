@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Frank Theilman
 date: '2013-06-02'
 description: ''

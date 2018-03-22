@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - '"This is the will of God"'
 - 1 Peter 2
 date: '2015-03-26'

@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Carl Trueman, The Wages of Spin
 date: '2013-04-14'
 description: ''

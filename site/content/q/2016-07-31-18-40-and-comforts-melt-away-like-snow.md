@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - And comforts melt away like snow
 date: '2016-07-31'
 description: ''

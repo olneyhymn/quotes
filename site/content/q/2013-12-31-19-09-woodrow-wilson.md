@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - As stated clerk of the General Assembly of the Southern Presbyterian church, Woodrow
   Wilson's father was responsible for editing the minutes of the Assembly. He often
   called on young Woodrow for assistance. Woodrow said

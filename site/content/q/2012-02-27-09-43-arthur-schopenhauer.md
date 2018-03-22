@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Arthur Schopenhauer
 date: '2012-02-27'
 description: ''

@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Robert Tracy McKenzie
 date: '2016-03-01'
 description: ''

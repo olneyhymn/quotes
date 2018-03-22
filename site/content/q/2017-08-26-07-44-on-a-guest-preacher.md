@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Feedback on a guest preacher (in 1860)
 date: '2017-08-26'
 description: ''

@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Katharina von Schlegel
 date: '2015-01-07'
 description: ''

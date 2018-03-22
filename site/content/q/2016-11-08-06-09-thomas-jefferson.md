@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Thomas Jefferson
 date: '2016-11-08'
 description: ''

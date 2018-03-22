@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Joel Beeke and Michael Haykin
 date: '2016-01-19'
 description: ''

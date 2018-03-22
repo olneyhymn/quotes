@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - unknown
 source: Trinity Hymnal
 date: '2011-01-09'

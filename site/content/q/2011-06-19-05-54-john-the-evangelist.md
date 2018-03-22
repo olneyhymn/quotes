@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - John the Evangelist
 source: 1 John
 date: '2011-06-19'

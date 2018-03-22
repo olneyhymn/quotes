@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Daniel Kahneman
 date: '2015-06-29'
 description: ''
