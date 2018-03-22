@@ -1,10 +1,11 @@
 ---
 author:
-- Geerhardus Johannes Vos, 1920
+- Geerhardus Johannes Vos
+source_date: 1920
 date: '2010-10-01'
 description: ''
-slug: 2010-10-01-geerhardus-johannes-vos,-1920
-title: ''
+slug: trouble-with-eschatology
+title: 'The Trouble with Eschatology'
 ---
 The trouble with eschatology in the experience of the church has frequently been that it was either dead or overmuch pathologically alive.
 
