@@ -1,0 +1,20 @@
+---
+author:
+- John Gordon Lorimer, 1842
+date: '2017-11-19'
+description: ''
+slug: 2017-11-19-john-gordon-lorimer,-1842
+title: ''
+---
+A deacon, to be relieved from the annoyances sometimes connected with the discharge of his duties, is tempted to put the poor off with insincere words—to say one thing to one man, and an opposite to another. 
+
+He is in danger also, perhaps, of promising to the pastor, and not fulfilling. 
+
+This is justly fatal to character and to usefulness. 
+
+It prevents confidence and creates contempt. 
+
+The deacon, then, must be sincere.
+
+
+
