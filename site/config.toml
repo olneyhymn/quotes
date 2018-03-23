@@ -17,5 +17,6 @@ disableKinds = ["RSS"]
 date_format = "Mon Jan 02, 2006"
 [params.contact]
 email = "tim@waiting-tables.com"
-
-
+[params.about]
+title = "Olney Hymn"
+content = "Collected quotes from Tim Hopper"

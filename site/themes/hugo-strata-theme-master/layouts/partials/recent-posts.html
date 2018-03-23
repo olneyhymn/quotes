@@ -6,11 +6,11 @@
 	<div class="row">
         <br>
         <p>
-        <ol class="recent-posts">
-        {{ range first 5 (.Data.Pages) }}
-            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        <ul class="recent-posts">
+        {{ range .Data.Pages }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a> {{with .Params.authors }}{{ delimit . "and" }}{{ end }} </li>
         {{ end }}
-        </ol>
+        </ul>
         </p>
 	</div>
 </section>
