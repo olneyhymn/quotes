@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Richard Sibbes
 date: '2010-11-28'
 description: ''

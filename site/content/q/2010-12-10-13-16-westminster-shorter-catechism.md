@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Westminster Shorter Catechism
 date: '2010-12-10'
 description: ''

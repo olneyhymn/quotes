@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Augustine of Hippo
 date: '2009-10-25'
 description: ''

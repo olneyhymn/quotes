@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - William Lyon Phelps
 date: '2009-12-02'
 description: ''

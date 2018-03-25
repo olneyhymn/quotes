@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Richard Feynman
 date: '2010-11-16'
 description: ''

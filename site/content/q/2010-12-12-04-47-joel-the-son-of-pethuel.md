@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Joel
 source: Prophesy of Joel
 date: '2010-12-12'

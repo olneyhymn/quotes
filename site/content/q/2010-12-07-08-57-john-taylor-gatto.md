@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - John Taylor Gatto
 date: '2010-12-07'
 description: ''

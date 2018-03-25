@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Clement of Alexandria
 date: '2010-12-06'
 description: ''

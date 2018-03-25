@@ -1,5 +1,5 @@
 ---
-author:
+authors:
 - Charles Spurgeon
 date: '2009-04-13'
 description: ''
