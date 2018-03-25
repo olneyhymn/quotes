@@ -1,11 +1,12 @@
 ---
 authors:
-- George Whitefield, 1739
+- George Whitefield
+source_date: 1739
 date: '2014-07-28'
 description: ''
-draft: true
-slug: 2014-07-28-george-whitefield,-1739
-title: ''
+draft: false
+slug: in-our-days
+title: In Our Days
 ---
 In our days, to be a true Christian is really to become a scandal.
 
