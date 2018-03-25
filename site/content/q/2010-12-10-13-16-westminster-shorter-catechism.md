@@ -3,7 +3,7 @@ authors:
 - Westminster Shorter Catechism
 date: '2010-12-10'
 description: ''
-draft: 'true'
+draft: true
 slug: 2010-12-10-westminster-shorter-catechism
 title: ''
 ---
