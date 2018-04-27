@@ -1,6 +1,6 @@
 ---
 authors:
-- 'Westminster Shorter Catechism #92'
+source: Westminster Shorter Catechism
 date: '2012-04-01'
 description: ''
 draft: false
