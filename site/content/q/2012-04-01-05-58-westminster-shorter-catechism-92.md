@@ -3,9 +3,9 @@ authors:
 - 'Westminster Shorter Catechism #92'
 date: '2012-04-01'
 description: ''
-draft: true
-slug: 2012-04-01-westminster-shorter-catechism-#92
-title: ''
+draft: false
+slug: what-is-a-sacrament
+title: What is a Sacrament?
 ---
 Q. What is a sacrament?
 

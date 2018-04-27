@@ -3,11 +3,11 @@ authors:
 - Arthur Schopenhauer
 date: '2012-02-27'
 description: ''
-draft: true
-slug: 2012-02-27-arthur-schopenhauer
-title: ''
+draft: false
+slug: on-buying-books
+title: On Buying Books
 ---
-but as a rule the purchase of books is mistaken for the appropriation of their contents.
+Buying books would be a good thing if one could also buy the time to read them in: but as a rule the purchase of books is mistaken for the appropriation of their contents.
 
 
 

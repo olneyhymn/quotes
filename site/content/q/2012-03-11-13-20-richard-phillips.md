@@ -3,9 +3,9 @@ authors:
 - Richard Phillips
 date: '2012-03-11'
 description: ''
-draft: true
-slug: 2012-03-11-richard-phillips
-title: ''
+draft: false
+slug: theology-bores
+title: Theology Bores Christians
 ---
 Theology bores today's Christians, which is another way of saying we are bored with God himself.
 

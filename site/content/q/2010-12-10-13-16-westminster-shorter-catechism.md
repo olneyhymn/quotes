@@ -3,9 +3,9 @@ authors:
 - Westminster Shorter Catechism
 date: '2010-12-10'
 description: ''
-draft: true
-slug: 2010-12-10-westminster-shorter-catechism
-title: ''
+draft: false
+slug: full-contentment
+title: Full Contentment
 ---
 The Tenth Commandment requireth full contentment with our own condition...
 

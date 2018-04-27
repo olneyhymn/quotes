@@ -3,11 +3,11 @@ authors:
 - Herman Bavinck
 date: '2013-12-14'
 description: ''
-draft: true
-slug: 2013-12-14-herman-bavinck
-title: ''
+draft: false
+slug: god-has-spoken
+title: God Has Spoken
 ---
-God has spoken.
+A theologian's confidence comes from the conviction: God has spoken.
 
 
 
