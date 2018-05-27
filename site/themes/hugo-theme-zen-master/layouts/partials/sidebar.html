@@ -1,0 +1,13 @@
+{{ $currentID := .UniqueID }}
+<aside class="sidebar layout__second-sidebar" role="complementary">
+{{ range $.Site.Home.Sections -}}
+<section>
+<h4 class="menu"><a class="{{ if eq $currentID .UniqueID }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+<ul class="menu">
+{{ range .Pages -}}
+<li><a class="{{ if eq $currentID .UniqueID }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{ end -}}
+</ul>
+</section>
+{{ end -}}
+</aside>
