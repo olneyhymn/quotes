@@ -3,9 +3,8 @@ authors:
 - Chad Van Dixhorn
 date: '2015-03-29'
 description: ''
-draft: true
-slug: 2015-03-29-chad-van-dixhorn
-title: ''
+slug: the-promise-of-god-s-word
+title: The Promise of God’s Word
 ---
 This is the promise of God's Word. In spite of our daily failings, in spite of the accusations of our enemies, [Jesus] is there to quieten our consciences, to encourage our prayers, and to accept us and our services.
 
