@@ -1,7 +1,7 @@
 baseurl = "/"
 languageCode = "en-us"
 languageLang = "en"
-title = "Seven Pillar"
+title = "Seven Pillars"
 theme="hugo-theme-zen-master"
 
 # RSS, categories and tags disabled for an easy start
@@ -15,6 +15,8 @@ disableKinds = ["RSS"]
 
 [params]
 date_format = "Mon Jan 02, 2006"
+logo = false
+submitted = true
 [params.contact]
 email = "tim@waiting-tables.com"
 [params.about]

@@ -15,7 +15,11 @@
 {{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . }}{{ end -}}
 {{ if .Params.tags }}{{ partial "tags.html" . }}{{ end -}}
 </header>
+<div class="preamble">
+    {{ with .Params.pre }} {{ . }} {{ end }}
+</div>
 <div class="content">
+
 {{ .Content }}
 
 {{ if ne .Lastmod .Date }}{{ partial "dates.html" . }}{{ end -}}

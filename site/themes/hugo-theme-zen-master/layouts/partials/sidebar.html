@@ -1,6 +1,6 @@
 {{ $currentID := .UniqueID }}
 <aside class="sidebar layout__second-sidebar" role="complementary">
-{{ range $.Site.Home.Sections -}}
+{{ range first 5 (where .Data.Pages "Section" "q") }}
 <section>
 <h4 class="menu"><a class="{{ if eq $currentID .UniqueID }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
 <ul class="menu">
