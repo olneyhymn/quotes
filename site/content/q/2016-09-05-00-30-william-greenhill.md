@@ -1,6 +1,7 @@
 ---
 authors:
-- William Greenhill in 1670
+- William Greenhill
+source_date: 1670
 date: '2016-09-05'
 description: ''
 slug: use-of-creation

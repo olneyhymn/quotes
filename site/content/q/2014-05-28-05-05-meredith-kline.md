@@ -1,6 +1,7 @@
 ---
 authors:
-- Meredith Kline, By Oath Consigned
+- Meredith Kline
+source: By Oath Consigned
 date: '2014-05-28'
 description: ''
 slug: kline-on-baptism

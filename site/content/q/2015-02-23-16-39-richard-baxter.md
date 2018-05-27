@@ -1,6 +1,6 @@
 ---
 authors:
-- Richard Baxter on taking notes during sermons
+- Richard Baxter
 date: '2015-02-23'
 description: ''
 slug: richard-baxter-on-sermon-notes

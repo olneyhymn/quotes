@@ -1,6 +1,6 @@
 ---
 authors:
-- John Sanderson, quoted by Philip Ryken
+- John Sanderson
 date: '2013-08-01'
 description: ''
 draft: false
