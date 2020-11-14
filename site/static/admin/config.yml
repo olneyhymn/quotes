@@ -14,8 +14,8 @@ collections:
       - {
           label: "Authors",
           name: "authors",
-          widget: "string",
+          widget: "list",
           field: { label: "Name", name: "author_name", widget: "string" },
         }
-      - { label: "Publish Date", name: "date", widget: "list" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
