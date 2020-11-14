@@ -1,7 +1,7 @@
 baseurl = "/"
 languageCode = "en-us"
 languageLang = "en"
-title = "Seven Pillars"
+title = "Miscellanea"
 theme="hugo-theme-zen-master"
 
 # RSS, categories and tags disabled for an easy start
@@ -17,3 +17,5 @@ disableKinds = ["RSS"]
 date_format = "Mon Jan 02, 2006"
 logo = false
 submitted = true
+sidebar = false
+poweredby = false
