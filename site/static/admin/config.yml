@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: "site/static/images/upload"
+public_folder: "site/images/upload"
+collections:
+  - name: "quotes" # Used in routes, e.g., /admin/collections/blog
+    label: "Quotes" # Used in the UI
+    folder: "site/content/q" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Authors", name: "authors", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
