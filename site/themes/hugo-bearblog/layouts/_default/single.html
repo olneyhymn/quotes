@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ if eq .Type "q" }}{{ if not .Params.menu }}
+<h1>{{ .Title }}</h1>
+<ul>
+<li>Author: {{ delimit .Params.authors ", " }}</li>
+
+  <li>
+    <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
+      Date recorded: {{ .Date.Format "02 Jan, 2006" }}
+    </time>
+  </li>
+</ul>
+{{ end }}{{ end }}
+<content>
+  {{ .Content }}
+</content>
+<p>
+  {{ range (.GetTerms "tags") }}
+  <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+  {{ end }}
+</p>
+{{ end }}
