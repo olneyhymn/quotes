@@ -26,8 +26,7 @@ collections:
           label: "Authors",
           name: "authors",
           widget: "list",
-          field: { label: "Name", name: "author_name", widget: "string" },
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Source", name: "source", widget: "string" }
+      - { label: "Source", name: "source", widget: "string", required: false }
