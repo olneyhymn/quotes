@@ -23,20 +23,10 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: ls
-        run: ls
-      
-      
-
-      - name: ls workspace
-        run: ls
-        working-directory: $GITHUB_WORKSPACE
-        
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
         working-directory: site
-          
-      # Runs a single command using the runners shell
+        
       - name: Update images
         run: python quote_to_image.py update-images "./content/q" --glob '*machen*'
         working-directory: site
