@@ -48,6 +48,7 @@ blockquote span.author i {
   background: #eee;
   padding-left: 5px;
   font-style: italic;
+  font-size: 200%;
   z-index: 5;
 }
 blockquote span.author::before {
@@ -79,16 +80,21 @@ blockquote {
     width: 1080px;
     height: 600px;
 }
+
+.quote {
+  width: 990px;
+  height: 490px;
+}
   </style>
 
 </head>
 
 <body>
     <blockquote>
-        {{ body }}
+        <div class="quote">{{ body }}</div>
         <span class="author"><i>{{ author }}</i></span>
       </blockquote>
   <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/textfit/2.4.0/textFit.min.js"></script>
-  <script>textFit(document.querySelector("blockquote"));</script>
+  <script>textFit(document.querySelector(".quote"));</script>
 </body>
 </html>
