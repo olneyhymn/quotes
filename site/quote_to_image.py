@@ -38,7 +38,7 @@ def add_image(path: Path, image_url: str):
 
 @app.command()
 def update_images(path: Path, glob="*"):
-    for post in posts.glob(glob):
+    for post in path.glob(glob):
         content = frontmatter.loads(post.read_text())
         if 'image' not in content:
             content['image'] = html_to_image(markdown_to_html(content))
