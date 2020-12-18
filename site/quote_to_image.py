@@ -30,18 +30,13 @@ def html_to_image(html: str):
     except KeyError:
         raise RuntimeError(image.json())
 
-def add_image(path: Path, image_url: str):
-    content = frontmatter.loads(path.read_text())
-    content['image'] = image_url
-
-
 
 @app.command()
 def update_images(path: Path, glob="*"):
     for post in path.glob(glob):
         content = frontmatter.loads(post.read_text())
-        if 'image' not in content:
-            content['image'] = html_to_image(markdown_to_html(content))
+        if 'images' not in content:
+            content['images'] = [html_to_image(markdown_to_html(content))]
             post.write_text(frontmatter.dumps(content))
             print(f"Updated {post}")
 
