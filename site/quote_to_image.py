@@ -19,7 +19,7 @@ def markdown_to_html(content):
 def html_to_image(html: str):
 
     USER_ID = os.environ['USER_ID']
-    API_KEY = os.environ.get['API_KEY']
+    API_KEY = os.environ['API_KEY']
     HCTI_API_ENDPOINT = "https://hcti.io/v1/image"
     data = { 'html': html, 'selector': 'blockquote', 'ms_delay': 500 }
 
