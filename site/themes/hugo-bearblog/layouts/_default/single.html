@@ -11,9 +11,9 @@
   </li>
 </ul>
 {{ end }}{{ end }}
-<content>
+<content><div class="quote">
   {{ .Content }}
-</content>
+</div></content>
 <p>
   {{ range (.GetTerms "tags") }}
   <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>

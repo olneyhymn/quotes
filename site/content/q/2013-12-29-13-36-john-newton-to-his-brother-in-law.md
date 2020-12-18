@@ -4,7 +4,7 @@ authors:
 date: '2013-12-29'
 description: ''
 draft: false
-image: https://hcti.io/v1/image/a53860ec-9903-4226-820b-2506bf9b7828
+images: ["https://hcti.io/v1/image/a53860ec-9903-4226-820b-2506bf9b7828.png"]
 slug: true-wisdom
 title: True Wisdom
 ---
