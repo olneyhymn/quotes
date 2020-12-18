@@ -27,7 +27,10 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
         working-directory: site
-        
+
       - name: Update images
         run: python quote_to_image.py update-images "./content/q" --glob '*machen*'
         working-directory: site
+        env: # Or as an environment variable
+          USER_ID: ${{ secrets.USER_ID }}
+          API_KEY: ${{ secrets.API_KEY }}
