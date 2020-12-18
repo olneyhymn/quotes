@@ -43,6 +43,7 @@ def update_images(path: Path, glob="*"):
         if 'image' not in content:
             content['image'] = html_to_image(markdown_to_html(content))
             post.write_text(frontmatter.dumps(content))
+            print(f"Updated {path}")
 
 @app.command()
 def html(path: Path):
