@@ -51,9 +51,8 @@ jobs:
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.1
-        working-directory: site
         with:
-          publish-dir: './public'
+          publish-dir: 'site/public'
           production-branch: master
           enable-commit-comment: true
           overwrites-pull-request-comment: true
