@@ -39,3 +39,25 @@ jobs:
         with:
           commit_message: Add images
           file_pattern: site/content/q/*
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+
+      - name: Build Site
+        working-directory: site
+        run: hugo
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.1
+        working-directory: site
+        with:
+          publish-dir: './public'
+          production-branch: master
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
