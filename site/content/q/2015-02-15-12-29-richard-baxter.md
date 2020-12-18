@@ -3,6 +3,7 @@ authors:
 - Richard Baxter
 date: '2015-02-15'
 description: ''
+images: []
 slug: singles-in-the-service-of-god
 title: Singles in the Service of God
 ---

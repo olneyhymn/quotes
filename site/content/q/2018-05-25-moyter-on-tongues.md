@@ -2,10 +2,11 @@
 authors:
 - Alec Moyter
 date: '2018-05-25'
-source: James
 description: ''
 draft: true
+images: []
 slug: the-tongue
+source: James
 title: Set on Fire by Hell
 ---
 
@@ -22,6 +23,3 @@ Alec Moyter on James 3:1:
 > Nor has anyone ever told us that a controlled tongue is the key to blessing, as Peter does, and as we are about to hear from James.
 
 > Let us ask James, then, why the tongue is so important and humbly wait to hear his reply.
-
-
-

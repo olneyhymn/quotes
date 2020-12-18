@@ -1,10 +1,12 @@
 ---
-title: Poor Souls Cast Down
-slug: poor-souls
 authors:
-  - ChristopherLove
-date: 2020-12-14T01:34:39.236Z
+- ChristopherLove
+date: 2020-12-14 01:34:39.236000+00:00
+images: []
+slug: poor-souls
+title: Poor Souls Cast Down
 ---
+
 What is the great reason that so many poor souls are so much cast down for sin, too much dejected under the sight and sense of it?
 
 It is this: because they are afraid to cast themselves wholly upon Jesus Christ, and to roll themselves upon him for salvation.
