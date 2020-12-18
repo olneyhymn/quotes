@@ -38,4 +38,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Add images
-          file_pattern: content/q/*
+          file_pattern: site/content/q/*
