@@ -14,7 +14,7 @@ USER_ID = os.environ.get('USER_ID').strip()
 API_KEY = os.environ.get('API_KEY').strip()
 
 print(f"""USER_ID: {USER_ID[:5] {USER_ID[-5:]}
-API_KEY: {APIKEY[:5]} {APIKEY[-5:]}"""
+API_KEY: {APIKEY[:5]} {APIKEY[-5:]}""")
 
 def markdown_to_html(content):
     html = markdown.markdown(content.content)
