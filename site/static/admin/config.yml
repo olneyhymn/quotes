@@ -23,10 +23,15 @@ collections:
             ],
         }
       - {
+          label: "Images",
+          name: "images",
+          widget: "list",
+        }
+      - {
           label: "Authors",
           name: "authors",
           widget: "list",
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Source", name: "source", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
