@@ -10,8 +10,6 @@ from jinja2 import Template
 app = typer.Typer()
 
 TEMPLATE = Path("image_template.html")
-USER_ID = os.environ.get('USER_ID').strip()
-API_KEY = os.environ.get('API_KEY').strip()
 
 print(f"""USER_ID: {USER_ID[:5]} {USER_ID[-5:]}
 API_KEY: {APIKEY[:5]} {APIKEY[-5:]}""")
@@ -23,6 +21,8 @@ def markdown_to_html(content):
 
 def html_to_image(html: str):
 
+    USER_ID = os.environ['USER_ID']
+    API_KEY = os.environ.get['API_KEY']
     HCTI_API_ENDPOINT = "https://hcti.io/v1/image"
     data = { 'html': html, 'selector': 'blockquote', 'ms_delay': 500 }
 
