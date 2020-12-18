@@ -29,7 +29,7 @@ jobs:
         working-directory: site
 
       - name: Update images
-        run: python quote_to_image.py update-images "./content/q" --glob '*sibbes*'
+        run: python quote_to_image.py update-images "./content/q"
         working-directory: site
         env: # Or as an environment variable
           USER_ID: ${{ secrets.USER_ID }}
