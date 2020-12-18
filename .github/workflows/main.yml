@@ -12,6 +12,7 @@ on:
 
 jobs:
   update-images:
+    environment: Main
     runs-on: ubuntu-latest
 
     steps:
