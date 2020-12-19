@@ -40,5 +40,5 @@ collections:
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Source", name: "source", widget: "string", required: false }
-      - { "label": "Source", name: "source", widget: "string" }
+      - { "label": "Source URL", name: "source_url", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
