@@ -29,7 +29,17 @@ collections:
           minimize_collapsed: true,
           field: { label: Image, name: "image", widget: "string" },
         }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        field:
+          label: "Tag"
+          name: "tag"
+          widget: "relation"
+          collection: "quotes"
+          search_fields: ["tags.*.name"]
+          display_fields: ["tags.*.name"]
+          value_field: "tags.*.name"
       - {
           label: "Authors",
           name: "authors",
