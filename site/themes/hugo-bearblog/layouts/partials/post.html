@@ -1,0 +1,19 @@
+<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+<ul>
+{{ with .Params.authors }}<li>Author: {{ delimit . ", " }}</li>{{ end }}
+
+  <li>
+    <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
+      Date recorded: {{ .Date.Format "02 Jan, 2006" }}
+    </time>
+  </li>
+</ul>
+
+<content><div class="quote">
+  {{ .Content }}
+</div></content>
+<p>
+  {{ range (.GetTerms "tags") }}
+  <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+  {{ end }}
+</p>
