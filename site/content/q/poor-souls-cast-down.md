@@ -1,6 +1,6 @@
 ---
 authors:
-- ChristopherLove
+- Christopher Love
 date: 2020-12-14 01:34:39.236000+00:00
 images: []
 slug: poor-souls
