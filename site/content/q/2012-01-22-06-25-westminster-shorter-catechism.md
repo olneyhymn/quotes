@@ -3,6 +3,8 @@ authors:
 - Westminster Assembly
 date: '2012-01-22'
 description: ''
+images:
+- https://hcti.io/v1/image/bea23601-3f91-49b1-bc35-ad1ea42de549
 slug: how-is-the-word-to-be-heard
 source: Westminster Shorter Catechism
 title: How is the Word to the Heard?

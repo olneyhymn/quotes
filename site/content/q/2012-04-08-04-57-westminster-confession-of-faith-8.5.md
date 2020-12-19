@@ -4,6 +4,8 @@ authors:
 date: '2012-04-08'
 description: ''
 draft: false
+images:
+- https://hcti.io/v1/image/a9d80cf9-829c-44f5-8a2b-3c26f261d5be
 slug: reconciliation-and-inheritance
 source: Westminster Confession of Faith
 title: Reconciliation and Inheritance
