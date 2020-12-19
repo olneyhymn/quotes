@@ -1,9 +1,9 @@
 ---
-authors: null
+authors:
+- Westminster Assembly
 date: '2012-04-01'
 description: ''
 draft: false
-images: []
 slug: what-is-a-sacrament
 source: Westminster Shorter Catechism
 title: What is a Sacrament?

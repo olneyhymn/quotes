@@ -1,10 +1,10 @@
 ---
 authors:
-- Westminster Confession of Faith 7.1
+- Westminster Assembly
+source: Westminster Confession of Faith 7.1
 date: '2012-03-04'
 description: ''
 draft: false
-images: []
 slug: condescention-of-god
 title: The Condescention of God
 ---

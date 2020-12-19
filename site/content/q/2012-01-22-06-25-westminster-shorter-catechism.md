@@ -1,9 +1,8 @@
 ---
 authors:
-- Westminster Divines
+- Westminster Assembly
 date: '2012-01-22'
 description: ''
-images: []
 slug: how-is-the-word-to-be-heard
 source: Westminster Shorter Catechism
 title: How is the Word to the Heard?

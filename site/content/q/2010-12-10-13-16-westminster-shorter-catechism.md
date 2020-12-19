@@ -1,10 +1,9 @@
 ---
 authors:
-- Westminster Shorter Catechism
+- Westminster Assembly
 date: '2010-12-10'
 description: ''
 draft: false
-images: []
 slug: full-contentment
 title: Full Contentment
 ---

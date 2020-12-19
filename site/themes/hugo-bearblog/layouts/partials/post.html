@@ -1,7 +1,11 @@
 <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 <ul>
-{{ with .Params.authors }}<li>Author: {{ delimit . ", " }}</li>{{ end }}
-
+  {{ if isset .Params "authors" }}
+    <li>Author: {{ range (.GetTerms "authors") }}
+        <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+    {{ end }}</li>
+  {{ end }}
+  {{ with .Params.source }}<li>Source: {{ . }}</li>{{ end }}
   <li>
     <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
       Recorded: {{ .Date.Format "Jan 02, 2006" }}

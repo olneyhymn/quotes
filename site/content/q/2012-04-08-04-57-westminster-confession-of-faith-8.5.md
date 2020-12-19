@@ -1,9 +1,9 @@
 ---
-authors: null
+authors:
+- Westminster Assembly
 date: '2012-04-08'
 description: ''
 draft: false
-images: []
 slug: reconciliation-and-inheritance
 source: Westminster Confession of Faith
 title: Reconciliation and Inheritance
