@@ -3,6 +3,8 @@ authors:
 - Richard Baxter
 date: '2014-11-12'
 description: ''
+images:
+- https://hcti.io/v1/image/eea320e8-e6b6-4f02-8edc-54636407738d
 pre: Things you hope to never find out your pastor said about you
 slug: lamentably-ignorant
 source_date: 1657
