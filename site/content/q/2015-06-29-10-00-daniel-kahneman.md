@@ -3,7 +3,6 @@ authors:
 - Daniel Kahneman
 date: '2015-06-29'
 description: ''
-tags: Media and Memory
 images:
 - https://hcti.io/v1/image/b374cc53-8a87-4907-b063-4c42e4e6addf
 title: 'Kahneman on Media and Memory'
