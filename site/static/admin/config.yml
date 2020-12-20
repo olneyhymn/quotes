@@ -20,8 +20,6 @@ collections:
         pattern: false
         label: "Published"
     view_groups:
-      - label: Author
-        field: authors.*[0]
       - label: Source
         field: source
     fields: # The fields for each document, usually in front matter
