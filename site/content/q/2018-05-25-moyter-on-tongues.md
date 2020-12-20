@@ -3,8 +3,12 @@ authors:
 - Alec Moyter
 date: '2018-05-25'
 description: ''
-tags: ["speech", "humility"]
+images:
+- https://hcti.io/v1/image/3eecf866-2ca6-4aff-83e7-e6b13eb915d3
 source: Commentary on James
+tags:
+- speech
+- humility
 title: On James 3:1
 ---
 
