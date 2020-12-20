@@ -56,3 +56,4 @@ collections:
       - { label: "Source", name: "source", widget: "string", required: false }
       - { "label": "Source URL", name: "source_url", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Draft", name: "draft", widget: "boolean" }
