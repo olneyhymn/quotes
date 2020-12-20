@@ -3,7 +3,6 @@ authors:
 - Charles Spurgeon
 date: '2009-04-13'
 description: ''
-draft: 'false'
 images: []
 slug: the-history-of-man
 title: The History of Man

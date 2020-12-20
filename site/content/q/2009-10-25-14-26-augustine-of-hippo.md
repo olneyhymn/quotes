@@ -3,8 +3,6 @@ authors:
 - Augustine of Hippo
 date: '2009-10-25'
 description: ''
-draft: 'false'
-images: []
 slug: love-builds-up
 title: Love Builds Up
 tags: ["love", "humility"]
