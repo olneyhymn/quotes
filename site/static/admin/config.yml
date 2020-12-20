@@ -12,7 +12,16 @@ collections:
     label: "Quotes" # Used in the UI
     folder: "site/content/q" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    filter: {field: "draft", value: true}
+    filter_views: 
+      - field: "draft"
+        pattern: true
+        label: "Drafts"
+      - field: "draft"
+        pattern: false
+        label: "Published"
+    view_groups:
+      - label: Author
+        field: authors.*
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
       - {
