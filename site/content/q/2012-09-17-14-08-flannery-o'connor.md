@@ -3,8 +3,6 @@ authors:
 - Flannery O'Connor
 date: '2012-09-17'
 description: ''
-draft: true
-images: []
 slug: story-is-the-meaning
 title: The Story is the Meaning
 ---
