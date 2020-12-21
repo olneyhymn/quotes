@@ -54,8 +54,8 @@ textarea {
 blockquote {
     margin-left: 1rem;
     font-style: normal;
-    font-size: 1rem;
-    font-family: Georgia,bitstream charter,serif;
+    font-size: 1.5rem;
+    font-family: Lora,Georgia,serif;
     border-left: 3px solid;
     border-color: #a00;
     padding-left: 20px
@@ -297,7 +297,7 @@ ul {
  /* Style the button that is used to open and close the collapsible content */
  .collapsible {
     background-color: #eee;
-    color: #444;
+    color: #666;
     cursor: pointer;
     padding: 8px;
     width: 100%;
