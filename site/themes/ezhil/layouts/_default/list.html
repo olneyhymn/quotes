@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+{{ partial "header.html" . }}
+
+<body>
+	<div class="container wrapper list">
+		{{ partial "head.html" . }}
+
+		{{ if isset .Data "Term" }}
+			<h3>{{.Data.Term | title }}</h3>
+		{{ else }}
+			<h3>All {{ .Title }}</h3>
+		{{ end }}
+
+		<ul class="posts">
+			{{- range (.Data.Pages.ByParam "year") -}}
+			{{- if (in (.Site.Params.excludedTypes | default (slice "page")) .Type) -}}
+			{{- else -}}
+			<li class="post">
+				<a href="{{ .RelPermalink }}" class="title">{{.Title}}</a> ({{ range (.GetTerms "authors") }}<a href="{{ .Permalink }}">{{ .LinkTitle }}{{ end }})
+			</li>
+			{{- end -}}
+			{{- end -}}
+		</ul>
+	</div>
+
+	{{ partial "footer.html" . }}
+</body>
+
+</html>

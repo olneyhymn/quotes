@@ -1,0 +1,16 @@
+<ul class="meta">
+    {{ if .Params.authors }}
+        <li class="foot">Author{{if gt (len .Params.authors) 1}}s{{end}}: {{ range (.GetTerms "authors") }}<a href="{{ .Permalink }}">{{ .LinkTitle }}{{ end }}</a></li>
+    {{ end }}
+    {{ if .Params.source_year }}
+        <li class="foot">Source Year: {{ .Params.volume }}</li>
+    {{ end }}
+    {{ if .Params.source }}
+        <li class="foot">Source: {{ .Params.source }}</li>
+    {{ end }}
+
+    {{ with .Params.pre }}
+        <li class="foot">Pre: {{ . }}</li>
+    {{ end }}
+
+</ul>

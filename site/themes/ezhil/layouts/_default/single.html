@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+{{ partial "header.html" . }}
+<body>
+	<div class="container wrapper post">
+		{{ partial "head.html" . }}
+
+		<div class="post-header">
+			<h2 class="item-title">▷ {{ .Title }}</h2>
+			{{ partial "meta.terms.html" . }}
+		</div>
+
+		<blockquote class="markdown">
+			{{ .Content }}
+		</blockquote>
+
+		{{ with .Params.links }}
+		{{ range $key, $value := . }}
+		  {{ if eq $key "pdf" }}
+
+		  <div class="pdf">
+		  <embed class="pdfembed" src="{{ $value }}" width="100%" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+		  </div>
+		  {{ end }}
+		{{ end }}
+	  {{ end }}
+	</div>
+	{{ partial "feedback.html" . }}
+	{{ partial "footer.html" . }}
+</body>
+</html>

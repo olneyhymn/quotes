@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <button class="collapsible">▸ Submit feedback...</button>
+    <div class="collapsible-content">
+    <p>
+        Please submit corrections, feedback, or information as to where the text of this {{ .Type | lower }} can be found.
+    </p>
+    <form name="feedback" method="POST" data-netlify="true" class="pure-form pure-form-aligned">
+            <div class="pure-control-group"><input type="text" name="name" placeholder="Name" /></div>
+            <div class="pure-control-group"><input type="email" name="email" placeholder="Email Address"/></div>
+            <input type="hidden" name="page" value="{{ .Permalink }}">
+            <div class="pure-control-group"><textarea name="message" class="pure-input-1" placeholder="Feedback"></textarea></div>
+            <button type="submit" class="pure-button">Send</button>
+    </form>
+</div>
+</div>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+{{ partial "header.html" . }}
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+
+<body>
+    <div class="container wrapper post">
+        {{ partial "head.html" . }}
+
+        <h3 id="result_title"></h3>
+
+        <div id="results"></div>
+
+        {{ partial "footer.html" . }}
+
+        <script>
+            async function run() {
+                try {
+                    let [raw_posts, raw_data] = await Promise.all([
+                        fetch("/index.json"),
+                        fetch("/search_index.json")
+                    ]);
+                    const posts = await (await raw_posts).json()
+                    const data = await (await raw_data).json()
+                    const query = new URLSearchParams(window.location.search);
+                    const searchString = query.get('q');
+                    document.querySelector('#search').value = searchString;
+                    const $target = document.querySelector('#results');
+                    const $title = document.querySelector('#result_title');
+                    $title.innerHTML = "Search results for <em>" + searchString + "</em>"
+                    const postsByTitle = posts.reduce((acc, curr) => {
+                        acc[curr.title] = curr;
+                        return acc;
+                    });
+
+                    const index = lunr.Index.load(data);
+                    const matches = index.search(searchString);
+                    const matchPosts = [];
+                    matches.forEach((m) => {
+                        if(postsByTitle[m.ref]){
+                            matchPosts.push(postsByTitle[m.ref]);
+                        }
+                    });
+
+                    if (matchPosts.length > 0) {
+                        $target.innerHTML = matchPosts.map(p => {
+                            return `<div>
+          <h4>▷ <a href="${p.link}">${p.title}</a> (${p.year})</h4>
+          </div>`;
+                        }).join('');
+                    } else {
+                        $target.innerHTML = `<div>No search results found</div>`;
+                    };
+                }
+                catch (err) {
+                    console.log(err);
+                };
+            }
+
+            (async () => {
+                await run();
+            })();
+
+
+        </script>
+
+
+</body>
+
+</html>

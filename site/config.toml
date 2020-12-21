@@ -6,7 +6,7 @@ title = "Miscellanea"
 author = "Tim Hopper"
 copyright = "Copyright © 2020, ulsterworldly.com."
 languageCode = "en-US"
-theme = "hugo-bearblog"
+theme = "ezhil"
 
 
 # Taxonomies
@@ -14,6 +14,25 @@ theme = "hugo-bearblog"
     author = "authors"
     tag = "tags"
 
+[[menu.main]]
+name = "Introduction"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All Quotes"
+url = "/q/"
+weight = 2
+
+[[menu.main]]
+name = "Authors"
+url = "/authors/"
+weight = 3
+
+[[menu.main]]
+name = "Topics"
+url = "/tags/"
+weight = 3
 
 
 # Generate a nice robots.txt for SEO

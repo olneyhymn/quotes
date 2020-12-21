@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+{{ partial "header.html" . }}
+<body>
+	<div class="container wrapper">
+		 {{ partial "head.html" . }}
+
+		<div class="markdown">
+			{{ .Content }}
+		</div>
+
+	</div>
+	{{ partial "feedback.html" . }}
+	{{ partial "footer.html" . }}
+</body>
+</html>

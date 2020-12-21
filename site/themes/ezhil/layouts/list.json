@@ -1,0 +1,7 @@
+{{- $p := slice -}}
+
+{{- range where .Site.Pages ".Params.year" "!=" nil -}}
+  {{- $post := dict "link" .RelPermalink "title" .Title "content" (substr .Plain 0 2000) "year" .Params.Year -}}
+  {{- $p = $p | append $post -}}
+{{- end -}}
+{{- $p | jsonify -}}
