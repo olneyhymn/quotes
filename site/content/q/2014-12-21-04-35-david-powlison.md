@@ -3,8 +3,6 @@ authors:
 - David Powlison
 date: '2014-12-21'
 description: ''
-images: []
-slug: good-counseling-is-wise-love
 title: Good Counseling is Wise Love
 ---
 
