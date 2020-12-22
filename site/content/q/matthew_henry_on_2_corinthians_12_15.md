@@ -1,0 +1,13 @@
+---
+title: Matthew Henry on 2 Corinthians 12:15
+slug: loving-when-unloved
+tags:
+  - love
+  - humility
+authors:
+  - Matthew Henry
+date: 2020-12-22T11:58:57.390Z
+source: Commentary on 2 Corinthians
+source_url: https://www.biblegateway.com/resources/matthew-henry/2Cor.12.11-2Cor.12.21
+---
+\[Paul] did not abate in his love to them, notwithstanding their unkindness and ingratitude to him; and therefore was contented and glad to take pains with them, though *the more abundantly he loved them the less he was loved*, 2 Cor. 12:15. This is applicable to other relations: if others be wanting in their duty to us it does not follow therefore that we may neglect our duty to them.
