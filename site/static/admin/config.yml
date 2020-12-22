@@ -28,7 +28,7 @@ collections:
           label: "Slug",
           name: "slug",
           widget: "string",
-          "required": true,
+          "required": false,
           pattern:
             [
               "^[a-z0-9]+(?:-[a-z0-9]+)*$",
@@ -57,6 +57,6 @@ collections:
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Source", name: "source", widget: "string", required: false }
-      - { "label": "Source URL", name: "source_url", widget: "string" }
+      - { "label": "Source URL", name: "source_url", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Draft", name: "draft", widget: "boolean", required: false }
