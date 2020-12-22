@@ -1,17 +1,19 @@
 <div class="header">
-	<h1 class="site-title">{{ .Site.Title }}</h1>
-	<div class="site-description">
+	<div style="overflow: hidden;">
+	<h1 class="site-title" style="float: left; margin-bottom: 0;">{{ .Site.Title }}</h1>
+	<div class="site-description" style="">
 		{{- if isset .Site.Params "subtitle" -}}
-		<h2 class="site-subtitle light">{{ .Site.Params.Subtitle | markdownify }}</h2>
+		<h3 class="site-subtitle light">{{ .Site.Params.Subtitle | markdownify }}</h3>
 		{{- end -}}
-		<nav class="nav social">
-			<ul class="flat">
-				{{- range $index, $key := .Site.Params.Social -}}
-				<a href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a>
-				{{- end -}}
-			</ul>
 		</nav>
 	</div>
+	</div>
+	<nav class="nav social">
+		<ul class="flat">
+			{{- range $index, $key := .Site.Params.Social -}}
+			<a href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a>
+			{{- end -}}
+		</ul>
 
 	{{ $permalink := .Page.RelPermalink }}
 	<nav class="nav">

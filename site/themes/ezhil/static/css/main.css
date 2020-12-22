@@ -51,26 +51,73 @@ textarea {
     resize: vertical
 }
 
-blockquote {
-    margin-left: 1rem;
-    font-style: normal;
-    font-size: 1.5rem;
-    font-family: Lora,Georgia,serif;
-    border-left: 3px solid;
-    border-color: #a00;
-    padding-left: 20px
-}
-
-blockquote cite {
-    font-size: 70%;
-    opacity: .8
-}
-
-h1,h2,h3,h4,h5,h6 {
+h1, h3 {
     font-family: Ubuntu,sans-serif;
     line-height: 1.2;
     color: #000;
     font-weight: 100
+}
+
+
+h2 {
+    font-family: Lora,sans-serif;
+    color: #011;
+    font-style: italic;
+    text-align: center;
+    font-weight: 100;
+}
+
+
+ blockquote {
+	 position: relative;
+	 display: inline-block;
+	 background: #eee;
+	 padding: 40px 30px 30px 60px;
+	 border-radius: 10px;
+	 font-family: 'Lora', serif;
+	 color: #333;
+     text-align: left;
+	 box-shadow: 1px 1px 1px #999, 2px 2px 1px #999, 3px 3px 1px #999;
+     transition-duration: .3s;
+     font-size: 1.4em;
+}
+ blockquote span.author {
+	 position: relative;
+	 display: block;
+	 text-align: right;
+	 margin-top: 5px;
+	 color: #999;
+}
+ blockquote span.author i {
+	 position: relative;
+	 background: #eee;
+	 padding-left: 5px;
+	 font-style: italic;
+	 z-index: 5;
+}
+ blockquote span.author::before {
+	 display: block;
+	 content: "";
+	 position: absolute;
+	 top: 50%;
+	 left: 0;
+	 width: 100%;
+	 height: 1px;
+	 background: #ccc;
+	 z-index: 1;
+}
+ blockquote:hover {
+	 box-shadow: 1px 1px 5px #999, 2px 2px 6px #999, 3px 3px 7px #999;
+}
+ blockquote::before {
+	 display: block;
+	 position: absolute;
+	 top: 10px;
+	 left: 10px;
+	 content: "\"";
+	 font-family: 'Bitter', serif;
+	 font-size: 120px;
+	 color: #999;
 }
 
 
@@ -98,7 +145,7 @@ ul.flat li {
 }
 
 .page-title {
-    margin: 0
+    margin: 0;
 }
 
 .smaller {
@@ -134,20 +181,12 @@ ul {
 }
 
 .container {
-	margin-top: 50px;
+	margin-top: 25px;
 }
 
 .header {
 	margin-bottom: 10;
 	padding-bottom: 10;
-}
-
-
-
-.header nav {
-	margin-top: 20px;
-	padding-bottom: 20px;
-	border-bottom: 1px solid #f4f4f4;
 }
 
 .header nav ul,
@@ -168,10 +207,6 @@ ul {
     text-transform: capitalize;
 }
 
-.header .site-description {
-	display: flex;
-	justify-content: space-between;
-}
 
 .header .site-description nav {
 	margin: 0;
@@ -192,9 +227,7 @@ ul {
 	letter-spacing: 1px;
 }
 
-.recent-posts .posts .post {
-	margin-bottom: 30px;
-}
+
 
 .recent-posts .posts .post .meta,
 .post .post-header .meta,
@@ -205,7 +238,7 @@ ul {
 }
 
 .post .post-header {
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 .post .post-header .title {
@@ -296,7 +329,7 @@ ul {
 
  /* Style the button that is used to open and close the collapsible content */
  .collapsible {
-    background-color: #eee;
+    background-color: #fff;
     color: #666;
     cursor: pointer;
     padding: 8px;
@@ -334,7 +367,8 @@ ul {
   }
 
   .site-title {
-      margin-bottom: .5em;
+      margin-top: 0em;
+      padding-right: 1em;
   }
 
   .site-subtitle {
@@ -358,3 +392,4 @@ ul {
   .video > iframe {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;
   }
+

@@ -6,13 +6,15 @@
 		{{ partial "head.html" . }}
 
 		<div class="post-header">
-			<h2 class="item-title">▷ {{ .Title }}</h2>
-			{{ partial "meta.terms.html" . }}
+			<h2 class="item-title">{{ .Title }}</h2>
 		</div>
 
 		<blockquote class="markdown">
 			{{ .Content }}
+			<span class="author"><i>{{ range (.GetTerms "authors") }}<a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{ end }}</i></span>
 		</blockquote>
+
+		{{ partial "meta.terms.html" . }}
 
 		{{ with .Params.links }}
 		{{ range $key, $value := . }}
