@@ -80,6 +80,7 @@ h2 {
 	 box-shadow: 1px 1px 1px #999, 2px 2px 1px #999, 3px 3px 1px #999;
      transition-duration: .3s;
      font-size: 1.4em;
+     margin: .1em;
 }
  blockquote span.author {
 	 position: relative;
