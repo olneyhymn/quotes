@@ -9,6 +9,15 @@
 			{{ .Content }}
 		</div>
 
+		<h4>Recent Quotes</h4>
+
+		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "q") }}
+		{{ range $paginator.Pages }}
+
+		{{ .Render "content" }}
+
+		{{ end }}
+
 	</div>
 	{{ partial "feedback.html" . }}
 	{{ partial "footer.html" . }}
