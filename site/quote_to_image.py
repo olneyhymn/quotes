@@ -34,7 +34,7 @@ def html_to_image(html: str):
 @app.command()
 def update_images(path: Path, glob="*"):
     for post in path.glob(glob):
-        if p.name in ["_index.md"]:
+        if post.name in ["_index.md"]:
             continue
         content = frontmatter.loads(post.read_text())
         if 'images' not in content:
