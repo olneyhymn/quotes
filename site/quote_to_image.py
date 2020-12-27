@@ -41,7 +41,7 @@ def update_images(path: Path, glob="*"):
         if post.name in ["_index.md"]:
             continue
         content = frontmatter.loads(post.read_text())
-        if 'images' not in content:
+        if 'images' not in content and content.get('draft') is not True:
             content['images'] = [html_to_image(markdown_to_html(content))]
             post.write_text(frontmatter.dumps(content))
             print(f"Updated {post}")
