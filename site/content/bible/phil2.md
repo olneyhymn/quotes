@@ -1,7 +1,7 @@
 ---
 bible_reference: Philippians 2:3-4
 date: 2020-12-27
-slug: in-humility
+slug: interests-of-others
 tags:
 - humility
 - love
