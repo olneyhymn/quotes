@@ -14,7 +14,11 @@ TEMPLATE = Path("image_template.html")
 def markdown_to_html(content):
     html = markdown.markdown(content.content)
     t = Template(TEMPLATE.read_text())
-    return t.render(body=html, author=", ".join(content['authors']))
+    if 'bible_reference' in content:
+        authors = content['bible_reference']
+    else:
+        authors = ", ".join(content['authors'])
+    return t.render(body=html, author=authors)
 
 def html_to_image(html: str):
 
