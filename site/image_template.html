@@ -7,92 +7,26 @@
   <title>The HTML5 Herald</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Lora:500,100,300" rel="stylesheet">
 
+  <link rel="stylesheet" href="themes/ezhil/static/css/main.css">
+  <link rel="stylesheet" href="themes/ezhil/static/css/normalize.css">
   <style>
-@font-face {
-  font-family: 'Bitter';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/bitter/v16/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8fbfOLjOWA.ttf) format('truetype');
-}
-* {
-  box-sizing: border-box;
-}
-html {
-  text-align: center;
-  padding-top: 50px;
-  background: url(https://dl.dropbox.com/s/mz2pjouq8xqw45k/wood_1.png?dl=1);
-}
-blockquote {
-  margin: 0px;
-  position: relative;
-  display: inline-block;
-  background: #eee;
-  padding: 40px 30px 30px 60px;
-  border-radius: 10px;
-  font-family: 'Bitter', serif;
-  color: #333;
-  text-align: left;
-  box-shadow: 1px 1px 1px #999, 2px 2px 1px #999, 3px 3px 1px #999;
-  transition-duration: 0.3s;
-}
-blockquote span.author {
-  position: relative;
-  display: block;
-  text-align: right;
-  margin-top: 5px;
-  color: #999;
-}
-blockquote span.author i {
-  position: relative;
-  background: #eee;
-  padding-left: 5px;
-  font-style: italic;
-  font-size: 300%;
-  z-index: 5;
-}
-blockquote span.author::before {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: #ccc;
-  z-index: 1;
-}
-blockquote:hover {
-  box-shadow: 1px 1px 5px #999, 2px 2px 6px #999, 3px 3px 7px #999;
-}
-blockquote::before {
-  display: block;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  content: "\"";
-  font-family: 'Bitter', serif;
-  font-size: 120px;
-  color: #999;
-}
-
-blockquote {
-    width: 1080px;
-    height: 600px;
-}
-
-.quote {
-  width: 990px;
-  height: 460px;
-}
+    p:first-of-type {
+      margin-top: 10px;
+    }
+    p:last-of-type {
+      margin-bottom: 10px;
+    }
   </style>
+
 
 </head>
 
 <body>
-    <blockquote>
-        <div class="quote">{{ body }}</div>
-        <span class="author"><i>{{ author }}</i></span>
+    <blockquote style="width: 1080px; height: 600px;">
+        <div class="quote" style="width: 990px; height: 500px;">{{ body }}</div>
+        <span class="author" style="font-size: 250%"><i>{{ author }}</i></span>
       </blockquote>
   <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/textfit/2.4.0/textFit.min.js"></script>
   <script>textFit(document.querySelector(".quote"));</script>
