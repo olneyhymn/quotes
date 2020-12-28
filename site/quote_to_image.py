@@ -14,7 +14,11 @@ TEMPLATE = Path("image_template.html")
 def markdown_to_html(content):
     html = markdown.markdown(content.content)
     t = Template(TEMPLATE.read_text())
-    return t.render(body=html, author=", ".join(content['authors']))
+    if 'bible_reference' in content:
+        authors = content['bible_reference']
+    else:
+        authors = ", ".join(content['authors'])
+    return t.render(body=html, author=authors)
 
 def html_to_image(html: str):
 
@@ -34,8 +38,10 @@ def html_to_image(html: str):
 @app.command()
 def update_images(path: Path, glob="*"):
     for post in path.glob(glob):
+        if post.name in ["_index.md"]:
+            continue
         content = frontmatter.loads(post.read_text())
-        if 'images' not in content:
+        if 'images' not in content and content.get('draft') is not True:
             content['images'] = [html_to_image(markdown_to_html(content))]
             post.write_text(frontmatter.dumps(content))
             print(f"Updated {post}")

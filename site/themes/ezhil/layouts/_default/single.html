@@ -11,7 +11,11 @@
 
 		<blockquote class="markdown">
 			{{ .Content }}
-			<span class="author"><i>{{ range (.GetTerms "authors") }}<a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{ end }}</i></span>
+			{{ if (isset .Params "authors") }}
+				<span class="author"><i>{{ range (.GetTerms "authors") }}<a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{ end }}</i></span>
+			{{ else if (isset .Params "bible_reference") }}
+				<span class="author"><i>{{ .Params.bible_reference }}</i></span>
+			{{ end }}
 		</blockquote>
 
 		{{ partial "meta.terms.html" . }}
