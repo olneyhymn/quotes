@@ -36,6 +36,7 @@ def html_to_image(html: str):
         "ms_delay": 1000,
         "css": CSS.read_text(),
         "google_fonts": "Lora",
+        "device_scale": 1,
     }
 
     image = requests.post(url=HCTI_API_ENDPOINT, data=data, auth=(USER_ID, API_KEY))
@@ -47,7 +48,7 @@ def html_to_image(html: str):
 
 
 @app.command()
-def update_images(path: Path, glob="*", force=False):
+def update_images(path: Path, glob="*", force: bool=False):
     for post in path.glob(glob):
         if post.name in ["_index.md"]:
             continue
