@@ -2,8 +2,6 @@
 authors:
 - Charles Spurgeon
 date: '2016-10-19'
-description: ''
-images: []
 slug: spurgeon-on-prayer-meetings
 title: Spurgeon on Prayer Meetings
 ---

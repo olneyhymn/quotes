@@ -3,8 +3,6 @@ authors:
 - Charles Spurgeon
 date: '2016-12-04'
 description: ''
-draft: false
-images: []
 slug: psalms-for-dark-times
 title: Psalms for Dark Times
 ---

@@ -1,10 +1,8 @@
 ---
 authors:
-- Charles Haddon Spurgeon
+- Charles Spurgeon
 date: '2012-08-13'
 description: ''
-draft: false
-images: []
 slug: borrow-a-song-from-tomorrow
 title: Borrow a Song from Tomorrow
 ---

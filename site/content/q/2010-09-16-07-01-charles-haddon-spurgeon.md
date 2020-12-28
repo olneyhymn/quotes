@@ -1,10 +1,9 @@
 ---
 authors:
-- Charles Haddon Spurgeon
+- Charles Spurgeon
 date: '2010-09-16'
 description: ''
 draft: false
-images: []
 slug: spurgeon-on-nature
 title: Nature and the Soul
 ---

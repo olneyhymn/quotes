@@ -3,8 +3,6 @@ authors:
 - Charles Spurgeon
 date: '2013-06-16'
 description: ''
-draft: false
-images: []
 slug: psalm-103
 title: Psalm 103
 ---

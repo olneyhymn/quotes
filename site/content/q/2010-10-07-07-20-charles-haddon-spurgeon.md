@@ -1,10 +1,8 @@
 ---
 authors:
-- Charles Haddon Spurgeon
+- Charles Spurgeon
 date: '2010-10-07'
 description: ''
-draft: 'false'
-images: []
 slug: as-though-god-could-be-indebted
 title: As Though God Could Be Indebted
 ---

@@ -2,8 +2,6 @@
 authors:
 - Charles Spurgeon
 date: '2015-04-13'
-description: ''
-images: []
 slug: concise-history-of-man
 title: Concise History of Man
 ---

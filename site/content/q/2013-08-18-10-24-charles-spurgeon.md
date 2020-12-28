@@ -3,7 +3,6 @@ authors:
 - Charles Spurgeon
 date: '2013-08-18'
 description: ''
-images: []
 slug: not-to-us
 title: Not to Us
 ---
