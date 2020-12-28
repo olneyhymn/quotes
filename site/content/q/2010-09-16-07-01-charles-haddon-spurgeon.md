@@ -4,8 +4,6 @@ authors:
 date: '2010-09-16'
 description: ''
 draft: false
-images:
-- https://hcti.io/v1/image/95dc8011-4793-465e-a238-cade4bd2ffbc
 slug: spurgeon-on-nature
 title: Nature and the Soul
 ---
