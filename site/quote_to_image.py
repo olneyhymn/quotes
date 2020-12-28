@@ -10,6 +10,7 @@ from jinja2 import Template
 app = typer.Typer()
 
 TEMPLATE = Path("image_template.html")
+CSS = Path("themes/ezhil/static/css/main.css")
 
 def markdown_to_html(content):
     html = markdown.markdown(content.content)
@@ -25,7 +26,7 @@ def html_to_image(html: str):
     USER_ID = os.environ['USER_ID']
     API_KEY = os.environ['API_KEY']
     HCTI_API_ENDPOINT = "https://hcti.io/v1/image"
-    data = { 'html': html, 'selector': 'blockquote', 'ms_delay': 500 }
+    data = { 'html': html, 'selector': 'blockquote', 'ms_delay': 500, 'css': CSS.read_text() }
 
     image = requests.post(url = HCTI_API_ENDPOINT, data = data, auth=(USER_ID, API_KEY))
 
