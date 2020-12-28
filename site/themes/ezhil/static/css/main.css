@@ -73,7 +73,7 @@ h2, h4 {
 	 display: inline-block;
 	 background: #eee;
 	 padding: 40px 30px 30px 60px;
-	 border-radius: 10px;
+	 border-radius: .25rem;
 	 font-family: 'Lora', serif;
 	 color: #333;
      text-align: left;
@@ -315,7 +315,7 @@ ul {
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
+    border-radius: .5rem;
 }
 
 
