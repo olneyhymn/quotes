@@ -3,8 +3,6 @@ authors:
 - Charles Spurgeon
 date: '2010-10-07'
 description: ''
-images:
-- https://hcti.io/v1/image/e07af167-44a2-409f-985a-6604672d7045
 slug: as-though-god-could-be-indebted
 title: As Though God Could Be Indebted
 ---

@@ -3,8 +3,6 @@ authors:
 - Charles Spurgeon
 date: '2013-06-16'
 description: ''
-images:
-- https://hcti.io/v1/image/73bab823-fd21-4def-b0ad-763031004484
 slug: psalm-103
 title: Psalm 103
 ---
