@@ -28,6 +28,6 @@
         <span class="author" style="font-size: 250%"><i>{{ author }}</i></span>
       </blockquote>
   <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/textfit/2.4.0/textFit.min.js"></script>
-  <script>textFit(document.querySelector(".quote"));</script>
+  <script>window.onload = function() {textFit(document.querySelector(".quote"));}</script>
 </body>
 </html>
