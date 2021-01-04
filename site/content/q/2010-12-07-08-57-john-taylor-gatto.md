@@ -3,7 +3,6 @@ authors:
 - John Taylor Gatto
 date: '2010-12-07'
 description: ''
-images: []
 slug: john-taylor-gatto-on-institutions
 title: Institutions Controlling our Chidren's Lives
 ---
