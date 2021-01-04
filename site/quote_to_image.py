@@ -35,7 +35,7 @@ def html_to_image(html: str):
         "selector": "blockquote",
         "ms_delay": 1000,
         "css": CSS.read_text(),
-        "google_fonts": "Lora",
+        "google_fonts": "Lora|Bitter",
         "device_scale": 1,
     }
 
