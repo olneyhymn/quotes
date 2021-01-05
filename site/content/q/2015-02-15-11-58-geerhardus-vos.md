@@ -3,7 +3,8 @@ authors:
 - Geerhardus Vos
 date: '2015-02-15'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/5632f51e-4fcb-4ea8-a5b7-ac4e2a979843
 slug: vos-on-the-importance-of-biblical-historicity
 title: Vos on the Importance of Biblical Historicity
 ---

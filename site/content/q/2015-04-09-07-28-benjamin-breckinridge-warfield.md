@@ -3,7 +3,8 @@ authors:
 - Benjamin Breckinridge Warfield
 date: '2015-04-09'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/615c64a1-3310-4ac8-9f8f-c94618d8ffe5
 slug: religion-of-the-bible
 title: Religion of the Bible
 ---

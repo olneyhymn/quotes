@@ -4,7 +4,8 @@ authors:
 date: '2013-08-01'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/fac456b6-46cf-46f2-805d-4fd0cba57c67
 slug: resentment-and-impatience
 title: Resentment and Impatience
 ---

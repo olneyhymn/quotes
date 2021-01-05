@@ -4,7 +4,8 @@ authors:
 date: '2014-08-21'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/aa4a6e83-1956-426f-990b-accf2eab51c9
 slug: the-ot-messiah
 title: The Old Testament Revelation of the Messiah
 ---

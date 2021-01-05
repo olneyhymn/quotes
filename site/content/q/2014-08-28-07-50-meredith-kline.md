@@ -4,7 +4,8 @@ authors:
 date: '2014-08-28'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/a5eae9fc-ceae-4111-9f95-81b6583b2726
 slug: image-wife
 source: Images of the Spirit
 title: Christ's image-wife

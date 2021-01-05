@@ -4,7 +4,8 @@ authors:
 date: '2012-02-11'
 description: ''
 draft: false
-images: ["https://hcti.io/v1/image/dffb82eb-74b4-4eec-95e9-c355ac0d4973"]
+images:
+- https://hcti.io/v1/image/c780d8bf-a4a4-4fb9-8d6e-d982ff9bfc3e
 slug: is-there-no-place
 title: Is There No Place?
 ---

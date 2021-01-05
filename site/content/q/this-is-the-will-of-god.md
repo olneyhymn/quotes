@@ -5,7 +5,8 @@ authors:
 date: '2015-03-26'
 description: ''
 draft: true
-images: []
+images:
+- https://hcti.io/v1/image/88777bcf-6443-4510-9078-f9767e476c61
 slug: 2015-03-26-"this-is-the-will-of-god"
 title: ''
 ---

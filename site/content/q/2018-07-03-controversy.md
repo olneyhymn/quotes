@@ -4,7 +4,8 @@ authors:
 date: '2018-07-03'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/eab26dc2-19c9-4dda-b9a3-0cefcb8cc139
 slug: controveries
 title: Controversies
 ---

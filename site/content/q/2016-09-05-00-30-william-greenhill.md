@@ -3,7 +3,8 @@ authors:
 - William Greenhill
 date: '2016-09-05'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/800749be-3c92-4031-8988-cee587c7c52f
 slug: use-of-creation
 source_date: 1670
 title: Use of Creation

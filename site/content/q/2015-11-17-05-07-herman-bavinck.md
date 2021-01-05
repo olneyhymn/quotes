@@ -3,7 +3,8 @@ authors:
 - Herman Bavinck
 date: '2015-11-17'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/2f56fca3-ac47-43ef-b0c5-45044b089a9f
 slug: when-our-faith-is-weak
 title: When Our Faith is Weak
 ---

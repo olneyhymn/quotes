@@ -4,7 +4,8 @@ authors:
 date: '2012-03-11'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/0d3c5598-57f8-417a-9867-927bf2d4bca6
 slug: alpha-and-omega
 title: Alpha and Omega
 ---

@@ -4,7 +4,8 @@ authors:
 date: '2012-09-06'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/dd16eae1-fe55-4015-8c63-faa5db813dc9
 slug: great-men-and-their-mothers
 title: Great Men and their Mothers
 ---

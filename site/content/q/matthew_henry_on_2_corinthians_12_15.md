@@ -3,7 +3,7 @@ authors:
 - Matthew Henry
 date: 2020-12-22 11:58:57.390000+00:00
 images:
-- https://hcti.io/v1/image/3823a62d-1860-426d-9ec4-e20176f1b0d9
+- https://hcti.io/v1/image/91fd0a3b-ebcc-41fd-a7cc-787ceec52cf6
 slug: loving-when-unloved
 source: Commentary on 2 Corinthians
 source_url: https://www.biblegateway.com/resources/matthew-henry/2Cor.12.11-2Cor.12.21

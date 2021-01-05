@@ -3,7 +3,8 @@ authors:
 - William Dunlop
 date: '2014-12-22'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/70842b6f-52fb-4213-827d-fcbf73ded62f
 slug: acquainted-with-controversy
 source_date: 1720
 title: Acquainted with Controversy

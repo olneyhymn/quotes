@@ -3,7 +3,8 @@ authors:
 - Herman Bavinck
 date: '2011-08-21'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/7bced67b-8c3a-4b2b-9a3f-df8bc0ac0906
 slug: unlikable-gospel
 title: The Unlikable Gospel
 ---

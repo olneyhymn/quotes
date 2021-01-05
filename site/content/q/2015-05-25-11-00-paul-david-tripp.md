@@ -3,7 +3,8 @@ authors:
 - Paul David Tripp
 date: '2015-05-25'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/5cc40c59-423b-4e49-9e9d-2c8877f51cc8
 slug: marriage-and-the-creator
 title: Marriage and the Creator
 ---

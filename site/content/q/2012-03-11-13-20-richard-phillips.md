@@ -4,7 +4,8 @@ authors:
 date: '2012-03-11'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/79780022-afcc-4f33-9369-2a4057308a70
 slug: theology-bores
 title: Theology Bores Christians
 ---

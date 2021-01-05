@@ -4,7 +4,8 @@ authors:
 date: '2010-12-12'
 description: ''
 draft: 'false'
-images: []
+images:
+- https://hcti.io/v1/image/a2714988-33be-448f-a688-8ee6c8815c6c
 slug: rend-your-heart
 source: Prophesy of Joel
 title: Rend Your Heart

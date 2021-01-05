@@ -3,7 +3,7 @@ authors:
 - John Calvin
 date: 2021-01-03 02:10:18.272000+00:00
 images:
-- https://hcti.io/v1/image/f18bfcc5-cca3-4226-9900-58d6deddf432
+- https://hcti.io/v1/image/b2e09730-a3c6-4830-8b9c-cc6a86ab7b73
 slug: ignorance-of-faults
 tags:
 - humility

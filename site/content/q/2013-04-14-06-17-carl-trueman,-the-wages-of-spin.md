@@ -4,7 +4,8 @@ authors:
 date: '2013-04-14'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/1ebef8cb-1e5b-4846-8157-630d5e179dfe
 slug: trueman-on-humility
 title: Trueman on Humility
 ---

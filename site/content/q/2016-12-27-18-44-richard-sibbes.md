@@ -5,7 +5,7 @@ date: '2016-12-27'
 description: ''
 draft: false
 images:
-- https://hcti.io/v1/image/bfc573f0-dcfd-40e6-aa6d-919f5a9e1ba3
+- https://hcti.io/v1/image/17538023-89f0-452c-b998-a34128748e08
 slug: sibbes-on-the-best-men
 title: Sibbes on The Best Men
 ---

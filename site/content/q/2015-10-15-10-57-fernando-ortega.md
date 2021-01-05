@@ -3,7 +3,8 @@ authors:
 - Fernando Ortega
 date: '2015-10-15'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/79f6e1d3-5031-413a-b54d-3c0c81d3be56
 slug: value-of-hymns
 title: Value of Hymns
 ---

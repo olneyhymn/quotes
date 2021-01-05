@@ -2,7 +2,8 @@
 authors:
 - Christopher Love
 date: 2020-12-14 01:34:39.236000+00:00
-images: []
+images:
+- https://hcti.io/v1/image/a818cb8c-cce4-422b-b75e-9d549daf18fc
 slug: poor-souls
 title: Poor Souls Cast Down
 ---

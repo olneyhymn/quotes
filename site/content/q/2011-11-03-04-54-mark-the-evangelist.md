@@ -3,7 +3,8 @@ authors:
 - Mark the Evangelist
 date: '2011-11-03'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/5b0499f2-91f9-417d-b52b-0564592dacfd
 slug: one-thing-is-necessary
 source: Gospel of Mark
 title: One Thing is Necessary

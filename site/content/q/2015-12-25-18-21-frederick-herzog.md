@@ -3,7 +3,8 @@ authors:
 - Frederick Herzog
 date: '2015-12-25'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/bb0c7d1c-cca5-4fd2-8c99-049435d6e708
 slug: deacons-and-the-nazis
 source: Service in Christ
 title: Deacons and the Nazis

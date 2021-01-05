@@ -4,7 +4,8 @@ authors:
 date: '2013-12-09'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/cac3df06-8283-46f1-b663-1732cc84df75
 slug: the-church-under-the-cross
 title: The Church Under the Cross
 ---

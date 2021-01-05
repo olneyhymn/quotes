@@ -3,7 +3,8 @@ authors:
 - William Greenhill
 date: '2016-08-22'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/6353fb2f-73ef-4e88-9c73-3073c4be49b0
 slug: laying-up-treasures-in-heaven
 title: Laying Up Treasures in Heaven
 ---

@@ -3,7 +3,8 @@ authors:
 - Joe Barron Hopper
 date: '2015-10-31'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/c5ed91a9-999b-49f7-8e3e-af45007ec25b
 pre: My grandfather, a PCUS missionary to Korea for 38 years
 slug: communion-with-lepers
 title: Communion with Lepers

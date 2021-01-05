@@ -3,7 +3,8 @@ authors:
 - Richard Baxter
 date: '2015-02-15'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/aeca389a-68db-4a47-896c-cb454f72e2a8
 slug: singles-in-the-service-of-god
 title: Singles in the Service of God
 ---

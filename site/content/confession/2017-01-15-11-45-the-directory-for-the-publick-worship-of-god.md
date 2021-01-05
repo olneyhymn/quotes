@@ -2,7 +2,7 @@
 authors: null
 date: '2017-01-15'
 description: ''
-draft: false
+draft: true
 images: []
 slug: timely-for-public-worship
 source: The Directory for The Publick Worship of God

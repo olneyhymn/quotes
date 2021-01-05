@@ -4,7 +4,8 @@ authors:
 - Michael Haykin
 date: '2016-01-19'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/e97d1709-5101-4701-bbbc-5cfd368c9a05
 slug: eating-and-christian-friendship
 title: Eating and Christian Friendship
 ---

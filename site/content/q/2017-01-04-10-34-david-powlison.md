@@ -4,7 +4,8 @@ authors:
 date: '2017-01-04'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/cf8343db-95b3-45e0-b68d-7be8aebcdb47
 slug: the-from-too-movement-of-the-christian-life
 title: The From... Too.. Movement of the Christian Life
 ---

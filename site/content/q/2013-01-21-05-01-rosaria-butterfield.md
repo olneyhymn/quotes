@@ -4,7 +4,8 @@ authors:
 date: '2013-01-21'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/a698795d-0324-46a0-ae20-28992c06be57
 slug: lacking-fellowship
 source: The Secret Thoughts of an Unlikely Convert
 title: Lacking Fellowship?

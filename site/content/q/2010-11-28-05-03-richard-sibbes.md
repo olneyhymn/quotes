@@ -5,7 +5,7 @@ date: '2010-11-28'
 description: ''
 draft: 'false'
 images:
-- https://hcti.io/v1/image/cd42f09c-ab82-4812-9cc4-f4e75b558fc4
+- https://hcti.io/v1/image/a515a81b-ce1e-4442-9350-d3844afcf898
 slug: things-of-this-world
 title: Things of This World
 ---

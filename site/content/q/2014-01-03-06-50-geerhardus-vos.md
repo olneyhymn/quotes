@@ -4,7 +4,8 @@ authors:
 date: '2014-01-03'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/ed526e98-af04-4384-833d-67e2f31d24ea
 slug: infallibility-and-dull-uniformity
 title: Infallibility and Dull Uniformity
 ---

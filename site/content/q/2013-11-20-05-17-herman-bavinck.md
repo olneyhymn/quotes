@@ -4,7 +4,8 @@ authors:
 date: '2013-11-20'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/0a7f3d4f-4ab2-451a-a004-4b6aaffaef4c
 slug: prayer-for-unity
 title: Prayer for Unity
 ---

@@ -3,7 +3,8 @@ authors:
 - Edmund Clowney
 date: '2015-02-14'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/7fc5c698-af78-4220-8b47-db21ac535a83
 slug: pilgrim-life
 title: Pilgrim Life
 ---

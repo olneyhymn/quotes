@@ -4,7 +4,7 @@ authors:
 date: '2017-10-11'
 description: ''
 images:
-- https://hcti.io/v1/image/4ea348a6-fbe2-474c-b7f1-fbd74f34c9b0
+- https://hcti.io/v1/image/937a9cf7-f8d5-42cb-bc8c-49dbaa82cc29
 slug: contest-among-christians
 title: Contest Among Christians
 ---

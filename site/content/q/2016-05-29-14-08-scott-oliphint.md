@@ -3,7 +3,8 @@ authors:
 - Scott Oliphint
 date: '2016-05-29'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/dd166700-7f82-49fb-91e0-f1329ec5e9cb
 slug: absurdity-of-the-incarnation
 source: Covenental Apologetics
 title: Absurdity of the Incarnation?

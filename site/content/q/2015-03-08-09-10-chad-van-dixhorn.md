@@ -3,7 +3,8 @@ authors:
 - Chad Van Dixhorn
 date: '2015-03-08'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/88a28e49-f202-4f2d-8082-33739f9f6a6e
 slug: does-your-faith-waiver
 title: Does Your Faith Waiver?
 ---

@@ -3,7 +3,8 @@ authors:
 - Paul David Tripp
 date: '2015-06-27'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/fc877d4b-29fb-472d-80ed-09cd96561c94
 slug: building-our-kingdom
 title: Building Our Kingdom
 ---

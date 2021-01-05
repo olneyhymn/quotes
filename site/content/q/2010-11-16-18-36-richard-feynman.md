@@ -4,7 +4,8 @@ authors:
 date: '2010-11-16'
 description: ''
 draft: 'false'
-images: []
+images:
+- https://hcti.io/v1/image/41e99dda-28b4-46e7-9311-1b614872f46b
 slug: feynman-on-knowledge
 title: Feynman on Knowledge
 ---

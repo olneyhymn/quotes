@@ -4,7 +4,8 @@ authors:
 date: '2013-01-14'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/9d953de7-464c-42c7-8855-25dc81e9a925
 slug: bavinck-on-elohim
 title: Bavinck on Elihim
 ---

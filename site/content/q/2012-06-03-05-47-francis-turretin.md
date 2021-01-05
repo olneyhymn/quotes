@@ -4,7 +4,8 @@ authors:
 date: '2012-06-03'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/32871e58-f16c-4761-a543-df70a65f5bca
 slug: turretin-on-good-works
 title: Turretin on Good Works
 ---

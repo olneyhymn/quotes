@@ -4,7 +4,8 @@ authors:
 date: '2016-12-26'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/dec856bf-86e9-4439-b235-4786f260185e
 slug: vos-on-american-christianity
 source_date: 1888
 title: Vos on American Christianity

@@ -3,7 +3,8 @@ authors:
 - Thomas Jefferson
 date: '2015-08-05'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/0687908a-2b08-4d62-bc1c-983dd542614e
 slug: thomas-jefferon-on-jesus
 title: Thomas Jefferon on Jesus
 ---

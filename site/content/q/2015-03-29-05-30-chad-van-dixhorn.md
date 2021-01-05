@@ -3,7 +3,8 @@ authors:
 - Chad Van Dixhorn
 date: '2015-03-29'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/c46ef134-b7df-49d4-88e2-547c6613e786
 slug: the-promise-of-god-s-word
 title: The Promise of God’s Word
 ---

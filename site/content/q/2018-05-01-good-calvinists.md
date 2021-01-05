@@ -3,7 +3,8 @@ authors:
 - J.I. Packer
 date: 2018-05-01
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/a9f91581-3b7f-4a42-8583-dfa7d2b4f56f
 slug: good-calvinists
 source: A Quest for Godliness
 title: Good Calvinists?

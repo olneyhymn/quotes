@@ -3,7 +3,8 @@ authors:
 - Robert Tracy McKenzie
 date: '2016-03-01'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/7b9a8f54-4cf0-48fc-9507-6dc7a06fea91
 slug: diminshed-value-of-historical-arguments
 title: Diminshed Value of Historical Arguments
 ---

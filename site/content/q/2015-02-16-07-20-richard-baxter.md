@@ -3,7 +3,8 @@ authors:
 - Richard Baxter
 date: '2015-02-16'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/814ecb64-21f8-4037-9c4a-20051120832f
 slug: a-holy-family
 title: A Holy Family
 ---

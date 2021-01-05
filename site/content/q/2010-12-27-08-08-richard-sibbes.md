@@ -4,7 +4,7 @@ authors:
 date: 2010-12-27
 description: ''
 images:
-- https://hcti.io/v1/image/a4c61bcd-82ef-4db9-9970-7fd5e58d7618
+- https://hcti.io/v1/image/8ad6b5c6-67ac-4ab2-9341-a657ed1d89a9
 slug: loving-goodness
 title: Owen on Loving Goodness
 ---

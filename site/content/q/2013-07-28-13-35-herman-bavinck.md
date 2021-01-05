@@ -4,7 +4,8 @@ authors:
 date: '2013-07-28'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/7cf1bc4c-ce8a-4ee0-8d59-881fd055cfd9
 slug: triune-salvation
 title: Triune Salvation
 ---

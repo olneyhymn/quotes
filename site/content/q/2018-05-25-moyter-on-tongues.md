@@ -4,7 +4,7 @@ authors:
 date: '2018-05-25'
 description: ''
 images:
-- https://hcti.io/v1/image/3eecf866-2ca6-4aff-83e7-e6b13eb915d3
+- https://hcti.io/v1/image/f02eabaf-e893-433e-bf21-a2cf8d4cae09
 source: Commentary on James
 tags:
 - speech

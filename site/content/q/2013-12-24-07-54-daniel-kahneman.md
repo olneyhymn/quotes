@@ -4,7 +4,8 @@ authors:
 date: '2013-12-24'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/84669a33-dca1-43d2-8261-79b8514f0f3e
 slug: eschew-obfuscation
 title: Eschew Obfuscation
 ---

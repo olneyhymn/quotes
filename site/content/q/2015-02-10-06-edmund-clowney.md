@@ -3,7 +3,8 @@ authors:
 - Edmund Clowney
 date: '2015-02-10'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/7e39593d-75d9-4297-b4fd-ddb3a4b0dc6b
 slug: unpractical-theology
 title: Unpractical Theology?
 ---

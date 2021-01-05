@@ -3,7 +3,8 @@ authors:
 - Richard Baxter
 date: '2015-02-16'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/17eb7d31-979f-476b-8325-96303dd2e788
 slug: family-reformation
 title: Family Reformation
 ---

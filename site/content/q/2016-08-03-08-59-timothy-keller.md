@@ -3,7 +3,8 @@ authors:
 - Timothy Keller
 date: '2016-08-03'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/72a694f0-af20-42eb-b3c2-aeca54ba0943
 slug: the-strongest-christians
 source: The Songs of Jesus
 title: The Strongest Christians

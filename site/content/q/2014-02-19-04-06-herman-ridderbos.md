@@ -4,7 +4,8 @@ authors:
 date: '2014-02-19'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/b1930ea6-eac0-43db-a189-4f3195be4775
 pre: On Colossians 1:18
 slug: the-inaugurator
 title: The Inaugurator

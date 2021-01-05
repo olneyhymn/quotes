@@ -4,7 +4,7 @@ authors:
 date: '2016-07-31'
 description: ''
 images:
-- https://hcti.io/v1/image/f12088ee-dc0f-4950-80c7-61a4e3575477
+- https://hcti.io/v1/image/5335fdcf-fbcd-4dac-9938-5e4b405943dc
 slug: jesus-is-mine
 title: Jesus is Mine!
 ---

@@ -3,7 +3,8 @@ authors:
 - Herman Bavinck
 date: '2011-06-19'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/9d94422b-94bd-4fad-ae74-ebc6aaf671c7
 slug: god-is-real
 title: If God Were Indeed a Human Projection
 ---

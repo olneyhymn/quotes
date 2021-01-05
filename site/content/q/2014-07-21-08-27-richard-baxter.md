@@ -3,7 +3,8 @@ authors:
 - Richard Baxter
 date: '2014-07-21'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/68e94c1a-dfba-433c-aa99-4b805aa09157
 pre: A direction from on "loving the children of God"
 slug: observe-their-graces
 title: Observe their Graces

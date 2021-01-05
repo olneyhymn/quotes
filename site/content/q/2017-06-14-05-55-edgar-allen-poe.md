@@ -3,7 +3,8 @@ authors:
 - Edgar Allen Poe
 date: '2017-06-14'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/2f9359fb-e949-4a15-a934-bea95676dbfd
 slug: enormous-multiplication-of-books
 title: Evil, Enormous Multiplication of Books
 ---

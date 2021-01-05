@@ -4,7 +4,8 @@ authors:
 date: '2013-01-27'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/88e3e418-f40a-4f4b-8df5-d025a362b7ee
 slug: the-doctrine-of-providence
 title: The Doctrine of Providence
 ---

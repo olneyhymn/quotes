@@ -4,7 +4,8 @@ authors:
 date: '2014-07-25'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/85ba56a5-e480-4bb4-9175-d612eb2d3073
 slug: the-end-of-education
 title: The End of Education
 ---

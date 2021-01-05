@@ -3,7 +3,8 @@ authors:
 - Richard Baxter
 date: '2015-02-15'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/7331ecea-0c2d-446f-b9d9-a07cb87655f6
 slug: improve-what-you-hear
 title: Improve What you Hear
 ---

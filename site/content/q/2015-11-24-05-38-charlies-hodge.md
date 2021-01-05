@@ -4,7 +4,8 @@ authors:
 date: '2015-11-24'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/7229c176-8399-4ca5-9403-cac3c612c624
 slug: new-feelings-and-purposes
 title: New Feelings and Purposes
 ---

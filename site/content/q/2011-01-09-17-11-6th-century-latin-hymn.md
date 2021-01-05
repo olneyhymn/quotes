@@ -3,7 +3,8 @@ authors:
 - unknown
 date: '2011-01-09'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/fcec138c-97b9-4d26-8eac-d002420d3071
 slug: 6th-century-latin-hymn
 source: Trinity Hymnal
 title: At the Lamb's high feast we sing

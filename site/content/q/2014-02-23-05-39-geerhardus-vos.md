@@ -4,7 +4,8 @@ authors:
 date: '2014-02-23'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/032e3ad6-3184-42f0-bcf9-0835134c9532
 slug: truly-evangelical-piety
 title: Truly Evangelical Piety
 ---

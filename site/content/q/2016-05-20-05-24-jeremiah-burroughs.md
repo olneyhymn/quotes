@@ -3,7 +3,8 @@ authors:
 - Jeremiah Burroughs
 date: '2016-05-20'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/b314591a-50ba-4b77-97d6-1052bcf44961
 slug: faith-can-do-this
 title: Faith Can Do This
 ---

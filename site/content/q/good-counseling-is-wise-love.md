@@ -4,7 +4,7 @@ authors:
 date: '2014-12-21'
 description: ''
 images:
-- https://hcti.io/v1/image/9c169ca4-3e27-4a7b-a021-5ac753a29b71.png
+- https://hcti.io/v1/image/1971c1cd-8e83-47b4-a301-f0fc5c18fd8d
 title: Good Counseling is Wise Love
 ---
 

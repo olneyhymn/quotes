@@ -4,7 +4,8 @@ authors:
 date: '2013-07-23'
 description: ''
 draft: falase
-images: []
+images:
+- https://hcti.io/v1/image/f6eb86d4-ea47-4df7-afe0-a67063bff31c
 slug: bavicnk-on-crime
 title: Bavinck on Crime
 ---

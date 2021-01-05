@@ -1,9 +1,10 @@
-    ---
+---
 authors:
 - Stephen Charnock
 date: '2017-12-12'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/6750b2be-0cc8-4a43-bbe5-cdfe62a20624
 slug: top-of-our-comfort
 title: The Top of our Comfort
 ---

@@ -3,7 +3,7 @@ authors:
 - Council of Nicaea
 date: 2020-12-24 14:12:43.249000+00:00
 images:
-- https://hcti.io/v1/image/df3663b0-4954-4f1f-9880-2839ef8ecc88.png
+- https://hcti.io/v1/image/52098a5d-1181-447f-b388-e0ca9b2baecd
 slug: ''
 source_url: https://en.wikipedia.org/wiki/Nicene_Creed
 tags:

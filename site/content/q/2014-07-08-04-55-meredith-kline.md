@@ -3,7 +3,8 @@ authors:
 - Meredith Kline
 date: '2014-07-08'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/3439ffad-6a30-4e5f-8c16-469f4a7fa66f
 slug: kline-on-covenant-and-election
 source: By Oath Consigned
 title: Kline on Covenant and Election

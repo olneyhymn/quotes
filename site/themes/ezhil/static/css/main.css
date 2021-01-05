@@ -73,7 +73,8 @@ h2, h4 {
 	 display: inline-block;
 	 background: #eee;
 	 padding: 40px 30px 30px 60px;
-	 border-radius: .25rem;
+     border-radius: .25rem;
+     font-weight: 400;
 	 font-family: 'Lora', serif;
 	 color: #333;
      text-align: left;

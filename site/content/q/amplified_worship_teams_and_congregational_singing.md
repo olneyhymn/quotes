@@ -3,7 +3,7 @@ authors:
 - Andy Crouch
 date: 2020-12-29 13:46:01.403000+00:00
 images:
-- https://hcti.io/v1/image/9afc7492-5d8f-477b-b070-37cd3c243b67
+- https://hcti.io/v1/image/d01011f5-ea40-45fa-83c5-8b0e76acc557
 slug: worship-teams
 source: 'Playing God: Redeeming the Gift of Power'
 tags:

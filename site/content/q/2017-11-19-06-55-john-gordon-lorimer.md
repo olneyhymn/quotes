@@ -3,7 +3,8 @@ authors:
 - John Lorimer
 date: '2017-11-19'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/454eaf90-58be-466d-922e-1b4432f28810
 slug: the-deacon-sincere
 source: The Deaconship
 source_date: 1842

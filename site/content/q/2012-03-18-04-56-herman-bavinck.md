@@ -4,7 +4,8 @@ authors:
 date: '2012-03-18'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/9281fd4c-f82d-4514-91ec-82ab3313b4dd
 slug: the-gospel-for-all
 title: The Gospel is Joyous for All
 ---

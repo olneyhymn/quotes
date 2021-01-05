@@ -6,7 +6,7 @@ date: '2013-12-16'
 description: ''
 draft: false
 images:
-- https://hcti.io/v1/image/e01738ae-25ce-418c-a208-db57d0d9c156
+- https://hcti.io/v1/image/a63983e8-56ad-4af2-afe1-adb383df0fe6
 slug: communion-with-christ
 source: A Puritan Theology
 title: Communion with Christ

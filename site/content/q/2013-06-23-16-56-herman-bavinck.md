@@ -4,7 +4,8 @@ authors:
 date: '2013-06-23'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/7c572c5f-1ac7-4ff5-a9fb-f8ba4a63b855
 slug: bavinck-on-rosseau
 title: Bavinck on Rosseau
 ---

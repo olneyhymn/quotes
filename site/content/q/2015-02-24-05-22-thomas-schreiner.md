@@ -3,7 +3,8 @@ authors:
 - Thomas Schreiner
 date: '2015-02-24'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/1c44c0ed-d113-42a9-8725-4ff8bf8a0d7a
 slug: tender-and-awesome
 title: Tender and Awesome
 ---

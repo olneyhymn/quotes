@@ -3,7 +3,8 @@ authors:
 - Meredith Kline
 date: '2014-05-28'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/1546ef98-75fe-46ac-8ba1-966196e2a9de
 slug: kline-on-baptism
 source: By Oath Consigned
 title: Kline on Baptism

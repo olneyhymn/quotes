@@ -3,7 +3,8 @@ authors:
 - Geerhardus Vos
 date: '2014-07-27'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/ff97e2b6-3129-4918-bd17-d680601fef68
 slug: glory-in-our-good-works
 title: Glory in Our Good Works
 ---

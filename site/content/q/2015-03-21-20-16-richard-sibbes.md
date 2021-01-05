@@ -4,7 +4,7 @@ authors:
 date: '2015-03-21'
 description: ''
 images:
-- https://hcti.io/v1/image/216fdb8d-3de4-4e1e-988d-cf4082b6eafe
+- https://hcti.io/v1/image/65b2fa06-9101-4d3a-807b-e9b1c7377a70
 slug: all-christians-are-brethren
 title: All Christians are Brethren
 ---

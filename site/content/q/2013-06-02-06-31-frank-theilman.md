@@ -4,7 +4,8 @@ authors:
 date: '2013-06-02'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/356014bb-8c98-4756-bf3d-e2bb193982b3
 slug: sanctified-for-unity
 title: Sanctified for Unity
 ---

@@ -4,7 +4,8 @@ authors:
 date: '2014-02-14'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/868704d4-1f21-4656-a289-a1085049162d
 slug: lovers-of-books
 source_date: 1489
 title: Lovers of Books

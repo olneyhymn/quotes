@@ -3,7 +3,8 @@ authors:
 - Richard Gaffin
 date: '2014-12-07'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/f55a6b39-c04b-470a-8590-b9aa4934f271
 slug: real-victory-in-chirst
 title: Real Victory Already Possessed
 ---

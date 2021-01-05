@@ -4,7 +4,8 @@ authors:
 date: '2015-11-24'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/36cb209f-9f14-40df-905d-9c2235e004fa
 slug: radical-transformation
 title: Radical Transformation
 ---

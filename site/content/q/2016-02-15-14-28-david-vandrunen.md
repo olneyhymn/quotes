@@ -3,7 +3,8 @@ authors:
 - David VanDrunen
 date: '2016-02-15'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/9ce4754a-990f-4455-ba5b-079725b7118a
 slug: the-authentic-face-of-christ
 title: The Authentic Face of Christ
 ---

@@ -4,7 +4,8 @@ authors:
 date: '2016-11-08'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/d46517ae-82d9-496f-a357-7ebb252d873f
 slug: a-modest-cottage-with-books
 title: A Modest Cottage with Books
 ---

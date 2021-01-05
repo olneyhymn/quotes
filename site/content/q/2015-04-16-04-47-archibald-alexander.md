@@ -3,7 +3,8 @@ authors:
 - Archibald Alexander
 date: '2015-04-16'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/ef2ffe8a-344c-43da-ad21-cef8423c9e73
 slug: archibald-alexander-on-the-office-of-elder
 title: Archibald Alexander on the Office of Elder
 ---

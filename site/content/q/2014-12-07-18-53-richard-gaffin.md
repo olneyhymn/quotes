@@ -4,7 +4,8 @@ authors:
 date: '2014-12-07'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/b83b2904-e2be-42f8-907e-152fd9151ac5
 slug: eschatology-of-victory
 title: Eschatology of Victory
 ---

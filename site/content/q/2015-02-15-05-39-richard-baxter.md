@@ -3,7 +3,8 @@ authors:
 - Richard Baxter
 date: '2015-02-15'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/709c8e33-b3ba-440e-8f3b-468fb649cf90
 slug: chew-the-cud
 title: Chew the Cud
 ---

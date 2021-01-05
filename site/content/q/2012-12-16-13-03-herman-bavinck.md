@@ -4,7 +4,8 @@ authors:
 date: '2012-12-16'
 description: ''
 draft: false
-images: []
+images:
+- https://hcti.io/v1/image/56dcae44-1574-435b-bc38-b4e461eb309e
 slug: creator-creature-distinction
 title: Creator Creature Distinction
 ---

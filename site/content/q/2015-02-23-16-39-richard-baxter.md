@@ -3,7 +3,8 @@ authors:
 - Richard Baxter
 date: '2015-02-23'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/5b4980fc-5b43-4491-af10-fab100ab23e0
 slug: richard-baxter-on-sermon-notes
 title: Richard Baxter on Sermon Notes
 ---

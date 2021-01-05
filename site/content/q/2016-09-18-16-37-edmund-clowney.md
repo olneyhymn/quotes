@@ -3,7 +3,8 @@ authors:
 - Edmund Clowney
 date: '2016-09-18'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/f1de2d64-672d-4926-80d6-22a99930c5f6
 slug: ecclesiastical-tunnel-vision
 title: Ecclesiastical Tunnel Vision
 ---

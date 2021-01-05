@@ -3,7 +3,8 @@ authors:
 - Herman Bavinck
 date: '2016-06-01'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/7c572c5f-1ac7-4ff5-a9fb-f8ba4a63b855
 slug: bavinck-on-rosseau
 title: Bavinck on Rosseau
 ---

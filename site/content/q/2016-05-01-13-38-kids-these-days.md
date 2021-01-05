@@ -3,7 +3,8 @@ authors:
 - Thomas Manton
 date: '2016-05-01'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/dcd85b48-8e85-43e7-b76b-ae6c17d0431f
 slug: bad-parents-make-bad-children
 title: Bad Parents Make Bad Children
 ---

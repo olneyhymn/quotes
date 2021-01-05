@@ -4,7 +4,8 @@ authors:
 - Ryan Speck
 date: '2016-02-10'
 description: ''
-images: []
+images:
+- https://hcti.io/v1/image/8b8af323-e82b-49d0-a37c-fa3de723205d
 slug: church-leaders
 title: Church Leaders as a Gift from God
 ---

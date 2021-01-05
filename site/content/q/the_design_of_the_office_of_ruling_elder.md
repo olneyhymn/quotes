@@ -3,7 +3,7 @@ authors:
 - Samuel Miller
 date: 2020-12-22 12:04:35.876000+00:00
 images:
-- https://hcti.io/v1/image/36911515-0aa2-49e7-9910-5a1451b6f34d
+- https://hcti.io/v1/image/f7e83499-0aa4-4824-b42d-db78a1584f61
 tags:
 - ecclesiology
 title: The Design of the Office of Ruling Elder
