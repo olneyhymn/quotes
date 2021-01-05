@@ -5,7 +5,7 @@ date: '2016-05-19'
 description: ''
 images:
 - https://hcti.io/v1/image/b8d0903b-a773-4c7c-a5f1-9d8d36d8701a.png
-slug: god-s-tools-in-providence
+slug: tools-in-providence
 title: God’s Tools in Providence
 ---
 
