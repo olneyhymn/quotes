@@ -1,13 +1,13 @@
 ---
-authors:
-- Johann Heermann
-date: 2021-01-06 12:17:01.216000+00:00
-images:
-- https://hcti.io/v1/image/8563bd15-b5e1-468b-b7fd-edb18ee28e54
+title: Not My Deserving
 slug: not-my-deserving
+images:
+  - https://hcti.io/v1/image/8563bd15-b5e1-468b-b7fd-edb18ee28e54
 tags:
-- grace
-title: Johann Heermann
+  - grace
+authors:
+  - Johann Heermann
+date: 2021-01-06 12:17:01.216000+00:00
 ---
 
 Therefore, kind Jesus, since I cannot pay thee, 
