@@ -4,6 +4,8 @@ authors:
 date: '2016-05-31'
 description: ''
 draft: false
+images:
+- https://hcti.io/v1/image/1d4e5e97-3cdb-46c1-ba0f-8ece5eb72fb6
 slug: hasty-and-censorious
 source_url: https://www.gracegems.org/Newton/112.htm
 title: Hasty and Censorious Spirit
