@@ -1,6 +1,6 @@
 ---
 authors:
-- Augustine
+- Augustine of Hippo
 date: '2021-06-26'
 description: ''
 images:
