@@ -3,6 +3,8 @@ authors:
 - Matthew Henry
 date: '2015-07-15'
 description: ''
+images:
+- https://hcti.io/v1/image/49bcb4ff-85c8-4a0d-87c4-4ecebc3548dd
 slug: badness-of-our-times
 title: Badness of our Times
 ---
