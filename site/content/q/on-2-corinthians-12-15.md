@@ -4,7 +4,7 @@ authors:
 date: 2020-12-14 01:36:34.140000+00:00
 images:
 - https://hcti.io/v1/image/53dc505f-3415-4d2b-a986-25194b5a7390
-slug: spend-and-be-spent
+slug: others-be-wanting
 title: On 2 Corinthians 12:15
 ---
 
