@@ -4,6 +4,8 @@ authors:
 date: '2021-07-31'
 description: ''
 draft: false
+images:
+- https://hcti.io/v1/image/d78eadf1-6ff0-4c24-883a-8eb275cb5c93
 slug: thankful-guest-from-a-plentiful-table
 title: Thankful Guest from a Pleantiful Table
 ---
