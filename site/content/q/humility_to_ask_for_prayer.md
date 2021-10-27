@@ -1,9 +1,7 @@
 ---
 authors:
-- El Welch
+- Ed Welch
 date: 2018-10-27 11:16:26.390000+00:00
-images:
-- https://hcti.io/v1/image/a9f9d146-2b19-4d0b-a304-50be517dad13
 slug: ask-for-prayer
 title: Humility to Ask for Prayer
 ---
