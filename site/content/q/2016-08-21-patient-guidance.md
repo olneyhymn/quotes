@@ -4,6 +4,8 @@ authors:
 date: '2016-08-21'
 description: ''
 draft: false
+images:
+- https://hcti.io/v1/image/75531264-0537-41f7-aed3-5671872de462
 slug: patient-guidance
 title: The Patient Guidance of God
 ---
