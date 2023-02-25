@@ -4,6 +4,8 @@ authors:
 date: '2023-02-25'
 description: ''
 draft: false
+images:
+- https://hcti.io/v1/image/5beb79c5-3f6f-425c-9ac3-8b00e4a297a1
 slug: little-and-narrow-mind
 source: https://www.google.com/books/edition/The_Works_of_the_Rev_John_Newton/QRRKAQAAMAAJ?hl=en&gbpv=1
 title: Tokens of a Little and Narrow Mind
