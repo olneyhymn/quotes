@@ -42,6 +42,12 @@ jobs:
           commit_message: Add images
           file_pattern: site/content/q/*
 
+      - name: Build search index
+        run: |
+          npm install
+          node build-index.js > static/search_index.json
+        working-directory: site
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
