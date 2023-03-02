@@ -4,6 +4,8 @@ authors:
 date: '2016-08-25'
 description: ''
 draft: false
+images:
+- https://hcti.io/v1/image/84fa383e-a019-4fa1-8e86-444241304ed6
 slug: trifles
 title: Trifles Once Discouraging
 ---
