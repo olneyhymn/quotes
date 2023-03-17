@@ -4,6 +4,8 @@ authors:
 date: '2023-03-17'
 description: ''
 draft: false
+images:
+- https://hcti.io/v1/image/dfb5c9c3-fd53-44ad-9f75-4cd0fb3b1250
 slug: gracious-and-faithful
 title: Is He Not Gracious and Faithful?
 ---
