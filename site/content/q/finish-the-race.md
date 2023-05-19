@@ -1,10 +1,11 @@
-
 ---
 authors:
 - John Newton
 date: '2023-05-19'
 description: ''
 draft: false
+images:
+- https://hcti.io/v1/image/39d179c1-8278-4c6d-b031-cd0ee28664fa
 slug: finish-the-race
 title: Retire Like a Plentiful Guest from a Thankful Table
 ---
