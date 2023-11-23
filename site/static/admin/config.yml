@@ -1,62 +1,76 @@
+---
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
-media_folder: "site/static/images/upload"
-public_folder: "site/images/upload"
+  branch: master
+media_folder: site/static/images/upload
+public_folder: site/images/upload
 slug:
-  encoding: "ascii"
+  encoding: ascii
   clean_accents: true
-  sanitize_replacement: "_"
+  sanitize_replacement: _
 collections:
-  - name: "quotes" # Used in routes, e.g., /admin/collections/blog
-    label: "Quotes" # Used in the UI
-    folder: "site/content/q" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+  - name: quotes
+    label: Quotes
+    folder: site/content/q
+    create: true
     view_filters:
-      - field: "draft"
+      - field: draft
         pattern: true
-        label: "Drafts"
-      - field: "draft"
+        label: Drafts
+      - field: draft
         pattern: false
-        label: "Published"
+        label: Published
     view_groups:
       - label: Source
         field: source
-    fields: # The fields for each document, usually in front matter
-      - { label: "Title", name: "title", widget: "string" }
-      - {
-          label: "Slug",
-          name: "slug",
-          widget: "string",
-          "required": false,
-          pattern:
-            [
-              "^[a-z0-9]+(?:-[a-z0-9]+)*$",
-              "A slug can have no spaces or special characters",
-            ],
-        }
-      - {
-          label: "Images",
-          name: "images",
-          widget: "list",
-          minimize_collapsed: true,
-          required: false,
-          field: { label: Image, name: "image", widget: "string" },
-        }
-      - label: "Tags"
-        name: "tags"
-        widget: "list"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Slug
+        name: slug
+        widget: string
         required: false
-      - {
-          label: "Authors",
-          name: "authors",
-          widget: "list",
-          allow_add: true,
-          collapsed: false,
-          field: { label: "Author", name: "author", widget: "string" },
-        }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Source", name: "source", widget: "string", required: false }
-      - { "label": "Source URL", name: "source_url", widget: "string", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Draft", name: "draft", widget: "boolean", required: false }
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - A slug can have no spaces or special characters
+      - label: Images
+        name: images
+        widget: list
+        minimize_collapsed: true
+        required: false
+        field:
+          label: Image
+          name: image
+          widget: string
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+      - label: Authors
+        name: authors
+        widget: list
+        allow_add: true
+        collapsed: false
+        field:
+          label: Author
+          name: author
+          widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Source
+        name: source
+        widget: string
+        required: false
+      - label: Source URL
+        name: source_url
+        widget: string
+        required: false
+      - label: Body
+        name: body
+        widget: markdown
+      - label: Draft
+        name: draft
+        widget: boolean
+        required: false
