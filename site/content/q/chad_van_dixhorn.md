@@ -6,7 +6,7 @@ images:
 tags:
   - faith
 authors:
-  - Chad van Dixhorn
+  - Chad Van Dixhoorn
 date: 2015-03-03 12:15:10.030000+00:00
 ---
 

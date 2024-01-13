@@ -1,6 +1,6 @@
 ---
 authors:
-- Chad Van Dixhorn
+- Chad Van Dixhoorn
 date: '2015-03-29'
 description: ''
 images:

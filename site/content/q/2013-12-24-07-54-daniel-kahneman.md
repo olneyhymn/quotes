@@ -1,6 +1,6 @@
 ---
 authors:
-- Daniel Kahnem
+- Daniel Kahneman
 date: '2013-12-24'
 description: ''
 draft: false

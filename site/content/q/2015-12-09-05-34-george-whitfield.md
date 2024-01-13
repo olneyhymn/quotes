@@ -1,6 +1,6 @@
 ---
 authors:
-- George Whitfield
+- George Whitefield
 date: '2015-12-09'
 description: ''
 images:
