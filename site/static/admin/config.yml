@@ -24,6 +24,9 @@ collections:
       - label: Source
         field: source
     fields:
+      - label: Body
+        name: body
+        widget: markdown
       - label: Title
         name: title
         widget: string
@@ -35,6 +38,7 @@ collections:
           - ^[a-z0-9]+(?:-[a-z0-9]+)*$
           - A slug can have no spaces or special characters
       - label: Images
+        hidden: true
         name: images
         widget: list
         minimize_collapsed: true
@@ -67,9 +71,6 @@ collections:
         name: source_url
         widget: string
         required: false
-      - label: Body
-        name: body
-        widget: markdown
       - label: Draft
         name: draft
         widget: boolean
