@@ -1,7 +1,0 @@
-{{ define "main" }}
-{{ .Content }}
-
-{{- range (.Paginate ( where site.RegularPages "Section" "q" | first 5 ) ).Pages }}
-    {{ partial "post.html" . }}
-{{ end }}
-{{ end }}
