@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <script src="https://unpkg.com/lunr/lunr.js"></script>
-</head>
+{{ partial "header.html" . }}
+<script src="https://unpkg.com/lunr/lunr.js"></script>
 
 <body>
+	<div class="container wrapper post">
+		{{ partial "head.html" . }}
 
-  <form method="get" action="">
-    <input id="search" name="q" type="text" />
-    <button type="submit" class="button">Search</button>
-    <a href="/search">Clear</a>
-  </form>
-  <div id="app"></div>
+    <div id="app"></div>
+  </div>
+
+{{ partial "feedback.html" . }}
+{{ partial "footer.html" . }}
 </body>
-
-
+</html>
 
 {{- $p := slice -}}
-{{- range (where .Site.Pages "Section" "review") -}}
-  {{- $post := dict "link" .RelPermalink "title" .Title "content" (substr .Plain 0 200) -}}
+{{- range .Site.RegularPages -}}
+  {{- $post := dict "link" .RelPermalink "title" .Title "content" .Content "authors" .Params.Authors -}}
   {{- $p = $p | append $post -}}
 {{- end -}}
 
@@ -38,7 +36,7 @@
     return acc;
   }, {});
 
-  fetch('/index.json').then(function (res) {
+  fetch('/search_index.json').then(function (res) {
     return res.json();
   }).then(function (data) {
     const index = lunr.Index.load(data);
@@ -50,10 +48,17 @@
 
     if (matchPosts.length > 0) {
       $target.innerHTML = matchPosts.map(p => {
-        return `<div>
-          <h3><a href="${p.link}">${p.title}</a></h3>
-          <p>${p.content}...</p>
-        </div>`;
+        if (p && p.link && p.title && p.content && p.authors) {
+          return `<div>
+            <h2 class="item-title"><a href="${p.link}">${p.title}</a>  </h2>
+            <blockquote>
+              ${p.content}
+              <span class="author"><i><a href="${p.link}">${p.authors}</a></i></span>
+            </blockquote>
+          </div>`;
+        } else {
+          return "";
+        }
       }).join('');
     } else {
       $target.innerHTML = `<div>No search results found</div>`;

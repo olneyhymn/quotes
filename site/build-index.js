@@ -15,8 +15,10 @@ async function loadPostsWithFrontMatter(postsDirectoryPath) {
       );
       const {content, data} = await parse(fileContent);
       return {
-        content: content.slice(0, 3000),
-        ...data
+        content: content,
+        ...data,
+        authors: data.authors ? data.authors.join(' ') : '',
+        tags: data.tags ? data.tags.join(' ') : ''
       };
     })
   );
@@ -30,10 +32,9 @@ function makeIndex(posts) {
     this.ref('title');
     this.field('title');
     this.field('content');
-    this.field('sources');
-    this.field('years');
-    this.field('publishers');
-    this.field('editors');
+    this.field('authors');
+    this.field('tags');
+    this.field('description');
     posts.forEach(p => {
       this.add(p);
     });
