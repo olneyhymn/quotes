@@ -2,9 +2,13 @@
 authors:
 - John Newton
 date: 2024-01-13 22:41:03.114000+00:00
+images:
+- https://hcti.io/v1/image/22fb83d5-6451-4c38-9ec3-fde3e5255eed
 slug: loss-of-a-pastor
+snippet: But we are prone to lean too hard upon the ministers, by whom the Lord conveys
+  His blessings to us--as if they were necessary. Perhaps to cure us of this mistake,
+  is one reason why He often unexpectedly takes them from us!
 title: On the Loss of a Beloved Pastor
-snippet: But we are prone to lean too hard upon the ministers, by whom the Lord conveys His blessings to us--as if they were necessary. Perhaps to cure us of this mistake, is one reason why He often unexpectedly takes them from us!
 ---
 
 Your beloved pastor has died, but he has only gone a little before you. We expect and hope to follow him soon. It will be a joyful meeting, when we shall part no more. In the mean time, you will do well to consider that he neither did nor could do you any good but as an instrument, and that his Lord and Master who honored him with acceptance and usefulness still lives, and the supply of the Spirit is still with him. What must the first disciples have felt--when their Master was not only taken from them--but crucified before their eyes? Yet He had said to them a little before, "But I tell you the truth: It is for your good that I am going away. Unless I go away, the Comforter will not come to you; but if I go, I will send Him to you." John 16:7. Surely that Comforter, whose influence was more than a compensation for the lack of the Savior's visible presence--can fully repair our losses and heal our wounds. And He is as near to his people now, and as willing and able to help them--as He was then.
