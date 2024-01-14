@@ -1,10 +1,13 @@
 ---
 authors:
-  - J. Ligon Duncan
-title: Law-Gospel Exegesis
-date: 2024-01-14T21:03:36.606Z
+- J. Ligon Duncan
+date: 2024-01-14 21:03:36.606000+00:00
+images:
+- https://hcti.io/v1/image/4178f7d2-8e92-4090-a6d2-17e94d3ffa74
 source_url: https://www.newgeneva.org/audio/NGHour323__02-8-12.mp3
+title: Law-Gospel Exegesis
 ---
+
 Law-gospel is a wonderful theological category. It’s lousy exegesis. If every
 command that you find you put in the category of law, and every promise you put in the
 category of gospel, and every time you see a command you say, ‘Well the point of this
