@@ -28,6 +28,14 @@ jobs:
         run: python -m pip install -r requirements.txt
         working-directory: site
 
+      - name: Cache Python packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
       - name: Update images
         run: |
           python quote_to_image.py update-images "./content/q"
@@ -51,7 +59,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.120.4'
 
       - name: Build Site
         working-directory: site
