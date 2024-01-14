@@ -16,7 +16,11 @@ CSS = Path("themes/ezhil/static/css/main.css")
 
 
 def markdown_to_html(content):
-    html = markdown.markdown(content.content)
+    if "snippet" in content:
+        quote = content["snippet"]
+    else:
+        quote = content["content"]
+    html = markdown.markdown(quote)
     t = Template(TEMPLATE.read_text())
     if "bible_reference" in content:
         authors = content["bible_reference"]
