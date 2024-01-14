@@ -1,11 +1,14 @@
 ---
 authors:
-  - Christian Reformed Church Study Committee
-title: Unmarried in the Church
-date: 2024-01-14T21:04:50.805Z
+- Christian Reformed Church Study Committee
+date: 2024-01-14 21:04:50.805000+00:00
+images:
+- https://hcti.io/v1/image/b660bf9a-8705-4a2a-b174-58274fe47b16
 source: Christian Reformed Church, Report 42, 1970
 source_url: https://www.crcna.org/sites/default/files/1973_report_homosexuality.pdf
+title: Unmarried in the Church
 ---
+
 The church is required to be the body of Christ in which the unmarried may find
 fulfillment as persons in the fellowship and companionship of the congregation of
 believers. The church should recognize that being unmarried the single members are free
