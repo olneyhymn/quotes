@@ -13,6 +13,8 @@ collections:
     label: Quotes
     folder: site/content/q
     create: true
+    editor:
+      preview: false
     view_filters:
       - field: draft
         pattern: true
@@ -27,6 +29,15 @@ collections:
       - label: Body
         name: body
         widget: markdown
+      - label: Authors
+        name: authors
+        widget: list
+        allow_add: true
+        collapsed: false
+        field:
+          label: Author
+          name: author
+          widget: string
       - label: Title
         name: title
         widget: string
@@ -51,15 +62,6 @@ collections:
         name: tags
         widget: list
         required: false
-      - label: Authors
-        name: authors
-        widget: list
-        allow_add: true
-        collapsed: false
-        field:
-          label: Author
-          name: author
-          widget: string
       - label: Publish Date
         name: date
         widget: datetime
