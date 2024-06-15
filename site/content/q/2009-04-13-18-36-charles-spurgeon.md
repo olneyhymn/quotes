@@ -4,7 +4,7 @@ authors:
 date: '2009-04-13'
 description: ''
 images:
-- https://hcti.io/v1/image/844157df-cac2-4002-bb0c-905a1fd4919e
+- https://hcti.io/v1/image/57194862-f866-4843-9336-0521c399beb9
 slug: the-history-of-man
 tags:
 - death

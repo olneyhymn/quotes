@@ -5,7 +5,7 @@ date: '2010-12-06'
 description: ''
 draft: false
 images:
-- https://hcti.io/v1/image/551052a2-c566-4bd7-9b67-a135198aca81
+- https://hcti.io/v1/image/d40f68d0-328c-4e1e-a56d-b708fa406728
 slug: clement-on-beards
 title: Clement on Beards
 ---

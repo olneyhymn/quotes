@@ -1,33 +1,81 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+  <title>Quote Image</title>
+  <meta name="description" content="Quote Image">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Lora:500,100,300|Bitter:500,100,300" rel="stylesheet">
-
   <link rel="stylesheet" href="themes/ezhil/static/css/main.css">
   <style>
-    p:first-of-type {
-      margin-top: 10px;
+    body {
+      font-family: "Ubuntu", sans-serif;
+      color: #000;
+      line-height: 1.6;
+      font-size: 16px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f5f5;
     }
-    p:last-of-type {
-      margin-bottom: 10px;
+    blockquote {
+      width: 1080px;
+      height: 600px;
+      background: #fff;
+      padding: 40px 60px;
+      border-radius: 10px;
+      font-family: 'Lora', serif;
+      color: #333;
+      text-align: left;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    blockquote::before {
+      content: "“";
+      font-family: 'Bitter', serif;
+      font-size: 100px;
+      color: #999;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+    }
+    blockquote::after {
+      content: "”";
+      font-family: 'Bitter', serif;
+      font-size: 100px;
+      color: #999;
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+    }
+    .quote {
+      font-size: 1.4em;
+      font-weight: 400;
+      line-height: 1.4;
+      height: 80%;
+      overflow: auto;
+    }
+    .author {
+      font-size: 1.6em;
+      font-style: italic;
+      text-align: right;
+      margin-top: 20px;
+      color: #666;
     }
   </style>
-
-
 </head>
-
 <body>
-    <blockquote style="width: 1080px; height: 600px;">
-        <div class="quote" style="width: 990px; height: 500px;">{{ body }}</div>
-        <span class="author" style="font-size: 250%"><i>{{ author }}</i></span>
-      </blockquote>
+  <blockquote>
+    <div class="quote">{{ body }}</div>
+    <span class="author">{{ author }}</span>
+  </blockquote>
   <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/textfit/2.4.0/textFit.min.js"></script>
-  <script>window.onload = function() {textFit(document.querySelector(".quote"));}</script>
+  <script>
+    window.onload = function() {
+      textFit(document.querySelector(".quote"), { alignHoriz: true, alignVert: true, multiLine: true, minFontSize: 20, maxFontSize: 50 });
+    };
+  </script>
 </body>
 </html>
