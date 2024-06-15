@@ -330,3 +330,34 @@ ul {
     height: 100%;
     border: 0;
 }
+
+blockquote {
+    font-size: 1.4em;
+    overflow: auto;
+    background: #fff;
+    padding: 40px 60px;
+    border-radius: 10px;
+    font-family: 'Lora', serif;
+    color: #333;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  blockquote::before {
+    content: "“";
+    font-family: 'Bitter', serif;
+    font-size: 100px;
+    color: #999;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+  blockquote::after {
+    content: "”";
+    font-family: 'Bitter', serif;
+    font-size: 100px;
+    color: #999;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+  }

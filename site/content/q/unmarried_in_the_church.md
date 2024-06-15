@@ -3,7 +3,7 @@ authors:
 - Christian Reformed Church Study Committee
 date: 2024-01-14 21:04:50.805000+00:00
 images:
-- https://hcti.io/v1/image/b660bf9a-8705-4a2a-b174-58274fe47b16
+- https://hcti.io/v1/image/284d937c-1b75-427f-80a0-f214522ba0bc
 source: Christian Reformed Church, Report 42, 1970
 source_url: https://www.crcna.org/sites/default/files/1973_report_homosexuality.pdf
 title: Unmarried in the Church
