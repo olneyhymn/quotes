@@ -1,0 +1,17 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "{{ .Site.Title }}",
+  "home_page_url": "{{ .Site.BaseURL }}",
+  "feed_url": "{{ .Permalink }}",
+  "items": [
+    {{ range .Pages }}
+    {
+      "id": "{{ .Permalink }}",
+      "url": "{{ .Permalink }}",
+      "title": "{{ .Title }}",
+      "content_text": {{ .Plain | jsonify }},
+      "date_published": "{{ .Date }}"
+    }{{ if not (last .) }},{{ end }}
+    {{ end }}
+  ]
+}
