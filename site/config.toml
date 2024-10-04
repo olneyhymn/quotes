@@ -8,8 +8,15 @@ copyright = "Copyright © 2021, ulsterworldly.com."
 languageCode = "en-US"
 theme = "ezhil"
 
-[outputFormats.RSS]
-mediatype = "application/rss+xml"
+[outputFormats.JSONRSS]
+mediaType = "application/json"
+baseName = "index"
+isPlainText = false
+isHTML = false
+noUgly = true
+
+[outputs]
+home = ["HTML", "RSS", "JSONRSS"]
 
 # Taxonomies
 [taxonomies]
