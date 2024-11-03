@@ -14,7 +14,7 @@ home = ["HTML", "RSS", "JSONFeed"]
 [outputFormats]
 [outputFormats.JSONFeed]
 name = "JSONFeed"
-mediaType = "application/feed+json"
+mediaType = "application/json"
 baseName = "feed"
 isPlainText = true
 
