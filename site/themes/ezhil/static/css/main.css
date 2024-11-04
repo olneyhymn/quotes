@@ -355,8 +355,8 @@ blockquote {
     blockquote {
         font-size: 1.2em;
         padding: 20px 20px;
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
     }
 
     blockquote::before {
