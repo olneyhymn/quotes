@@ -342,7 +342,7 @@ blockquote {
     font-size: 1.4em;
     overflow: auto;
     background: #fff;
-    padding: 40px 60px;
+    padding: 20px 60px;
     border-radius: 10px;
     font-family: 'Lora', serif;
     color: #333;
@@ -353,8 +353,10 @@ blockquote {
 
 @media (max-width: 767px) {
     blockquote {
-        font-size: 1.1em;
-        padding: 20px 40px;
+        font-size: 1.2em;
+        padding: 20px 20px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
     blockquote::before {
