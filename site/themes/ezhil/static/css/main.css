@@ -6,7 +6,8 @@ body {
     margin: 0;
 }
 
-a, a:hover {
+a,
+a:hover {
     color: #800000;
     text-decoration: none;
 }
@@ -15,7 +16,10 @@ a:hover {
     text-decoration: underline;
 }
 
-html, input, select, textarea {
+html,
+input,
+select,
+textarea {
     color: #222;
 }
 
@@ -48,14 +52,16 @@ textarea {
     resize: vertical;
 }
 
-h1, h3 {
+h1,
+h3 {
     font-family: "Ubuntu", sans-serif;
     line-height: 1.2;
     color: #000;
     font-weight: 100;
 }
 
-h2, h4 {
+h2,
+h4 {
     font-family: "Lora", serif;
     color: #011;
     font-style: italic;
@@ -248,7 +254,7 @@ ul {
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
+    border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .5rem;
 }
 
@@ -272,7 +278,8 @@ ul {
     font-size: 15px;
 }
 
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
     background-color: #ccc;
 }
 
@@ -322,7 +329,7 @@ ul {
     overflow: hidden;
 }
 
-.video > iframe {
+.video>iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -342,22 +349,23 @@ blockquote {
     text-align: left;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
-  }
-  blockquote::before {
-    content: "“";
-    font-family: 'Bitter', serif;
-    font-size: 100px;
-    color: #999;
-    position: absolute;
-    top: 10px;
-    left: 20px;
-  }
-  blockquote::after {
-    content: "”";
-    font-family: 'Bitter', serif;
-    font-size: 100px;
-    color: #999;
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
-  }
+}
+
+@media (max-width: 767px) {
+    blockquote {
+        font-size: 1.1em;
+        padding: 20px 40px;
+    }
+
+    blockquote::before {
+        font-size: 60px;
+        top: 5px;
+        left: 10px;
+    }
+
+    blockquote::after {
+        font-size: 60px;
+        bottom: 5px;
+        right: 10px;
+    }
+}
