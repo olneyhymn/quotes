@@ -77,3 +77,423 @@ collections:
         name: draft
         widget: boolean
         required: false
+        
+  - name: lewis
+    label: C. S. Lewis
+    folder: site/content/q/lewis
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Body
+        name: body
+        widget: markdown
+      - label: Authors
+        name: authors
+        widget: list
+        default: ["C. S. Lewis"]
+        allow_add: true
+        collapsed: false
+        field:
+          label: Author
+          name: author
+          widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Slug
+        name: slug
+        widget: string
+        required: false
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - A slug can have no spaces or special characters
+      - label: Images
+        hidden: true
+        name: images
+        widget: list
+        minimize_collapsed: true
+        required: false
+        field:
+          label: Image
+          name: image
+          widget: string
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Source
+        name: source
+        widget: string
+        required: false
+      - label: Source URL
+        name: source_url
+        widget: string
+        required: false
+      - label: Draft
+        name: draft
+        widget: boolean
+        required: false
+        
+  - name: spurgeon
+    label: Charles Spurgeon
+    folder: site/content/q/spurgeon
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Body
+        name: body
+        widget: markdown
+      - label: Authors
+        name: authors
+        widget: list
+        default: ["Charles Spurgeon"]
+        allow_add: true
+        collapsed: false
+        field:
+          label: Author
+          name: author
+          widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Slug
+        name: slug
+        widget: string
+        required: false
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - A slug can have no spaces or special characters
+      - label: Images
+        hidden: true
+        name: images
+        widget: list
+        minimize_collapsed: true
+        required: false
+        field:
+          label: Image
+          name: image
+          widget: string
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Source
+        name: source
+        widget: string
+        required: false
+      - label: Source URL
+        name: source_url
+        widget: string
+        required: false
+      - label: Draft
+        name: draft
+        widget: boolean
+        required: false
+        
+  - name: augustine
+    label: Augustine of Hippo
+    folder: site/content/q/augustine
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Body
+        name: body
+        widget: markdown
+      - label: Authors
+        name: authors
+        widget: list
+        default: ["Augustine of Hippo"]
+        allow_add: true
+        collapsed: false
+        field:
+          label: Author
+          name: author
+          widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Slug
+        name: slug
+        widget: string
+        required: false
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - A slug can have no spaces or special characters
+      - label: Images
+        hidden: true
+        name: images
+        widget: list
+        minimize_collapsed: true
+        required: false
+        field:
+          label: Image
+          name: image
+          widget: string
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Source
+        name: source
+        widget: string
+        required: false
+      - label: Source URL
+        name: source_url
+        widget: string
+        required: false
+      - label: Draft
+        name: draft
+        widget: boolean
+        required: false
+        
+  - name: bavinck
+    label: Herman Bavinck
+    folder: site/content/q/bavinck
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Body
+        name: body
+        widget: markdown
+      - label: Authors
+        name: authors
+        widget: list
+        default: ["Herman Bavinck"]
+        allow_add: true
+        collapsed: false
+        field:
+          label: Author
+          name: author
+          widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Slug
+        name: slug
+        widget: string
+        required: false
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - A slug can have no spaces or special characters
+      - label: Images
+        hidden: true
+        name: images
+        widget: list
+        minimize_collapsed: true
+        required: false
+        field:
+          label: Image
+          name: image
+          widget: string
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Source
+        name: source
+        widget: string
+        required: false
+      - label: Source URL
+        name: source_url
+        widget: string
+        required: false
+      - label: Draft
+        name: draft
+        widget: boolean
+        required: false
+        
+  - name: machen
+    label: J. Gresham Machen
+    folder: site/content/q/machen
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Body
+        name: body
+        widget: markdown
+      - label: Authors
+        name: authors
+        widget: list
+        default: ["J. Gresham Machen"]
+        allow_add: true
+        collapsed: false
+        field:
+          label: Author
+          name: author
+          widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Slug
+        name: slug
+        widget: string
+        required: false
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - A slug can have no spaces or special characters
+      - label: Images
+        hidden: true
+        name: images
+        widget: list
+        minimize_collapsed: true
+        required: false
+        field:
+          label: Image
+          name: image
+          widget: string
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Source
+        name: source
+        widget: string
+        required: false
+      - label: Source URL
+        name: source_url
+        widget: string
+        required: false
+      - label: Draft
+        name: draft
+        widget: boolean
+        required: false
+        
+  - name: newton
+    label: John Newton
+    folder: site/content/q/newton
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Body
+        name: body
+        widget: markdown
+      - label: Authors
+        name: authors
+        widget: list
+        default: ["John Newton"]
+        allow_add: true
+        collapsed: false
+        field:
+          label: Author
+          name: author
+          widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Slug
+        name: slug
+        widget: string
+        required: false
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - A slug can have no spaces or special characters
+      - label: Images
+        hidden: true
+        name: images
+        widget: list
+        minimize_collapsed: true
+        required: false
+        field:
+          label: Image
+          name: image
+          widget: string
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Source
+        name: source
+        widget: string
+        required: false
+      - label: Source URL
+        name: source_url
+        widget: string
+        required: false
+      - label: Draft
+        name: draft
+        widget: boolean
+        required: false
+        
+  - name: owen
+    label: John Owen
+    folder: site/content/q/owen
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Body
+        name: body
+        widget: markdown
+      - label: Authors
+        name: authors
+        widget: list
+        default: ["John Owen"]
+        allow_add: true
+        collapsed: false
+        field:
+          label: Author
+          name: author
+          widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Slug
+        name: slug
+        widget: string
+        required: false
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - A slug can have no spaces or special characters
+      - label: Images
+        hidden: true
+        name: images
+        widget: list
+        minimize_collapsed: true
+        required: false
+        field:
+          label: Image
+          name: image
+          widget: string
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Source
+        name: source
+        widget: string
+        required: false
+      - label: Source URL
+        name: source_url
+        widget: string
+        required: false
+      - label: Draft
+        name: draft
+        widget: boolean
+        required: false
