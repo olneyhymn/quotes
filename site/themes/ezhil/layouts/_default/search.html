@@ -4,21 +4,32 @@
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 
 <body>
-	<div class="container wrapper post">
-		{{ partial "head.html" . }}
+  <div class="container wrapper post">
+    {{ partial "head.html" . }}
+
+    <div class="search-container">
+      <h1>Search Quotes</h1>
+      <p class="search-description">Find quotes by keyword or topic. Try searching for general topics for semantic
+        matches!</p>
+      <form action="/search" method="get">
+        <input id="search" name="q" type="text" placeholder="Search by keyword or topic..." />
+        <button type="submit">Search</button>
+      </form>
+    </div>
 
     <div id="app"></div>
   </div>
 
-{{ partial "feedback.html" . }}
-{{ partial "footer.html" . }}
+  {{ partial "feedback.html" . }}
+  {{ partial "footer.html" . }}
 </body>
+
 </html>
 
 {{- $p := slice -}}
 {{- range .Site.RegularPages -}}
-  {{- $post := dict "link" .RelPermalink "title" .Title "content" .Content "authors" .Params.Authors -}}
-  {{- $p = $p | append $post -}}
+{{- $post := dict "link" .RelPermalink "title" .Title "content" .Content "authors" .Params.Authors -}}
+{{- $p = $p | append $post -}}
 {{- end -}}
 
 <script>
@@ -27,41 +38,203 @@
   );
   const query = new URLSearchParams(window.location.search);
   const searchString = query.get('q');
-  document.querySelector('#search').value = searchString;
-  const $target = document.querySelector('#app');
 
-  // Our index uses title as a reference
-  const postsByTitle = posts.reduce((acc, curr) => {
-    acc[curr.title] = curr;
-    return acc;
-  }, {});
+  if (searchString) {
+    document.querySelector('#search').value = searchString;
+    const $target = document.querySelector('#app');
+    $target.innerHTML = '<div class="loading">Searching...</div>';
 
-  fetch('/search_index.json').then(function (res) {
-    return res.json();
-  }).then(function (data) {
-    const index = lunr.Index.load(data);
-    const matches = index.search(searchString);
-    const matchPosts = [];
-    matches.forEach((m) => {
-      matchPosts.push(postsByTitle[m.ref]);
-    });
+    // Calculate cosine similarity between two vectors
+    function cosineSimilarity(vec1, vec2) {
+      const common_terms = Object.keys(vec1).filter(term => term in vec2);
 
-    if (matchPosts.length > 0) {
-      $target.innerHTML = matchPosts.map(p => {
-        if (p && p.link && p.title && p.content && p.authors) {
-          return `<div>
-            <h2 class="item-title"><a href="${p.link}">${p.title}</a>  </h2>
-            <blockquote>
-              ${p.content}
-              <span class="author"><i><a href="${p.link}">${p.authors}</a></i></span>
-            </blockquote>
-          </div>`;
-        } else {
-          return "";
-        }
-      }).join('');
-    } else {
-      $target.innerHTML = `<div>No search results found</div>`;
+      // If no common terms, return 0
+      if (common_terms.length === 0) return 0;
+
+      let dot_product = 0;
+      for (const term of common_terms) {
+        dot_product += vec1[term] * vec2[term];
+      }
+
+      // Calculate magnitudes
+      let mag1 = 0;
+      let mag2 = 0;
+
+      for (const val of Object.values(vec1)) {
+        mag1 += val * val;
+      }
+
+      for (const val of Object.values(vec2)) {
+        mag2 += val * val;
+      }
+
+      mag1 = Math.sqrt(mag1);
+      mag2 = Math.sqrt(mag2);
+
+      // Prevent division by zero
+      if (mag1 === 0 || mag2 === 0) return 0;
+
+      return dot_product / (mag1 * mag2);
     }
-  });
+
+    // Create TF-IDF vector for search query
+    function createQueryVector(query) {
+      // Simple tokenization with stopwords removal
+      const stopwords = ['a', 'an', 'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'with', 'by'];
+      const terms = query.toLowerCase().split(/\W+/).filter(term =>
+        term.length > 1 && !stopwords.includes(term)
+      );
+
+      // Create a vector based on term frequency
+      const vector = {};
+      terms.forEach(term => {
+        if (!vector[term]) vector[term] = 0;
+        vector[term] += 1;
+      });
+
+      return vector;
+    }
+
+    // Perform semantic search using embeddings
+    function semanticSearch(query, embeddings) {
+      const queryVector = createQueryVector(query);
+      const results = [];
+
+      // Calculate similarity between query and each document
+      for (const [docId, docVector] of Object.entries(embeddings)) {
+        const similarity = cosineSimilarity(queryVector, docVector);
+        if (similarity > 0) { // Only include results with some relevance
+          results.push({
+            ref: docId,
+            score: similarity
+          });
+        }
+      }
+
+      // Sort by similarity score (descending)
+      results.sort((a, b) => b.score - a.score);
+
+      return results;
+    }
+
+    // Our index uses title as a reference
+    const postsByTitle = posts.reduce((acc, curr) => {
+      acc[curr.title] = curr;
+      return acc;
+    }, {});
+
+    fetch('/search_index.json').then(function (res) {
+      return res.json();
+    }).then(function (data) {
+      // Load lunr index
+      const lunrIndex = lunr.Index.load(data.lunrIndex);
+
+      // Perform traditional search
+      let matches = lunrIndex.search(searchString);
+
+      // If we don't have enough results, try semantic search
+      if (matches.length < 3) {
+        const semanticResults = semanticSearch(searchString, data.embeddings);
+
+        // Merge results, ensuring no duplicates
+        const existingRefs = new Set(matches.map(r => r.ref));
+        semanticResults.forEach(result => {
+          if (!existingRefs.has(result.ref)) {
+            matches.push(result);
+          }
+        });
+
+        // Re-sort by score
+        matches.sort((a, b) => b.score - a.score);
+      }
+
+      const matchPosts = [];
+      matches.forEach((m) => {
+        if (data.posts && data.posts[m.ref]) {
+          matchPosts.push(data.posts[m.ref]);
+        } else if (postsByTitle[m.ref]) {
+          matchPosts.push(postsByTitle[m.ref]);
+        }
+      });
+
+      if (matchPosts.length > 0) {
+        $target.innerHTML = matchPosts.map(p => {
+          if (p && p.link && p.title && p.content && p.authors) {
+            return `<div class="search-result">
+              <h2 class="item-title"><a href="${p.link}">${p.title}</a></h2>
+              <blockquote>
+                ${p.content}
+                <span class="author"><i><a href="${p.link}">${p.authors}</a></i></span>
+              </blockquote>
+            </div>`;
+          } else {
+            return "";
+          }
+        }).join('');
+      } else {
+        $target.innerHTML = `<div class="no-results">No search results found for "${searchString}"</div>`;
+      }
+    }).catch(error => {
+      console.error('Error fetching search results:', error);
+      $target.innerHTML = `<div class="error">Error fetching search results: ${error.message}</div>`;
+    });
+  }
 </script>
+
+<style>
+  .search-container {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .search-description {
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  #search {
+    padding: 0.5rem;
+    width: 70%;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .loading {
+    text-align: center;
+    padding: 2rem;
+    font-style: italic;
+  }
+
+  .search-result {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+  }
+
+  .no-results,
+  .error {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+  }
+
+  .error {
+    color: #d9534f;
+  }
+</style>

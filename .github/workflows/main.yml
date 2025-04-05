@@ -53,6 +53,7 @@ jobs:
       - name: Build search index
         run: |
           npm install
+          npm install natural
           node build-index.js > static/search_index.json
         working-directory: site
 
