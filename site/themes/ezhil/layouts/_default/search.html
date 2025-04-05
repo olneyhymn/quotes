@@ -26,16 +26,26 @@
 
 </html>
 
-{{- $p := slice -}}
+<!-- Prepare post data for JavaScript -->
+{{- $postsJson := slice -}}
 {{- range .Site.RegularPages -}}
 {{- $post := dict "link" .RelPermalink "title" .Title "content" .Content "authors" .Params.Authors -}}
-{{- $p = $p | append $post -}}
+{{- $postsJson = $postsJson | append $post -}}
 {{- end -}}
 
 <script>
-  const posts = JSON.parse(
-    {{- $p | jsonify -}}
-  );
+  // Define posts data
+  const posts = [];
+
+  { { range.Site.RegularPages } }
+  posts.push({
+    title: {{ .Title | jsonify }},
+    link: {{ .RelPermalink | jsonify }},
+    content: {{ .Content | jsonify }},
+    authors: {{ if .Params.Authors }}{{ .Params.Authors | jsonify }}{{ else }}""{{ end }}
+  });
+  { { end } }
+
   const query = new URLSearchParams(window.location.search);
   const searchString = query.get('q');
 
@@ -123,61 +133,77 @@
       return acc;
     }, {});
 
-    fetch('/search_index.json').then(function (res) {
-      return res.json();
-    }).then(function (data) {
-      // Load lunr index
-      const lunrIndex = lunr.Index.load(data.lunrIndex);
+    fetch('/search_index.json')
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (data) {
+        console.log("Loaded search index:", data);
 
-      // Perform traditional search
-      let matches = lunrIndex.search(searchString);
+        // Check if we have a proper index structure
+        if (!data || (!data.lunrIndex && !data.embeddings)) {
+          throw new Error("Invalid search index format");
+        }
 
-      // If we don't have enough results, try semantic search
-      if (matches.length < 3) {
-        const semanticResults = semanticSearch(searchString, data.embeddings);
+        let matches = [];
 
-        // Merge results, ensuring no duplicates
-        const existingRefs = new Set(matches.map(r => r.ref));
-        semanticResults.forEach(result => {
-          if (!existingRefs.has(result.ref)) {
-            matches.push(result);
+        // Try lunr search if available
+        if (data.lunrIndex) {
+          // Load lunr index
+          const lunrIndex = lunr.Index.load(data.lunrIndex);
+          // Perform traditional search
+          matches = lunrIndex.search(searchString);
+        }
+
+        // If we don't have enough results, try semantic search
+        if (matches.length < 3 && data.embeddings) {
+          const semanticResults = semanticSearch(searchString, data.embeddings);
+
+          // Merge results, ensuring no duplicates
+          const existingRefs = new Set(matches.map(r => r.ref));
+          semanticResults.forEach(result => {
+            if (!existingRefs.has(result.ref)) {
+              matches.push(result);
+            }
+          });
+
+          // Re-sort by score
+          matches.sort((a, b) => b.score - a.score);
+        }
+
+        console.log("Search results:", matches);
+
+        const matchPosts = [];
+        matches.forEach((m) => {
+          if (data.posts && data.posts[m.ref]) {
+            matchPosts.push(data.posts[m.ref]);
+          } else if (postsByTitle[m.ref]) {
+            matchPosts.push(postsByTitle[m.ref]);
           }
         });
 
-        // Re-sort by score
-        matches.sort((a, b) => b.score - a.score);
-      }
-
-      const matchPosts = [];
-      matches.forEach((m) => {
-        if (data.posts && data.posts[m.ref]) {
-          matchPosts.push(data.posts[m.ref]);
-        } else if (postsByTitle[m.ref]) {
-          matchPosts.push(postsByTitle[m.ref]);
+        if (matchPosts.length > 0) {
+          $target.innerHTML = matchPosts.map(p => {
+            if (p && p.link && p.title && p.content && p.authors) {
+              return `<div class="search-result">
+                <h2 class="item-title"><a href="${p.link}">${p.title}</a></h2>
+                <blockquote>
+                  ${p.content}
+                  <span class="author"><i><a href="${p.link}">${p.authors}</a></i></span>
+                </blockquote>
+              </div>`;
+            } else {
+              return "";
+            }
+          }).join('');
+        } else {
+          $target.innerHTML = `<div class="no-results">No search results found for "${searchString}"</div>`;
         }
+      })
+      .catch(error => {
+        console.error('Error fetching search results:', error);
+        $target.innerHTML = `<div class="error">Error fetching search results: ${error.message}</div>`;
       });
-
-      if (matchPosts.length > 0) {
-        $target.innerHTML = matchPosts.map(p => {
-          if (p && p.link && p.title && p.content && p.authors) {
-            return `<div class="search-result">
-              <h2 class="item-title"><a href="${p.link}">${p.title}</a></h2>
-              <blockquote>
-                ${p.content}
-                <span class="author"><i><a href="${p.link}">${p.authors}</a></i></span>
-              </blockquote>
-            </div>`;
-          } else {
-            return "";
-          }
-        }).join('');
-      } else {
-        $target.innerHTML = `<div class="no-results">No search results found for "${searchString}"</div>`;
-      }
-    }).catch(error => {
-      console.error('Error fetching search results:', error);
-      $target.innerHTML = `<div class="error">Error fetching search results: ${error.message}</div>`;
-    });
   }
 </script>
 

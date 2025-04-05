@@ -7,11 +7,13 @@
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
+        if (!item) continue; // Skip if item not found
+
         appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
         appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
       }
 
-      searchResults.innerHTML = appendString;
+      searchResults.innerHTML = appendString || '<li>No results found</li>';
     } else {
       searchResults.innerHTML = '<li>No results found</li>';
     }
@@ -28,6 +30,7 @@
         return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
       }
     }
+    return null;
   }
 
   // Calculate cosine similarity between two vectors
@@ -64,7 +67,7 @@
   }
 
   // Create TF-IDF vector for search query
-  function createQueryVector(query, corpus) {
+  function createQueryVector(query) {
     // Simple tokenization with stopwords removal
     const stopwords = ['a', 'an', 'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'with', 'by'];
     const terms = query.toLowerCase().split(/\W+/).filter(term =>
@@ -106,35 +109,71 @@
   var searchTerm = getQueryVariable('query');
 
   if (searchTerm) {
-    document.getElementById('search-box').setAttribute("value", searchTerm);
+    var searchBox = document.getElementById('search-box');
+    if (searchBox) {
+      searchBox.setAttribute("value", searchTerm);
+    }
 
     // Fetch search index JSON which now includes both lunr index and embeddings
-    fetch('/search_index.json').then(response => response.json())
+    fetch('/search_index.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok: ' + response.statusText);
+        }
+        return response.json();
+      })
       .then(data => {
-        // Load lunr index
-        var lunrIndex = lunr.Index.load(data.lunrIndex);
+        console.log("Search index loaded:", data ? "success" : "empty");
 
-        // Perform traditional search
-        var lunrResults = lunrIndex.search(searchTerm);
-
-        // Perform semantic search if no or few results
-        if (lunrResults.length < 3) {
-          const semanticResults = semanticSearch(searchTerm, data.embeddings);
-
-          // Merge results, ensuring no duplicates
-          const existingRefs = new Set(lunrResults.map(r => r.ref));
-          semanticResults.forEach(result => {
-            if (!existingRefs.has(result.ref)) {
-              lunrResults.push(result);
-            }
-          });
-
-          // Re-sort by score
-          lunrResults.sort((a, b) => b.score - a.score);
+        // Handle empty or invalid data
+        if (!data || typeof data !== 'object') {
+          console.error("Search index is empty or invalid");
+          displaySearchResults([], window.store || {});
+          return;
         }
 
-        // Use the store from combined index
-        displaySearchResults(lunrResults, data.posts);
+        let allResults = [];
+
+        // Try lunr search if available
+        if (data.lunrIndex) {
+          try {
+            var lunrIndex = lunr.Index.load(data.lunrIndex);
+            var lunrResults = lunrIndex.search(searchTerm);
+            allResults = lunrResults;
+            console.log("Lunr search results:", lunrResults.length);
+          } catch (e) {
+            console.error("Error performing lunr search:", e);
+          }
+        }
+
+        // Try semantic search if available
+        if (data.embeddings && allResults.length < 3) {
+          try {
+            const semanticResults = semanticSearch(searchTerm, data.embeddings);
+
+            // Merge results, ensuring no duplicates
+            const existingRefs = new Set(allResults.map(r => r.ref));
+            semanticResults.forEach(result => {
+              if (!existingRefs.has(result.ref)) {
+                allResults.push(result);
+              }
+            });
+            console.log("After semantic search:", allResults.length);
+          } catch (e) {
+            console.error("Error performing semantic search:", e);
+          }
+        }
+
+        // Sort by score
+        allResults.sort((a, b) => b.score - a.score);
+
+        // Use either the store from combined index or window.store
+        const store = data.posts || window.store || {};
+        displaySearchResults(allResults, store);
+      })
+      .catch(error => {
+        console.error('Error fetching search index:', error);
+        displaySearchResults([], window.store || {});
       });
   }
 })();

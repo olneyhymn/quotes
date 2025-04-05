@@ -50,11 +50,28 @@ jobs:
           commit_message: Add images
           file_pattern: site/content/**/*.md
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: site/package.json
+
       - name: Build search index
         run: |
           npm install
           npm install natural
+          echo "Node.js version: $(node -v)"
+          echo "NPM version: $(npm -v)"
+          echo "Contents of node_modules:"
+          ls -la node_modules
+          echo "Installed packages:"
+          npm list --depth=0
+          echo "Building search index..."
           node build-index.js > static/search_index.json
+          echo "Search index size: $(wc -c < static/search_index.json) bytes"
+          echo "Search index first 500 chars:"
+          head -c 500 static/search_index.json
         working-directory: site
 
       - name: Setup Hugo
