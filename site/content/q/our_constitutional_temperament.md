@@ -1,11 +1,14 @@
 ---
 authors:
-  - John Newton
-title: Our Constitutional Temperament
-date: 2025-07-23T15:32:00.000-04:00
+- John Newton
+date: 2025-07-23 15:32:00-04:00
+images:
+- https://hcti.io/v1/image/cf668631-ba6a-4697-9c68-0c50555f69fd
 source: Letters of John Newton
 source_url: https://x.com/jasonkovacs/status/1946241863532617914
+title: Our Constitutional Temperament
 ---
+
 I would observe farther, that our spiritual exercises are not a little influenced by our constitutional temperament. As you are only an ideal correspondent, I can but conjecture about you upon this head. If your frame is delicate, and your nervous system very sensible and tender, I should probably ascribe some of your apprehensions to this cause.
 
 It is an abstruse subject, and I will not enter into it; but according to the observations I have made, persons of this habit seem to live more upon the confines of the invisible world, if I may so speak, and to be more susceptive of impressions from it, than others. That complaint which, for want of a better name, we call lowness of spirits, may probably afford the enemy some peculiar advantages and occasions of distressing you.
