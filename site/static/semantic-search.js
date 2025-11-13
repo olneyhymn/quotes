@@ -31,12 +31,20 @@ class SemanticSearch {
       console.log('Loading embedding model...');
 
       // Import transformers.js from CDN
-      const { pipeline } = await import('https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2');
+      const { pipeline, env } = await import('https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2');
+
+      // Configure to use remote models from HuggingFace Hub
+      env.allowLocalModels = false;
+      env.useBrowserCache = true;
+      env.allowRemoteModels = true;
 
       // Initialize the feature extraction pipeline
       this.extractor = await pipeline(
         'feature-extraction',
-        'Xenova/all-MiniLM-L6-v2'
+        'Xenova/all-MiniLM-L6-v2',
+        {
+          quantized: true,  // Use quantized model for faster loading
+        }
       );
 
       console.log('Semantic search ready!');
