@@ -22,10 +22,23 @@ def load_quotes(content_dir: Path) -> List[Dict[str, Any]]:
 
     # Recursively find all .md files
     for md_file in content_dir.rglob('*.md'):
+        # Skip Hugo index files (_index.md)
+        if md_file.name == '_index.md':
+            continue
+
         try:
             # Parse front matter
             with open(md_file, 'r', encoding='utf-8') as f:
                 post = frontmatter.load(f)
+
+            # Skip drafts
+            if post.get('draft', False):
+                continue
+
+            # Skip posts without meaningful content
+            content = post.content.strip()
+            if not content:
+                continue
 
             # Create slug from file path relative to content dir
             relative_path = md_file.relative_to(content_dir)
@@ -35,7 +48,7 @@ def load_quotes(content_dir: Path) -> List[Dict[str, Any]]:
             quote = {
                 'title': post.get('title', ''),
                 'slug': slug,
-                'content': post.content.strip(),
+                'content': content,
                 'authors': post.get('authors', []),
                 'tags': post.get('tags', []),
                 'description': post.get('description', ''),
