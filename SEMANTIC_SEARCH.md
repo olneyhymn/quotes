@@ -9,15 +9,16 @@ The site now features **embedding-based semantic search** that understands the m
 ## Architecture
 
 ### Build Time (Pre-computation)
-1. **Embedding Generation** (`site/build-embeddings.js`):
+1. **Embedding Generation** (`site/build-embeddings.py`):
    - Reads all quote markdown files from `site/content/`
    - For each quote, creates a text representation combining title, content, authors, and tags
-   - Uses the **all-MiniLM-L6-v2** embedding model (384 dimensions) via Transformers.js
-   - Generates vector embeddings for all quotes
-   - Outputs `static/embeddings_index.json` (~8-10MB for 561 quotes)
+   - Uses the **all-MiniLM-L6-v2** embedding model (384 dimensions) via sentence-transformers
+   - Generates vector embeddings for all quotes with batch processing
+   - Outputs `static/embeddings_index.json` (~8-10MB for 621 quotes)
 
 2. **Build Process** (GitHub Actions):
    - Runs after the traditional Lunr.js search index is built
+   - Uses Python (already in workflow for image generation)
    - Generates embeddings for all quotes in the repository
    - Embeddings are deployed as a static JSON file
 
@@ -38,16 +39,17 @@ The site now features **embedding-based semantic search** that understands the m
 ## Technical Details
 
 ### Embedding Model
-- **Model**: [Xenova/all-MiniLM-L6-v2](https://huggingface.co/Xenova/all-MiniLM-L6-v2)
+- **Model**: [sentence-transformers/all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
 - **Dimensions**: 384
 - **Size**: ~23MB (cached in browser after first load)
 - **Performance**: Fast inference, suitable for client-side use
 
 ### Why This Model?
-- Available in both Node.js and browser via Transformers.js (ensures consistency)
+- Available in both Python (sentence-transformers) and browser (Transformers.js)
 - Good balance of size, speed, and quality
 - Well-suited for semantic text search
 - Wide browser compatibility via WASM/WebGPU
+- Battle-tested and mature library ecosystem
 
 ### File Sizes
 - **embeddings_index.json**: ~8-10MB (561 quotes × 384 dimensions)
@@ -66,14 +68,15 @@ The site now features **embedding-based semantic search** that understands the m
 1. **Install dependencies**:
    ```bash
    cd site
+   pip install -r requirements.txt
    npm install
    ```
 
 2. **Generate embeddings**:
    ```bash
-   node build-embeddings.js > static/embeddings_index.json
+   python build-embeddings.py > static/embeddings_index.json
    ```
-   This will take 5-10 minutes for 561 quotes on first run (model download).
+   This will take 3-5 minutes for 621 quotes on first run (model download).
 
 3. **Build and serve the site**:
    ```bash
@@ -90,10 +93,11 @@ The site now features **embedding-based semantic search** that understands the m
 ### Deployment
 
 The GitHub Actions workflow automatically:
-1. Installs npm dependencies
-2. Generates embeddings using `build-embeddings.js`
-3. Builds the Hugo site
-4. Deploys to Netlify
+1. Installs Python dependencies (`pip install -r requirements.txt`)
+2. Installs npm dependencies
+3. Generates embeddings using `build-embeddings.py`
+4. Builds the Hugo site
+5. Deploys to Netlify
 
 ## Comparison: Semantic vs. Keyword Search
 
@@ -119,8 +123,15 @@ Potential improvements:
 
 ## Troubleshooting
 
-### Issue: npm install fails with sharp errors
-**Solution**: The `sharp` package (optional dependency of transformers.js) may fail on some systems. This doesn't affect functionality since we're only doing text embeddings. The `.npmrc` file is configured to skip optional dependencies.
+### Issue: pip install fails for sentence-transformers
+**Solution**: Ensure you have Python 3.8+ and PyTorch installed. On some systems you may need to install PyTorch separately first:
+```bash
+pip install torch --index-url https://download.pytorch.org/whl/cpu
+pip install sentence-transformers
+```
+
+### Issue: Model download fails during build
+**Solution**: The sentence-transformers library downloads models from HuggingFace Hub. Ensure the build environment has internet access. The model (~80MB total) will be cached in `~/.cache/huggingface/`.
 
 ### Issue: Model download fails in browser
 **Solution**: Ensure CDN access to `cdn.jsdelivr.net` or use a self-hosted copy of Transformers.js.
@@ -130,12 +141,17 @@ Potential improvements:
 
 ## Dependencies
 
-### Build-time
-- `@xenova/transformers` (^2.17.2): ONNX Runtime for embeddings
-- `fs-readdir-recursive`: Recursive directory reading
-- `parser-front-matter`: YAML front matter parsing
+### Build-time (Python)
+- `sentence-transformers`: Generate embeddings using transformer models
+- `python-frontmatter`: Parse YAML front matter from markdown files
+- Python 3.8+ with PyTorch
 
-### Runtime
+### Build-time (Node.js)
+- `fs-readdir-recursive`: Recursive directory reading (for Lunr.js index)
+- `parser-front-matter`: YAML front matter parsing (for Lunr.js index)
+- `lunr`: Traditional keyword search index
+
+### Runtime (Browser)
 - Transformers.js (CDN): Browser-compatible embedding model inference
 - Modern browser with WebAssembly support
 
