@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 {{ partial "header.html" . }}
-<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src="/semantic-search.js"></script>
 
 <body>
 	<div class="container wrapper post">
 		{{ partial "head.html" . }}
 
+    <div id="search-status" style="padding: 10px; margin-bottom: 20px; background: #f0f0f0; border-radius: 5px;">
+      <span id="status-text">Initializing semantic search...</span>
+    </div>
     <div id="app"></div>
   </div>
 
@@ -27,41 +30,77 @@
   );
   const query = new URLSearchParams(window.location.search);
   const searchString = query.get('q');
-  document.querySelector('#search').value = searchString;
-  const $target = document.querySelector('#app');
 
-  // Our index uses title as a reference
-  const postsByTitle = posts.reduce((acc, curr) => {
-    acc[curr.title] = curr;
+  if (document.querySelector('#search')) {
+    document.querySelector('#search').value = searchString;
+  }
+
+  const $target = document.querySelector('#app');
+  const $statusText = document.querySelector('#status-text');
+
+  // Create a lookup by slug for additional metadata
+  const postsBySlug = posts.reduce((acc, curr) => {
+    // Extract slug from permalink (e.g., /q/some-quote/ -> q/some-quote)
+    const slug = curr.link.replace(/^\//, '').replace(/\/$/, '');
+    acc[slug] = curr;
     return acc;
   }, {});
 
-  fetch('/search_index.json').then(function (res) {
-    return res.json();
-  }).then(function (data) {
-    const index = lunr.Index.load(data);
-    const matches = index.search(searchString);
-    const matchPosts = [];
-    matches.forEach((m) => {
-      matchPosts.push(postsByTitle[m.ref]);
-    });
+  async function performSearch() {
+    try {
+      // Initialize semantic search
+      $statusText.textContent = 'Loading semantic search model (this may take a moment on first load)...';
+      await window.semanticSearch.initialize();
+      $statusText.textContent = 'Search ready! Performing search...';
 
-    if (matchPosts.length > 0) {
-      $target.innerHTML = matchPosts.map(p => {
-        if (p && p.link && p.title && p.content && p.authors) {
-          return `<div>
-            <h2 class="item-title"><a href="${p.link}">${p.title}</a>  </h2>
+      // Perform semantic search
+      const results = await window.semanticSearch.search(searchString, 20);
+
+      if (results.length > 0) {
+        $statusText.textContent = `Found ${results.length} semantically similar quotes`;
+
+        $target.innerHTML = results.map((result, index) => {
+          // Try to find full content from posts
+          const fullPost = postsBySlug[result.slug];
+          const content = fullPost ? fullPost.content : result.contentPreview;
+          const authors = Array.isArray(result.authors) ? result.authors.join(', ') : result.authors;
+          const link = `/${result.slug}/`;
+
+          // Format similarity score as percentage
+          const similarityPercent = (result.score * 100).toFixed(1);
+
+          return `<div style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+            <h2 class="item-title">
+              <a href="${link}">${result.title}</a>
+              <span style="font-size: 0.6em; color: #666; font-weight: normal; margin-left: 10px;">
+                (${similarityPercent}% match)
+              </span>
+            </h2>
             <blockquote>
-              ${p.content}
-              <span class="author"><i><a href="${p.link}">${p.authors}</a></i></span>
+              ${content}
+              ${authors ? `<span class="author"><i><a href="${link}">${authors}</a></i></span>` : ''}
             </blockquote>
           </div>`;
-        } else {
-          return "";
-        }
-      }).join('');
-    } else {
-      $target.innerHTML = `<div>No search results found</div>`;
+        }).join('');
+      } else {
+        $statusText.textContent = 'Search complete';
+        $target.innerHTML = `<div>No search results found for "${searchString}"</div>`;
+      }
+    } catch (error) {
+      console.error('Search error:', error);
+      $statusText.textContent = 'Error performing search';
+      $target.innerHTML = `<div style="color: red;">
+        An error occurred while searching. Please try again or check the console for details.
+        <br><br>Error: ${error.message}
+      </div>`;
     }
-  });
+  }
+
+  // Start search if we have a query
+  if (searchString && searchString.trim().length > 0) {
+    performSearch();
+  } else {
+    $statusText.textContent = 'Enter a search query to begin';
+    $target.innerHTML = `<div>Please enter a search query in the search box above.</div>`;
+  }
 </script>
