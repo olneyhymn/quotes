@@ -60,6 +60,9 @@ jobs:
         run: |
           node build-embeddings.js > static/embeddings_index.json
         working-directory: site
+        timeout-minutes: 15
+        env:
+          NODE_OPTIONS: "--max-old-space-size=4096"
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2

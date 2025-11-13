@@ -2,7 +2,14 @@ const fs = require('fs').promises;
 const read = require('fs-readdir-recursive');
 const {promisify} = require('util');
 const frontMatterParser = require('parser-front-matter');
-const { pipeline } = require('@xenova/transformers');
+
+// Configure environment for Node.js execution
+process.env.TRANSFORMERS_CACHE = process.env.TRANSFORMERS_CACHE || '/tmp/transformers_cache';
+
+const { pipeline, env } = require('@xenova/transformers');
+
+// Disable local model loading and use HuggingFace hub
+env.allowLocalModels = false;
 
 const parse = promisify(frontMatterParser.parse.bind(frontMatterParser));
 
@@ -58,7 +65,11 @@ async function generateEmbeddings(posts) {
   // This model produces 384-dimensional embeddings
   const extractor = await pipeline(
     'feature-extraction',
-    'Xenova/all-MiniLM-L6-v2'
+    'Xenova/all-MiniLM-L6-v2',
+    {
+      quantized: false,
+      device: 'cpu'
+    }
   );
 
   console.error(`Generating embeddings for ${posts.length} quotes...`);
