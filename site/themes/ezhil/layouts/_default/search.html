@@ -2,6 +2,7 @@
 <html>
 {{ partial "header.html" . }}
 <script src="/semantic-search.js"></script>
+<script src="/search-ui.js"></script>
 
 <body>
 	<div class="container wrapper post">
@@ -25,82 +26,29 @@
 {{- end -}}
 
 <script>
-  const posts = JSON.parse(
-    {{- $p | jsonify -}}
-  );
+  // Parse Hugo-generated posts data
+  const posts = JSON.parse({{- $p | jsonify -}});
+
+  // Get search query from URL
   const query = new URLSearchParams(window.location.search);
   const searchString = query.get('q');
 
-  if (document.querySelector('#search')) {
-    document.querySelector('#search').value = searchString;
+  // Set search input value if it exists
+  const searchInput = document.querySelector('#search');
+  if (searchInput && searchString) {
+    searchInput.value = searchString;
   }
-
-  const $target = document.querySelector('#app');
-  const $statusText = document.querySelector('#status-text');
 
   // Create a lookup by slug for additional metadata
   const postsBySlug = posts.reduce((acc, curr) => {
-    // Extract slug from permalink (e.g., /q/some-quote/ -> q/some-quote)
     const slug = curr.link.replace(/^\//, '').replace(/\/$/, '');
     acc[slug] = curr;
     return acc;
   }, {});
 
-  async function performSearch() {
-    try {
-      // Initialize semantic search
-      $statusText.textContent = 'Loading semantic search model (this may take a moment on first load)...';
-      await window.semanticSearch.initialize();
-      $statusText.textContent = 'Search ready! Performing search...';
+  // Initialize search UI
+  const searchUI = new SearchUI(window.semanticSearch, postsBySlug);
 
-      // Perform semantic search
-      const results = await window.semanticSearch.search(searchString, 20);
-
-      if (results.length > 0) {
-        $statusText.textContent = `Found ${results.length} semantically similar quotes`;
-
-        $target.innerHTML = results.map((result, index) => {
-          // Try to find full content from posts
-          const fullPost = postsBySlug[result.slug];
-          const content = fullPost ? fullPost.content : result.contentPreview;
-          const authors = Array.isArray(result.authors) ? result.authors.join(', ') : result.authors;
-          const link = `/${result.slug}/`;
-
-          // Format similarity score as percentage
-          const similarityPercent = (result.score * 100).toFixed(1);
-
-          return `<div style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-            <h2 class="item-title">
-              <a href="${link}">${result.title}</a>
-              <span style="font-size: 0.6em; color: #666; font-weight: normal; margin-left: 10px;">
-                (${similarityPercent}% match)
-              </span>
-            </h2>
-            <blockquote>
-              ${content}
-              ${authors ? `<span class="author"><i><a href="${link}">${authors}</a></i></span>` : ''}
-            </blockquote>
-          </div>`;
-        }).join('');
-      } else {
-        $statusText.textContent = 'Search complete';
-        $target.innerHTML = `<div>No search results found for "${searchString}"</div>`;
-      }
-    } catch (error) {
-      console.error('Search error:', error);
-      $statusText.textContent = 'Error performing search';
-      $target.innerHTML = `<div style="color: red;">
-        An error occurred while searching. Please try again or check the console for details.
-        <br><br>Error: ${error.message}
-      </div>`;
-    }
-  }
-
-  // Start search if we have a query
-  if (searchString && searchString.trim().length > 0) {
-    performSearch();
-  } else {
-    $statusText.textContent = 'Enter a search query to begin';
-    $target.innerHTML = `<div>Please enter a search query in the search box above.</div>`;
-  }
+  // Perform search
+  searchUI.performSearch(searchString);
 </script>
