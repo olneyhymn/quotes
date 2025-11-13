@@ -3,13 +3,16 @@ const read = require('fs-readdir-recursive');
 const {promisify} = require('util');
 const frontMatterParser = require('parser-front-matter');
 
-// Configure environment for Node.js execution
+// Configure environment for Node.js execution with WASM backend
 process.env.TRANSFORMERS_CACHE = process.env.TRANSFORMERS_CACHE || '/tmp/transformers_cache';
 
 const { pipeline, env } = require('@xenova/transformers');
 
-// Disable local model loading and use HuggingFace hub
+// Configure to use WASM backend instead of onnxruntime-node
+// This avoids tensor format compatibility issues
+env.backends.onnx.wasm.numThreads = 1;
 env.allowLocalModels = false;
+env.useBrowserCache = false;
 
 const parse = promisify(frontMatterParser.parse.bind(frontMatterParser));
 
@@ -63,12 +66,17 @@ async function generateEmbeddings(posts) {
 
   // Use the feature-extraction pipeline with all-MiniLM-L6-v2 model
   // This model produces 384-dimensional embeddings
+  // Using WASM backend to avoid onnxruntime-node tensor format issues
   const extractor = await pipeline(
     'feature-extraction',
     'Xenova/all-MiniLM-L6-v2',
     {
-      quantized: false,
-      device: 'cpu'
+      quantized: true,  // Use quantized model for faster loading
+      progress_callback: (progress) => {
+        if (progress.status === 'downloading') {
+          console.error(`Downloading model: ${progress.file} (${Math.round(progress.progress)}%)`);
+        }
+      }
     }
   );
 
