@@ -3,13 +3,14 @@ const read = require('fs-readdir-recursive');
 const {promisify} = require('util');
 const frontMatterParser = require('parser-front-matter');
 
-// Configure environment for Node.js execution with WASM backend
+// Configure environment BEFORE importing transformers
+// Force WASM backend to avoid onnxruntime-node tensor format issues
 process.env.TRANSFORMERS_CACHE = process.env.TRANSFORMERS_CACHE || '/tmp/transformers_cache';
+process.env.USE_ONNX_NODE = 'false';  // Disable native backend
 
 const { pipeline, env } = require('@xenova/transformers');
 
-// Configure to use WASM backend instead of onnxruntime-node
-// This avoids tensor format compatibility issues
+// Additional configuration for WASM backend
 env.backends.onnx.wasm.numThreads = 1;
 env.allowLocalModels = false;
 env.useBrowserCache = false;
