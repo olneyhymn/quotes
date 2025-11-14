@@ -131,16 +131,31 @@ class SearchUI {
   }
 
   /**
+   * Try to find a post by matching title as fallback
+   */
+  findPostByTitle(title) {
+    return Object.values(this.postsBySlug).find(post =>
+      post.title && post.title.trim() === title.trim()
+    );
+  }
+
+  /**
    * Format a search result item
    */
   formatResult(result, index) {
-    // Try to find full content from posts
-    const fullPost = this.postsBySlug[result.slug];
+    // Try to find full content from posts - first by slug, then by title
+    let fullPost = this.postsBySlug[result.slug];
+
+    if (!fullPost && result.title) {
+      fullPost = this.findPostByTitle(result.title);
+      if (fullPost) {
+        console.log(`Found post by title match: "${result.title}"`);
+      }
+    }
 
     // Debug logging for missing posts
     if (!fullPost) {
-      console.warn(`Could not find fullPost for slug: "${result.slug}"`);
-      console.log('Available slugs:', Object.keys(this.postsBySlug).slice(0, 5));
+      console.warn(`Could not find post for slug: "${result.slug}", title: "${result.title}"`);
     }
 
     const content = fullPost ? fullPost.content : result.contentPreview;
