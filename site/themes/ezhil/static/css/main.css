@@ -371,3 +371,67 @@ blockquote {
         right: 10px;
     }
 }
+
+/* Similar Quotes Section */
+.similar-quotes-container {
+    margin-top: 3em;
+    padding: 1.5em;
+    background: #f9f9f9;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+}
+
+.similar-quotes-header {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 1em;
+    letter-spacing: 1px;
+}
+
+.similar-quotes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+
+.similar-quote-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.similar-quote-title {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #800000;
+    text-decoration: none;
+}
+
+.similar-quote-title:hover {
+    text-decoration: underline;
+}
+
+.similar-quote-author {
+    font-size: 0.8em;
+    color: #666;
+    font-style: italic;
+}
+
+.similar-quote-preview {
+    font-size: 0.85em;
+    color: #666;
+    line-height: 1.4;
+}
+
+@media (max-width: 767px) {
+    .similar-quotes-container {
+        margin-top: 2em;
+        padding: 1em;
+    }
+
+    .similar-quotes-list {
+        gap: 1em;
+    }
+}

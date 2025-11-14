@@ -30,6 +30,20 @@
 		  {{ end }}
 		{{ end }}
 	  {{ end }}
+
+		<!-- Similar Quotes Section -->
+		<div id="similar-quotes-container" class="similar-quotes-container" style="display: none;"></div>
+
+		<script src="/similar-quotes.js"></script>
+		<script>
+			// Initialize and render similar quotes
+			(function() {
+				const similarQuotes = new SimilarQuotes();
+				// Use RelPermalink to get the URL path which matches the slug format in embeddings
+				const currentSlug = '{{ strings.TrimPrefix "/" (strings.TrimSuffix "/" .RelPermalink) }}';
+				similarQuotes.renderSimilarQuotes('similar-quotes-container', currentSlug);
+			})();
+		</script>
 	</div>
 	{{ partial "feedback.html" . }}
 	{{ partial "footer.html" . }}
