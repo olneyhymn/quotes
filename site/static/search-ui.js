@@ -138,7 +138,8 @@ class SearchUI {
     const fullPost = this.postsBySlug[result.slug];
     const content = fullPost ? fullPost.content : result.contentPreview;
     const authors = this.formatAuthors(result.authors);
-    const link = `/${result.slug}/`;
+    // Use Hugo's permalink if available, otherwise construct from slug
+    const link = fullPost ? fullPost.link : `/${result.slug}/`;
 
     // Add animation delay based on index for staggered appearance
     const animationDelay = index * 40; // 40ms between each result
