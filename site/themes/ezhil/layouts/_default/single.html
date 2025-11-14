@@ -12,7 +12,7 @@
 		<blockquote class="markdown">
 			{{ .Content }}
 			{{ if (isset .Params "authors") }}
-				<span class="author"><i>{{ range (.GetTerms "authors") }}<a href="{{ .Permalink }}">{{ .LinkTitle }} </a>{{ end }}</i></span>
+				<span class="author"><i>{{ range (.GetTerms "authors") }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }} </a>{{ end }}</i></span>
 			{{ else if (isset .Params "bible_reference") }}
 				<span class="author"><i>{{ .Params.bible_reference }}</i></span>
 			{{ end }}

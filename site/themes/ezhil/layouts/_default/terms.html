@@ -12,7 +12,7 @@
 		<ul>
 		{{ range $key, $value := .Data.Terms.Alphabetical }}
 			<li>
-			<a href="{{ $.Site.LanguagePrefix | absURL }}{{ $data.Plural }}/{{ $value.Name | urlize }}/">{{ with $value.Page.Title }}{{ . }}{{ end }}</a><small>&nbsp;({{ .Count }})</small>
+			<a href="{{ $.Site.LanguagePrefix }}/{{ $data.Plural }}/{{ $value.Name | urlize }}/">{{ with $value.Page.Title }}{{ . }}{{ end }}</a><small>&nbsp;({{ .Count }})</small>
 			</li>
 		{{ end }}
 		</ul>

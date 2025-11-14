@@ -1,5 +1,5 @@
 <header>
-    <h3 class="blog-post-title" style="display: inline;"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h3> · {{ range (.GetTerms "authors") }}<a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{ end }}
+    <h3 class="blog-post-title" style="display: inline;"><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h3> · {{ range (.GetTerms "authors") }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
   </header>
   <em>{{ .Content }}</em>
   <footer>
