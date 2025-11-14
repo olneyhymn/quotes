@@ -56,6 +56,12 @@ jobs:
           node build-index.js > static/search_index.json
         working-directory: site
 
+      - name: Build embeddings index
+        run: |
+          python build-embeddings.py > static/embeddings_index.json
+        working-directory: site
+        timeout-minutes: 15
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:

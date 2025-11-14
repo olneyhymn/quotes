@@ -1,11 +1,234 @@
 <!DOCTYPE html>
 <html>
 {{ partial "header.html" . }}
-<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src="/semantic-search.js"></script>
+<script src="/search-ui.js"></script>
+
+<style>
+/* Search page specific styles */
+.search-page-container .search {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 0;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Status indicator - minimal */
+.search-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #999;
+  margin-top: 8px;
+  min-height: 18px;
+}
+
+.status-spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #f0f0f0;
+  border-top: 2px solid #800000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Results Header */
+.results-header {
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.results-count {
+  font-size: 13px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* Search Results - matching site's blockquote style */
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.search-result {
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Match single page quote styling */
+.search-result {
+  margin-bottom: 30px;
+}
+
+.result-title {
+  margin: 0 0 10px 0;
+  font-size: 1.15em;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.result-title a {
+  color: #800000;
+  text-decoration: none;
+}
+
+.result-title a:hover {
+  text-decoration: underline;
+}
+
+/* Use same styling as single page blockquotes */
+.result-quote {
+  font-size: 1.4em;
+  background: #fff;
+  padding: 20px 60px;
+  border-radius: 10px;
+  font-family: 'Lora', serif;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 8px;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Author inside blockquote like single page */
+.result-quote .author {
+  display: block;
+  margin-top: 1em;
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+.result-quote .author a {
+  color: #800000;
+  text-decoration: none;
+}
+
+.result-quote .author a:hover {
+  text-decoration: underline;
+}
+
+/* Tags below blockquote */
+.result-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+  padding-left: 4px;
+}
+
+.tag {
+  padding: 2px 8px;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Empty States */
+.search-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.search-empty svg {
+  margin: 0 auto 20px;
+  opacity: 0.15;
+  stroke: #800000;
+}
+
+.search-empty h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: #333;
+  font-weight: 400;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.search-empty p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.search-empty a {
+  color: #800000;
+}
+
+/* Error State */
+.search-error {
+  text-align: center;
+  padding: 40px 20px;
+  color: #d32f2f;
+}
+
+.search-error svg {
+  margin: 0 auto 16px;
+  opacity: 0.3;
+}
+
+.search-error h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.search-error p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.error-hint {
+  color: #999 !important;
+}
+
+/* Responsive - match single page blockquote mobile styles */
+@media (max-width: 767px) {
+  .search-page-container .search {
+    padding: 12px 0;
+  }
+
+  .result-quote {
+    font-size: 1.2em;
+    padding: 20px 20px;
+  }
+
+  .search-empty {
+    padding: 40px 16px;
+  }
+}
+</style>
 
 <body>
-	<div class="container wrapper post">
+	<div class="container wrapper post search-page-container">
 		{{ partial "head.html" . }}
+
+    <div class="search-status" id="search-status">
+      <span id="status-text"></span>
+      <span id="spinner" class="status-spinner" style="display: none;"></span>
+    </div>
 
     <div id="app"></div>
   </div>
@@ -17,51 +240,53 @@
 
 {{- $p := slice -}}
 {{- range .Site.RegularPages -}}
-  {{- $post := dict "link" .RelPermalink "title" .Title "content" .Content "authors" .Params.Authors -}}
+  {{- $post := dict "link" .RelPermalink "title" .Title "content" .Content "authors" .Params.Authors "tags" .Params.tags -}}
   {{- $p = $p | append $post -}}
 {{- end -}}
 
 <script>
-  const posts = JSON.parse(
-    {{- $p | jsonify -}}
-  );
-  const query = new URLSearchParams(window.location.search);
-  const searchString = query.get('q');
-  document.querySelector('#search').value = searchString;
-  const $target = document.querySelector('#app');
+  // Parse Hugo-generated posts data
+  const posts = JSON.parse({{- $p | jsonify -}});
 
-  // Our index uses title as a reference
-  const postsByTitle = posts.reduce((acc, curr) => {
-    acc[curr.title] = curr;
+  // Get search query from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialQuery = urlParams.get('q') || '';
+
+  // Set search input value (uses search_bar partial with id="search")
+  const searchInput = document.querySelector('#search');
+  if (searchInput && initialQuery) {
+    searchInput.value = initialQuery;
+  }
+
+  // Create a lookup by slug for additional metadata
+  const postsBySlug = posts.reduce((acc, curr) => {
+    const slug = curr.link.replace(/^\//, '').replace(/\/$/, '');
+    acc[slug] = curr;
     return acc;
   }, {});
 
-  fetch('/search_index.json').then(function (res) {
-    return res.json();
-  }).then(function (data) {
-    const index = lunr.Index.load(data);
-    const matches = index.search(searchString);
-    const matchPosts = [];
-    matches.forEach((m) => {
-      matchPosts.push(postsByTitle[m.ref]);
-    });
+  // Initialize search UI
+  const searchUI = new SearchUI(window.semanticSearch, postsBySlug);
 
-    if (matchPosts.length > 0) {
-      $target.innerHTML = matchPosts.map(p => {
-        if (p && p.link && p.title && p.content && p.authors) {
-          return `<div>
-            <h2 class="item-title"><a href="${p.link}">${p.title}</a>  </h2>
-            <blockquote>
-              ${p.content}
-              <span class="author"><i><a href="${p.link}">${p.authors}</a></i></span>
-            </blockquote>
-          </div>`;
-        } else {
-          return "";
-        }
-      }).join('');
-    } else {
-      $target.innerHTML = `<div>No search results found</div>`;
-    }
-  });
+  // Perform initial search if query exists
+  if (initialQuery) {
+    searchUI.performSearch(initialQuery);
+  } else {
+    searchUI.showEmptyQuery();
+  }
+
+  // Handle search form submission
+  const searchForm = document.querySelector('.search-form');
+  if (searchForm) {
+    searchForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const query = searchInput.value.trim();
+      if (query) {
+        searchUI.performSearch(query);
+        // Update URL without reload
+        const newUrl = `?q=${encodeURIComponent(query)}`;
+        window.history.pushState({}, '', newUrl);
+      }
+    });
+  }
 </script>
