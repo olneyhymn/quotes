@@ -61,9 +61,22 @@ def load_quotes(content_dir: Path) -> List[Dict[str, Any]]:
                 skipped_count['empty'] += 1
                 continue
 
-            # Create slug from file path relative to content dir
+            # Create slug - respect Hugo's front matter slug field if present
             relative_path = md_file.relative_to(content_dir)
-            slug = str(relative_path.with_suffix('')).replace('\\', '/')
+
+            # Get the section (directory containing the file)
+            if len(relative_path.parts) > 1:
+                section = relative_path.parts[0]
+            else:
+                section = ''
+
+            # Use front matter slug if available, otherwise use filename
+            if 'slug' in post and post['slug']:
+                # Hugo uses /section/slug/ format when front matter slug is present
+                slug = f"{section}/{post['slug']}" if section else post['slug']
+            else:
+                # Hugo uses filename-based slug when no front matter slug
+                slug = str(relative_path.with_suffix('')).replace('\\', '/')
 
             # Extract metadata with validation
             quote = {
