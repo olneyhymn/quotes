@@ -8,15 +8,38 @@ class SearchUI {
     this.semanticSearch = semanticSearch;
     this.postsBySlug = postsBySlug;
     this.$target = document.querySelector('#app');
+    this.$statusContainer = document.querySelector('#search-status');
     this.$statusText = document.querySelector('#status-text');
+    this.$spinner = document.querySelector('#spinner');
   }
 
   /**
-   * Update status message
+   * Update status message with optional spinner
    */
-  setStatus(message) {
+  setStatus(message, showSpinner = false) {
     if (this.$statusText) {
       this.$statusText.textContent = message;
+    }
+    if (this.$spinner) {
+      this.$spinner.style.display = showSpinner ? 'inline-block' : 'none';
+    }
+  }
+
+  /**
+   * Hide status container
+   */
+  hideStatus() {
+    if (this.$statusContainer) {
+      this.$statusContainer.style.display = 'none';
+    }
+  }
+
+  /**
+   * Show status container
+   */
+  showStatus() {
+    if (this.$statusContainer) {
+      this.$statusContainer.style.display = 'block';
     }
   }
 
@@ -25,16 +48,19 @@ class SearchUI {
    */
   showError(message, error) {
     console.error('Search error:', error);
-    this.setStatus('Error performing search');
+    this.setStatus('Unable to perform search', false);
 
     if (this.$target) {
       this.$target.innerHTML = `
-        <div style="color: red; padding: 20px; background: #fee; border-radius: 5px;">
-          <strong>Error:</strong> ${this.escapeHtml(message)}
-          <br><br>
-          ${error ? `<small>${this.escapeHtml(error.message)}</small>` : ''}
-          <br><br>
-          <small>Check the console for more details.</small>
+        <div class="search-error">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <h3>Something went wrong</h3>
+          <p>${this.escapeHtml(message)}</p>
+          <p class="error-hint">Please try again or check your connection.</p>
         </div>
       `;
     }
@@ -44,11 +70,16 @@ class SearchUI {
    * Display no results message
    */
   showNoResults(query) {
-    this.setStatus('Search complete');
+    this.hideStatus();
     if (this.$target) {
       this.$target.innerHTML = `
-        <div style="padding: 20px;">
-          No search results found for "${this.escapeHtml(query)}"
+        <div class="search-empty">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <h3>No quotes found</h3>
+          <p>Try different words or browse <a href="/q/">all quotes</a></p>
         </div>
       `;
     }
@@ -58,11 +89,16 @@ class SearchUI {
    * Display empty query message
    */
   showEmptyQuery() {
-    this.setStatus('Enter a search query to begin');
+    this.hideStatus();
     if (this.$target) {
       this.$target.innerHTML = `
-        <div style="padding: 20px;">
-          Please enter a search query in the search box above.
+        <div class="search-empty">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <h3>Start searching</h3>
+          <p>Enter a word or phrase to find related quotes</p>
         </div>
       `;
     }
@@ -78,33 +114,52 @@ class SearchUI {
   }
 
   /**
+   * Format author names
+   */
+  formatAuthors(authors) {
+    if (!authors || authors.length === 0) return '';
+    const authorList = Array.isArray(authors) ? authors.join(', ') : String(authors);
+    return authorList;
+  }
+
+  /**
+   * Truncate text with ellipsis
+   */
+  truncate(text, maxLength) {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength).trim() + '...';
+  }
+
+  /**
    * Format a search result item
    */
-  formatResult(result) {
+  formatResult(result, index) {
     // Try to find full content from posts
     const fullPost = this.postsBySlug[result.slug];
     const content = fullPost ? fullPost.content : result.contentPreview;
-    const authors = Array.isArray(result.authors)
-      ? result.authors.join(', ')
-      : result.authors || '';
+    const authors = this.formatAuthors(result.authors);
     const link = `/${result.slug}/`;
 
-    // Format similarity score as percentage
-    const similarityPercent = (result.score * 100).toFixed(1);
+    // Add animation delay based on index for staggered appearance
+    const animationDelay = index * 50; // 50ms between each result
 
     return `
-      <div style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-        <h2 class="item-title">
+      <article class="search-result" style="animation-delay: ${animationDelay}ms;">
+        <h2 class="result-title">
           <a href="${link}">${this.escapeHtml(result.title)}</a>
-          <span style="font-size: 0.6em; color: #666; font-weight: normal; margin-left: 10px;">
-            (${similarityPercent}% match)
-          </span>
         </h2>
-        <blockquote>
+        <blockquote class="result-content">
           ${content}
-          ${authors ? `<span class="author"><i><a href="${link}">${this.escapeHtml(authors)}</a></i></span>` : ''}
         </blockquote>
-      </div>
+        ${authors ? `<p class="result-author"><a href="${link}">${this.escapeHtml(authors)}</a></p>` : ''}
+        ${result.tags && result.tags.length > 0 ? `
+          <div class="result-tags">
+            ${result.tags.slice(0, 3).map(tag =>
+              `<span class="tag">${this.escapeHtml(tag)}</span>`
+            ).join('')}
+          </div>
+        ` : ''}
+      </article>
     `;
   }
 
@@ -114,8 +169,18 @@ class SearchUI {
   showResults(results) {
     if (!this.$target) return;
 
-    this.setStatus(`Found ${results.length} semantically similar quotes`);
-    this.$target.innerHTML = results.map(result => this.formatResult(result)).join('');
+    this.hideStatus();
+
+    const resultsHtml = `
+      <div class="search-results-header">
+        <p>${results.length} ${results.length === 1 ? 'quote' : 'quotes'} found</p>
+      </div>
+      <div class="search-results">
+        ${results.map((result, index) => this.formatResult(result, index)).join('')}
+      </div>
+    `;
+
+    this.$target.innerHTML = resultsHtml;
   }
 
   /**
@@ -128,12 +193,14 @@ class SearchUI {
     }
 
     try {
-      // Initialize semantic search
-      this.setStatus('Loading semantic search model (this may take a moment on first load)...');
+      // Initialize search with loading animation
+      this.showStatus();
+      this.setStatus('Loading search...', true);
       await this.semanticSearch.initialize();
-      this.setStatus('Search ready! Performing search...');
 
-      // Perform semantic search
+      this.setStatus('Searching quotes...', true);
+
+      // Perform search
       const results = await this.semanticSearch.search(query, 20);
 
       // Display results

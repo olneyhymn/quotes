@@ -4,12 +4,222 @@
 <script src="/semantic-search.js"></script>
 <script src="/search-ui.js"></script>
 
+<style>
+/* Loading Spinner */
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Status Bar */
+#search-status {
+  padding: 12px 20px;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#status-text {
+  font-weight: 500;
+}
+
+/* Empty/Error States */
+.search-empty,
+.search-error {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.search-empty svg,
+.search-error svg {
+  margin: 0 auto 20px;
+  opacity: 0.3;
+}
+
+.search-empty h3,
+.search-error h3 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  color: #333;
+}
+
+.search-empty p,
+.search-error p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.search-error {
+  color: #d32f2f;
+}
+
+.search-error svg {
+  stroke: #d32f2f;
+}
+
+.error-hint {
+  font-size: 14px !important;
+  color: #999 !important;
+}
+
+/* Results Header */
+.search-results-header {
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #eee;
+}
+
+.search-results-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Search Results */
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.search-result {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  opacity: 0;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.search-result:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-title {
+  margin: 0 0 16px;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.result-title a {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.result-title a:hover {
+  color: #667eea;
+}
+
+.result-content {
+  margin: 0 0 16px;
+  padding: 16px 20px;
+  background: #f8f9fa;
+  border-left: 4px solid #667eea;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.result-author {
+  margin: 0 0 12px;
+  font-style: italic;
+  color: #666;
+  font-size: 15px;
+}
+
+.result-author a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.result-author a:hover {
+  text-decoration: underline;
+}
+
+.result-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #e8eaf6;
+  color: #5c6bc0;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-result {
+    padding: 16px;
+  }
+
+  .result-title {
+    font-size: 20px;
+  }
+
+  .result-content {
+    font-size: 15px;
+    padding: 12px 16px;
+  }
+
+  .search-empty,
+  .search-error {
+    padding: 40px 16px;
+  }
+}
+</style>
+
 <body>
 	<div class="container wrapper post">
 		{{ partial "head.html" . }}
 
-    <div id="search-status" style="padding: 10px; margin-bottom: 20px; background: #f0f0f0; border-radius: 5px;">
-      <span id="status-text">Initializing semantic search...</span>
+    <div id="search-status">
+      <span id="status-text">Initializing search...</span>
+      <span id="spinner" class="spinner" style="display: none;"></span>
     </div>
     <div id="app"></div>
   </div>

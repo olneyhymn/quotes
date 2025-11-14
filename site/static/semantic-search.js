@@ -68,11 +68,11 @@ class SemanticSearch {
 
     try {
       // Load pre-computed embeddings
-      console.log('Loading embeddings...');
+      console.log('Loading search index...');
       const response = await fetch('/embeddings_index.json');
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch embeddings: ${response.status} ${response.statusText}`);
+        throw new Error(`Failed to fetch search index: ${response.status} ${response.statusText}`);
       }
 
       const data = await response.json();
@@ -88,11 +88,11 @@ class SemanticSearch {
         version: data.version
       };
 
-      console.log(`Loaded ${this.embeddings.length} quote embeddings`);
+      console.log(`Loaded ${this.embeddings.length} quotes`);
       console.log(`Model: ${this.metadata.model}, Dimensions: ${this.metadata.dimensions}`);
 
       // Load transformers.js model
-      console.log('Loading embedding model...');
+      console.log('Loading search model...');
 
       // Import transformers.js from CDN
       const { pipeline, env } = await import('https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2');
@@ -111,10 +111,10 @@ class SemanticSearch {
         }
       );
 
-      console.log('Semantic search ready!');
+      console.log('Search ready!');
       this.isReady = true;
     } catch (error) {
-      console.error('Error initializing semantic search:', error);
+      console.error('Error initializing search:', error);
       this.isLoading = false;
       this.isReady = false;
       throw error;
