@@ -8,7 +8,7 @@ class SearchUI {
     this.semanticSearch = semanticSearch;
     this.postsBySlug = postsBySlug;
     this.$target = document.querySelector('#app');
-    this.$statusContainer = document.querySelector('#search-status');
+    this.$statusContainer = document.querySelector('.search-status');
     this.$statusText = document.querySelector('#status-text');
     this.$spinner = document.querySelector('#spinner');
   }
@@ -141,24 +141,26 @@ class SearchUI {
     const link = `/${result.slug}/`;
 
     // Add animation delay based on index for staggered appearance
-    const animationDelay = index * 50; // 50ms between each result
+    const animationDelay = index * 40; // 40ms between each result
 
     return `
       <article class="search-result" style="animation-delay: ${animationDelay}ms;">
         <h2 class="result-title">
           <a href="${link}">${this.escapeHtml(result.title)}</a>
         </h2>
-        <blockquote class="result-content">
+        <blockquote class="result-quote">
           ${content}
         </blockquote>
-        ${authors ? `<p class="result-author"><a href="${link}">${this.escapeHtml(authors)}</a></p>` : ''}
-        ${result.tags && result.tags.length > 0 ? `
-          <div class="result-tags">
-            ${result.tags.slice(0, 3).map(tag =>
-              `<span class="tag">${this.escapeHtml(tag)}</span>`
-            ).join('')}
-          </div>
-        ` : ''}
+        <div class="result-meta">
+          ${authors ? `<span class="result-author"><a href="${link}">${this.escapeHtml(authors)}</a></span>` : ''}
+          ${result.tags && result.tags.length > 0 ? `
+            <div class="result-tags">
+              ${result.tags.slice(0, 3).map(tag =>
+                `<span class="tag">${this.escapeHtml(tag)}</span>`
+              ).join('')}
+            </div>
+          ` : ''}
+        </div>
       </article>
     `;
   }
@@ -172,8 +174,8 @@ class SearchUI {
     this.hideStatus();
 
     const resultsHtml = `
-      <div class="search-results-header">
-        <p>${results.length} ${results.length === 1 ? 'quote' : 'quotes'} found</p>
+      <div class="results-header">
+        <div class="results-count">${results.length} ${results.length === 1 ? 'quote' : 'quotes'} found</div>
       </div>
       <div class="search-results">
         ${results.map((result, index) => this.formatResult(result, index)).join('')}
