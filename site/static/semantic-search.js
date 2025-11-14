@@ -3,23 +3,26 @@
  * This provides embedding-based search for static sites
  */
 
-// Configuration
-const DEBUG_MODE = false; // Set to true to enable debug logging
+(function() {
+  'use strict';
 
-// Constants
-const MODEL_NAME = 'Xenova/all-MiniLM-L6-v2';
-const EXPECTED_DIMENSIONS = 384;
-const MIN_SIMILARITY_THRESHOLD = 0.1;  // Filter out very low similarity results
-const EXPECTED_SCHEMA_VERSION = '1.0';
+  // Configuration
+  const DEBUG_MODE = false; // Set to true to enable debug logging
 
-// Debug logging helper
-const debug = (...args) => {
-  if (DEBUG_MODE) {
-    console.log('[SemanticSearch]', ...args);
-  }
-};
+  // Constants
+  const MODEL_NAME = 'Xenova/all-MiniLM-L6-v2';
+  const EXPECTED_DIMENSIONS = 384;
+  const MIN_SIMILARITY_THRESHOLD = 0.1;  // Filter out very low similarity results
+  const EXPECTED_SCHEMA_VERSION = '1.0';
 
-class SemanticSearch {
+  // Debug logging helper
+  const debug = (...args) => {
+    if (DEBUG_MODE) {
+      console.log('[SemanticSearch]', ...args);
+    }
+  };
+
+  class SemanticSearch {
   constructor() {
     this.embeddings = null;
     this.extractor = null;
@@ -252,12 +255,13 @@ class SemanticSearch {
   }
 }
 
-// Create a global instance
-if (typeof window !== 'undefined') {
-  window.semanticSearch = new SemanticSearch();
-}
+  // Create a global instance
+  if (typeof window !== 'undefined') {
+    window.semanticSearch = new SemanticSearch();
+  }
 
-// Export for module usage
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = SemanticSearch;
-}
+  // Export for module usage
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = SemanticSearch;
+  }
+})();

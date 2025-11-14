@@ -3,18 +3,21 @@
  * Manages the search interface and result display
  */
 
-// Configuration
-const DEBUG_MODE = false; // Set to true to enable debug logging
-const RESULT_ANIMATION_DELAY = 40; // Milliseconds between each result animation
+(function() {
+  'use strict';
 
-// Debug logging helper
-const debug = (...args) => {
-  if (DEBUG_MODE) {
-    console.log('[SearchUI]', ...args);
-  }
-};
+  // Configuration
+  const DEBUG_MODE = false; // Set to true to enable debug logging
+  const RESULT_ANIMATION_DELAY = 40; // Milliseconds between each result animation
 
-class SearchUI {
+  // Debug logging helper
+  const debug = (...args) => {
+    if (DEBUG_MODE) {
+      console.log('[SearchUI]', ...args);
+    }
+  };
+
+  class SearchUI {
   constructor(semanticSearch, postsBySlug) {
     this.semanticSearch = semanticSearch;
     this.postsBySlug = postsBySlug;
@@ -250,7 +253,8 @@ class SearchUI {
   }
 }
 
-// Export for use in search page
-if (typeof window !== 'undefined') {
-  window.SearchUI = SearchUI;
-}
+  // Export for use in search page
+  if (typeof window !== 'undefined') {
+    window.SearchUI = SearchUI;
+  }
+})();
