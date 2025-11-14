@@ -140,7 +140,7 @@ class SearchUI {
   }
 
   /**
-   * Format a search result item
+   * Format a search result item - matches single page layout
    */
   formatResult(result, index) {
     // Try to find full content from posts - first by slug, then by title
@@ -171,19 +171,17 @@ class SearchUI {
         <h2 class="result-title">
           <a href="${link}">${this.escapeHtml(result.title)}</a>
         </h2>
-        <blockquote class="result-quote">
+        <blockquote class="result-quote markdown">
           ${content}
+          ${authors ? `<span class="author"><i><a href="${link}">${this.escapeHtml(authors)}</a></i></span>` : ''}
         </blockquote>
-        <div class="result-meta">
-          ${authors ? `<span class="result-author"><a href="${link}">${this.escapeHtml(authors)}</a></span>` : ''}
-          ${result.tags && result.tags.length > 0 ? `
-            <div class="result-tags">
-              ${result.tags.slice(0, 3).map(tag =>
-                `<span class="tag">${this.escapeHtml(tag)}</span>`
-              ).join('')}
-            </div>
-          ` : ''}
-        </div>
+        ${result.tags && result.tags.length > 0 ? `
+          <div class="result-tags">
+            ${result.tags.slice(0, 3).map(tag =>
+              `<span class="tag">${this.escapeHtml(tag)}</span>`
+            ).join('')}
+          </div>
+        ` : ''}
       </article>
     `;
   }

@@ -1,8 +1,69 @@
+<style>
+.search {
+    margin-bottom: 1.5em;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-input-wrapper {
+    flex: 1;
+}
+
+.search input[type="text"] {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+}
+
+.search input[type="text"]:focus {
+    outline: none;
+    border-color: #800000;
+}
+
+.search button {
+    padding: 10px 20px;
+    background: #800000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.search button:hover {
+    background: #600000;
+}
+
+@media (max-width: 767px) {
+    .search-form {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .search button {
+        width: 100%;
+    }
+}
+</style>
+
 <div class="search">
-    <center>
-        <form method="get" action="" class="pure-form pure-form-aligned">
-            <input id="search" name="q" type="text" />
-            <button type="submit" class="pure-button" formaction="/search/index.html">Search</button>
-        </form>
-    </center>
+    <form method="get" action="" class="search-form">
+        <div class="search-input-wrapper">
+            <input id="search" name="q" type="text" placeholder="Search quotes..." autocomplete="off" />
+        </div>
+        <button type="submit" formaction="/search/index.html">Search</button>
+    </form>
 </div>

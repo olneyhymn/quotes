@@ -1,0 +1,44 @@
+{{/*
+  Shared partial for displaying a quote
+  Expected context: a page or dict with .Title, .Content, authors, and link
+*/}}
+{{ $title := .Title }}
+{{ $content := .Content }}
+{{ $authors := .authors }}
+{{ $link := .link }}
+{{ $tags := .tags }}
+
+<article class="quote-item">
+  <h2 class="item-title">
+    {{ if $link }}
+      <a href="{{ $link }}">{{ $title }}</a>
+    {{ else }}
+      <a href="{{ .Permalink }}">{{ $title }}</a>
+    {{ end }}
+  </h2>
+
+  <blockquote class="markdown">
+    {{ $content | safeHTML }}
+    {{ if $authors }}
+      <span class="author">
+        <i>
+          {{ if $link }}
+            {{ range $authors }}
+              {{ . }}{{ end }}
+          {{ else }}
+            {{ range (.GetTerms "authors") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{ end }}
+          {{ end }}
+        </i>
+      </span>
+    {{ end }}
+  </blockquote>
+
+  {{ if $tags }}
+    <div class="quote-tags">
+      {{ range $tags }}
+        <span class="tag">{{ . }}</span>
+      {{ end }}
+    </div>
+  {{ end }}
+</article>
