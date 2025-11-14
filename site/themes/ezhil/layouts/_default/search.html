@@ -331,6 +331,12 @@
     return acc;
   }, {});
 
+  // Debug: Log the slug creation process
+  console.log('Total posts from Hugo:', posts.length);
+  console.log('Sample post:', posts[0]);
+  console.log('Sample slug from Hugo:', posts[0] ? posts[0].link.replace(/^\//, '').replace(/\/$/, '') : 'none');
+  console.log('Total slugs in lookup:', Object.keys(postsBySlug).length);
+
   // Initialize search UI
   const searchUI = new SearchUI(window.semanticSearch, postsBySlug);
 

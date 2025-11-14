@@ -136,10 +136,17 @@ class SearchUI {
   formatResult(result, index) {
     // Try to find full content from posts
     const fullPost = this.postsBySlug[result.slug];
+
+    // Debug logging for missing posts
+    if (!fullPost) {
+      console.warn(`Could not find fullPost for slug: "${result.slug}"`);
+      console.log('Available slugs:', Object.keys(this.postsBySlug).slice(0, 5));
+    }
+
     const content = fullPost ? fullPost.content : result.contentPreview;
     const authors = this.formatAuthors(result.authors);
     // Use Hugo's permalink if available, otherwise construct from slug
-    const link = fullPost ? fullPost.link : `/${result.slug}/`;
+    const link = fullPost && fullPost.link ? fullPost.link : `/${result.slug}/`;
 
     // Add animation delay based on index for staggered appearance
     const animationDelay = index * 40; // 40ms between each result
