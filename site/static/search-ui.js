@@ -3,6 +3,17 @@
  * Manages the search interface and result display
  */
 
+// Configuration
+const DEBUG_MODE = false; // Set to true to enable debug logging
+const RESULT_ANIMATION_DELAY = 40; // Milliseconds between each result animation
+
+// Debug logging helper
+const debug = (...args) => {
+  if (DEBUG_MODE) {
+    console.log('[SearchUI]', ...args);
+  }
+};
+
 class SearchUI {
   constructor(semanticSearch, postsBySlug) {
     this.semanticSearch = semanticSearch;
@@ -149,13 +160,13 @@ class SearchUI {
     if (!fullPost && result.title) {
       fullPost = this.findPostByTitle(result.title);
       if (fullPost) {
-        console.log(`Found post by title match: "${result.title}"`);
+        debug(`Found post by title match: "${result.title}"`);
       }
     }
 
     // Debug logging for missing posts
     if (!fullPost) {
-      console.warn(`Could not find post for slug: "${result.slug}", title: "${result.title}"`);
+      debug(`Could not find post for slug: "${result.slug}", title: "${result.title}"`);
     }
 
     const content = fullPost ? fullPost.content : result.contentPreview;
@@ -164,7 +175,7 @@ class SearchUI {
     const link = fullPost && fullPost.link ? fullPost.link : `/${result.slug}/`;
 
     // Add animation delay based on index for staggered appearance
-    const animationDelay = index * 40; // 40ms between each result
+    const animationDelay = index * RESULT_ANIMATION_DELAY;
 
     return `
       <article class="search-result" style="animation-delay: ${animationDelay}ms;">

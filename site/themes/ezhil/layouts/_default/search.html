@@ -252,8 +252,8 @@
   const urlParams = new URLSearchParams(window.location.search);
   const initialQuery = urlParams.get('q') || '';
 
-  // Set search input value
-  const searchInput = document.querySelector('#search-input');
+  // Set search input value (uses search_bar partial with id="search")
+  const searchInput = document.querySelector('#search');
   if (searchInput && initialQuery) {
     searchInput.value = initialQuery;
   }
@@ -265,12 +265,6 @@
     return acc;
   }, {});
 
-  // Debug: Log the slug creation process
-  console.log('Total posts from Hugo:', posts.length);
-  console.log('Sample post:', posts[0]);
-  console.log('Sample slug from Hugo:', posts[0] ? posts[0].link.replace(/^\//, '').replace(/\/$/, '') : 'none');
-  console.log('Total slugs in lookup:', Object.keys(postsBySlug).length);
-
   // Initialize search UI
   const searchUI = new SearchUI(window.semanticSearch, postsBySlug);
 
@@ -281,21 +275,18 @@
     searchUI.showEmptyQuery();
   }
 
-  // Handle search button click
-  document.querySelector('#search-btn').addEventListener('click', () => {
-    const query = searchInput.value.trim();
-    if (query) {
-      searchUI.performSearch(query);
-      // Update URL without reload
-      const newUrl = `?q=${encodeURIComponent(query)}`;
-      window.history.pushState({}, '', newUrl);
-    }
-  });
-
-  // Handle Enter key
-  searchInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-      document.querySelector('#search-btn').click();
-    }
-  });
+  // Handle search form submission
+  const searchForm = document.querySelector('.search-form');
+  if (searchForm) {
+    searchForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const query = searchInput.value.trim();
+      if (query) {
+        searchUI.performSearch(query);
+        // Update URL without reload
+        const newUrl = `?q=${encodeURIComponent(query)}`;
+        window.history.pushState({}, '', newUrl);
+      }
+    });
+  }
 </script>

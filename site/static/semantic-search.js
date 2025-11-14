@@ -3,11 +3,21 @@
  * This provides embedding-based search for static sites
  */
 
+// Configuration
+const DEBUG_MODE = false; // Set to true to enable debug logging
+
 // Constants
 const MODEL_NAME = 'Xenova/all-MiniLM-L6-v2';
 const EXPECTED_DIMENSIONS = 384;
 const MIN_SIMILARITY_THRESHOLD = 0.1;  // Filter out very low similarity results
 const EXPECTED_SCHEMA_VERSION = '1.0';
+
+// Debug logging helper
+const debug = (...args) => {
+  if (DEBUG_MODE) {
+    console.log('[SemanticSearch]', ...args);
+  }
+};
 
 class SemanticSearch {
   constructor() {
@@ -68,7 +78,7 @@ class SemanticSearch {
 
     try {
       // Load pre-computed embeddings
-      console.log('Loading search index...');
+      debug('Loading search index...');
       const response = await fetch('/embeddings_index.json');
 
       if (!response.ok) {
@@ -88,11 +98,11 @@ class SemanticSearch {
         version: data.version
       };
 
-      console.log(`Loaded ${this.embeddings.length} quotes`);
-      console.log(`Model: ${this.metadata.model}, Dimensions: ${this.metadata.dimensions}`);
+      debug(`Loaded ${this.embeddings.length} quotes`);
+      debug(`Model: ${this.metadata.model}, Dimensions: ${this.metadata.dimensions}`);
 
       // Load transformers.js model
-      console.log('Loading search model...');
+      debug('Loading search model...');
 
       // Import transformers.js from CDN
       const { pipeline, env } = await import('https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2');
@@ -111,7 +121,7 @@ class SemanticSearch {
         }
       );
 
-      console.log('Search ready!');
+      debug('Search ready!');
       this.isReady = true;
     } catch (error) {
       console.error('Error initializing search:', error);
