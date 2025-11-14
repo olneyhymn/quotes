@@ -12,7 +12,7 @@
 		<blockquote class="markdown">
 			{{ .Content }}
 			{{ if (isset .Params "authors") }}
-				<span class="author"><i>{{ range (.GetTerms "authors") }}<a href="{{ .Permalink }}">{{ .LinkTitle }} </a>{{ end }}</i></span>
+				<span class="author"><i>{{ range (.GetTerms "authors") }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }} </a>{{ end }}</i></span>
 			{{ else if (isset .Params "bible_reference") }}
 				<span class="author"><i>{{ .Params.bible_reference }}</i></span>
 			{{ end }}
@@ -30,6 +30,20 @@
 		  {{ end }}
 		{{ end }}
 	  {{ end }}
+
+		<!-- Similar Quotes Section -->
+		<div id="similar-quotes-container" class="similar-quotes-container" style="display: none;"></div>
+
+		<script src="/similar-quotes.js"></script>
+		<script>
+			// Initialize and render similar quotes
+			(function() {
+				const similarQuotes = new SimilarQuotes();
+				// Use RelPermalink to get the URL path which matches the slug format in embeddings
+				const currentSlug = '{{ strings.TrimPrefix "/" (strings.TrimSuffix "/" .RelPermalink) }}';
+				similarQuotes.renderSimilarQuotes('similar-quotes-container', currentSlug);
+			})();
+		</script>
 	</div>
 	{{ partial "feedback.html" . }}
 	{{ partial "footer.html" . }}

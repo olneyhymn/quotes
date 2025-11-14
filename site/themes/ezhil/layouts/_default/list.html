@@ -17,7 +17,7 @@
 			{{- if (in (.Site.Params.excludedTypes | default (slice "page")) .Type) -}}
 			{{- else -}}
 			<li class="post">
-				<a href="{{ .RelPermalink }}" class="title">{{.Title}}</a> ({{ range (.GetTerms "authors") }}<a href="{{ .Permalink }}">{{ .LinkTitle }}{{ end }})
+				<a href="{{ .RelPermalink }}" class="title">{{.Title}}</a> ({{ range (.GetTerms "authors") }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}{{ end }})
 			</li>
 			{{- end -}}
 			{{- end -}}
