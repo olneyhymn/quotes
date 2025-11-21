@@ -3,8 +3,6 @@ authors:
 - J. Gresham Machen
 date: '2025-11-21'
 description: ''
-images:
-- https://hcti.io/v1/image/b07c0944-0a1f-474f-b193-76283bf23c00
 slug: real-america
 tags:
 - liberty
